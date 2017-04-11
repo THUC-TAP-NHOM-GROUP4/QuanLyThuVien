@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.rbcMenu = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiDSDS = new DevExpress.XtraBars.BarButtonItem();
             this.bbiThemDG = new DevExpress.XtraBars.BarButtonItem();
@@ -50,6 +50,19 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemRichTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
             this.bbtiDSSDocGia = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
+            this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemColorPickEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit();
+            this.barEditItem3 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemColorEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorEdit();
+            this.barEditItem4 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.barEditItem5 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemPopupGalleryEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit();
+            this.barEditItem6 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
             this.rPTrangChu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbPGHT = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rPQLDG = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -60,7 +73,6 @@
             this.rPQLDS = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rPGDS = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rPTaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.rbpgTK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
@@ -76,21 +88,19 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.bbiDSDG = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
-            this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
-            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
-            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemColorPickEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit();
-            this.barEditItem3 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemColorEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemColorEdit();
-            this.barEditItem4 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
-            this.barEditItem5 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemPopupGalleryEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit();
-            this.barEditItem6 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.rbcMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupGalleryEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -98,11 +108,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupGalleryEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // rbcMenu
@@ -136,8 +143,11 @@
             this.barEditItem3,
             this.barEditItem4,
             this.barEditItem5,
-            this.barEditItem6});
-            this.rbcMenu.MaxItemId = 27;
+            this.barEditItem6,
+            this.skinRibbonGalleryBarItem2,
+            this.barStaticItem1,
+            this.barStaticItem2});
+            this.rbcMenu.MaxItemId = 30;
             this.rbcMenu.Name = "rbcMenu";
             this.rbcMenu.PageHeaderItemLinks.Add(this.barButtonItem3);
             this.rbcMenu.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -276,10 +286,107 @@
             this.bbtiDSSDocGia.Name = "bbtiDSSDocGia";
             this.bbtiDSSDocGia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtiDSSDocGia_ItemClick);
             // 
+            // ribbonGalleryBarItem1
+            // 
+            resources.ApplyResources(this.ribbonGalleryBarItem1, "ribbonGalleryBarItem1");
+            // 
+            // 
+            // 
+            resources.ApplyResources(galleryItemGroup3, "galleryItemGroup3");
+            resources.ApplyResources(galleryItemGroup4, "galleryItemGroup4");
+            this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
+            galleryItemGroup3,
+            galleryItemGroup4});
+            this.ribbonGalleryBarItem1.Id = 19;
+            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            // 
+            // barDockingMenuItem1
+            // 
+            resources.ApplyResources(this.barDockingMenuItem1, "barDockingMenuItem1");
+            this.barDockingMenuItem1.Id = 20;
+            this.barDockingMenuItem1.Name = "barDockingMenuItem1";
+            // 
+            // skinRibbonGalleryBarItem1
+            // 
+            resources.ApplyResources(this.skinRibbonGalleryBarItem1, "skinRibbonGalleryBarItem1");
+            this.skinRibbonGalleryBarItem1.Id = 21;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // 
+            // barEditItem2
+            // 
+            resources.ApplyResources(this.barEditItem2, "barEditItem2");
+            this.barEditItem2.Edit = this.repositoryItemColorPickEdit1;
+            this.barEditItem2.Id = 22;
+            this.barEditItem2.Name = "barEditItem2";
+            // 
+            // repositoryItemColorPickEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemColorPickEdit1, "repositoryItemColorPickEdit1");
+            this.repositoryItemColorPickEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemColorPickEdit1.Buttons"))))});
+            this.repositoryItemColorPickEdit1.Name = "repositoryItemColorPickEdit1";
+            // 
+            // barEditItem3
+            // 
+            resources.ApplyResources(this.barEditItem3, "barEditItem3");
+            this.barEditItem3.Edit = this.repositoryItemColorEdit1;
+            this.barEditItem3.Id = 23;
+            this.barEditItem3.Name = "barEditItem3";
+            // 
+            // repositoryItemColorEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemColorEdit1, "repositoryItemColorEdit1");
+            this.repositoryItemColorEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemColorEdit1.Buttons"))))});
+            this.repositoryItemColorEdit1.Name = "repositoryItemColorEdit1";
+            // 
+            // barEditItem4
+            // 
+            resources.ApplyResources(this.barEditItem4, "barEditItem4");
+            this.barEditItem4.Edit = this.repositoryItemImageEdit1;
+            this.barEditItem4.Id = 24;
+            this.barEditItem4.Name = "barEditItem4";
+            // 
+            // repositoryItemImageEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemImageEdit1, "repositoryItemImageEdit1");
+            this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemImageEdit1.Buttons"))))});
+            this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
+            // 
+            // barEditItem5
+            // 
+            resources.ApplyResources(this.barEditItem5, "barEditItem5");
+            this.barEditItem5.Edit = this.repositoryItemPopupGalleryEdit1;
+            this.barEditItem5.Id = 25;
+            this.barEditItem5.Name = "barEditItem5";
+            // 
+            // repositoryItemPopupGalleryEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemPopupGalleryEdit1, "repositoryItemPopupGalleryEdit1");
+            this.repositoryItemPopupGalleryEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemPopupGalleryEdit1.Buttons"))))});
+            this.repositoryItemPopupGalleryEdit1.Name = "repositoryItemPopupGalleryEdit1";
+            // 
+            // barEditItem6
+            // 
+            resources.ApplyResources(this.barEditItem6, "barEditItem6");
+            this.barEditItem6.Edit = this.repositoryItemFontEdit1;
+            this.barEditItem6.Id = 26;
+            this.barEditItem6.Name = "barEditItem6";
+            // 
+            // repositoryItemFontEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemFontEdit1, "repositoryItemFontEdit1");
+            this.repositoryItemFontEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemFontEdit1.Buttons"))))});
+            this.repositoryItemFontEdit1.Name = "repositoryItemFontEdit1";
+            // 
             // rPTrangChu
             // 
             this.rPTrangChu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rbPGHT});
+            this.rbPGHT,
+            this.ribbonPageGroup1});
             this.rPTrangChu.Name = "rPTrangChu";
             resources.ApplyResources(this.rPTrangChu, "rPTrangChu");
             // 
@@ -287,10 +394,6 @@
             // 
             this.rbPGHT.ItemLinks.Add(this.bbiDN);
             this.rbPGHT.ItemLinks.Add(this.bbiDX);
-            this.rbPGHT.ItemLinks.Add(this.barEditItem3);
-            this.rbPGHT.ItemLinks.Add(this.barEditItem4);
-            this.rbPGHT.ItemLinks.Add(this.barEditItem5);
-            this.rbPGHT.ItemLinks.Add(this.barEditItem6);
             this.rbPGHT.Name = "rbPGHT";
             resources.ApplyResources(this.rbPGHT, "rbPGHT");
             // 
@@ -348,13 +451,6 @@
             // 
             this.rPTaiKhoan.Name = "rPTaiKhoan";
             resources.ApplyResources(this.rPTaiKhoan, "rPTaiKhoan");
-            // 
-            // ribbonStatusBar1
-            // 
-            this.ribbonStatusBar1.ItemLinks.Add(this.barEditItem1);
-            resources.ApplyResources(this.ribbonStatusBar1, "ribbonStatusBar1");
-            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-            this.ribbonStatusBar1.Ribbon = this.rbcMenu;
             // 
             // rbpgTK
             // 
@@ -461,101 +557,44 @@
             this.bbiDSDG.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiDSDG.LargeGlyph")));
             this.bbiDSDG.Name = "bbiDSDG";
             // 
-            // ribbonGalleryBarItem1
+            // ribbonPageGroup1
             // 
-            resources.ApplyResources(this.ribbonGalleryBarItem1, "ribbonGalleryBarItem1");
+            this.ribbonPageGroup1.ItemLinks.Add(this.skinRibbonGalleryBarItem2);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            resources.ApplyResources(this.ribbonPageGroup1, "ribbonPageGroup1");
             // 
+            // skinRibbonGalleryBarItem2
             // 
+            resources.ApplyResources(this.skinRibbonGalleryBarItem2, "skinRibbonGalleryBarItem2");
+            this.skinRibbonGalleryBarItem2.Id = 27;
+            this.skinRibbonGalleryBarItem2.Name = "skinRibbonGalleryBarItem2";
             // 
-            resources.ApplyResources(galleryItemGroup1, "galleryItemGroup1");
-            resources.ApplyResources(galleryItemGroup2, "galleryItemGroup2");
-            this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1,
-            galleryItemGroup2});
-            this.ribbonGalleryBarItem1.Id = 19;
-            this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
+            // barStaticItem1
             // 
-            // barDockingMenuItem1
+            resources.ApplyResources(this.barStaticItem1, "barStaticItem1");
+            this.barStaticItem1.Id = 28;
+            this.barStaticItem1.Name = "barStaticItem1";
+            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            resources.ApplyResources(this.barDockingMenuItem1, "barDockingMenuItem1");
-            this.barDockingMenuItem1.Id = 20;
-            this.barDockingMenuItem1.Name = "barDockingMenuItem1";
+            // panelControl3
             // 
-            // skinRibbonGalleryBarItem1
+            this.panelControl3.Controls.Add(this.ribbonStatusBar1);
+            resources.ApplyResources(this.panelControl3, "panelControl3");
+            this.panelControl3.Name = "panelControl3";
             // 
-            resources.ApplyResources(this.skinRibbonGalleryBarItem1, "skinRibbonGalleryBarItem1");
-            this.skinRibbonGalleryBarItem1.Id = 21;
-            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
+            // ribbonStatusBar1
             // 
-            // barEditItem2
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem2);
+            resources.ApplyResources(this.ribbonStatusBar1, "ribbonStatusBar1");
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.rbcMenu;
             // 
-            resources.ApplyResources(this.barEditItem2, "barEditItem2");
-            this.barEditItem2.Edit = this.repositoryItemColorPickEdit1;
-            this.barEditItem2.Id = 22;
-            this.barEditItem2.Name = "barEditItem2";
+            // barStaticItem2
             // 
-            // repositoryItemColorPickEdit1
-            // 
-            resources.ApplyResources(this.repositoryItemColorPickEdit1, "repositoryItemColorPickEdit1");
-            this.repositoryItemColorPickEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemColorPickEdit1.Buttons"))))});
-            this.repositoryItemColorPickEdit1.Name = "repositoryItemColorPickEdit1";
-            // 
-            // barEditItem3
-            // 
-            resources.ApplyResources(this.barEditItem3, "barEditItem3");
-            this.barEditItem3.Edit = this.repositoryItemColorEdit1;
-            this.barEditItem3.Id = 23;
-            this.barEditItem3.Name = "barEditItem3";
-            // 
-            // repositoryItemColorEdit1
-            // 
-            resources.ApplyResources(this.repositoryItemColorEdit1, "repositoryItemColorEdit1");
-            this.repositoryItemColorEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemColorEdit1.Buttons"))))});
-            this.repositoryItemColorEdit1.Name = "repositoryItemColorEdit1";
-            // 
-            // barEditItem4
-            // 
-            resources.ApplyResources(this.barEditItem4, "barEditItem4");
-            this.barEditItem4.Edit = this.repositoryItemImageEdit1;
-            this.barEditItem4.Id = 24;
-            this.barEditItem4.Name = "barEditItem4";
-            // 
-            // repositoryItemImageEdit1
-            // 
-            resources.ApplyResources(this.repositoryItemImageEdit1, "repositoryItemImageEdit1");
-            this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemImageEdit1.Buttons"))))});
-            this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
-            // 
-            // barEditItem5
-            // 
-            resources.ApplyResources(this.barEditItem5, "barEditItem5");
-            this.barEditItem5.Edit = this.repositoryItemPopupGalleryEdit1;
-            this.barEditItem5.Id = 25;
-            this.barEditItem5.Name = "barEditItem5";
-            // 
-            // repositoryItemPopupGalleryEdit1
-            // 
-            resources.ApplyResources(this.repositoryItemPopupGalleryEdit1, "repositoryItemPopupGalleryEdit1");
-            this.repositoryItemPopupGalleryEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemPopupGalleryEdit1.Buttons"))))});
-            this.repositoryItemPopupGalleryEdit1.Name = "repositoryItemPopupGalleryEdit1";
-            // 
-            // barEditItem6
-            // 
-            resources.ApplyResources(this.barEditItem6, "barEditItem6");
-            this.barEditItem6.Edit = this.repositoryItemFontEdit1;
-            this.barEditItem6.Id = 26;
-            this.barEditItem6.Name = "barEditItem6";
-            // 
-            // repositoryItemFontEdit1
-            // 
-            resources.ApplyResources(this.repositoryItemFontEdit1, "repositoryItemFontEdit1");
-            this.repositoryItemFontEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemFontEdit1.Buttons"))))});
-            this.repositoryItemFontEdit1.Name = "repositoryItemFontEdit1";
+            resources.ApplyResources(this.barStaticItem2, "barStaticItem2");
+            this.barStaticItem2.Id = 29;
+            this.barStaticItem2.Name = "barStaticItem2";
+            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // Main
             // 
@@ -567,9 +606,7 @@
             this.Appearance.Options.UseForeColor = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
-            this.Controls.Add(this.ribbonStatusBar1);
+            this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.rbcMenu);
@@ -580,6 +617,11 @@
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rbcMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupGalleryEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -587,11 +629,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupGalleryEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -638,7 +677,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit repositoryItemRichTextEdit1;
-        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraBars.BarButtonItem bbtiDSSDocGia;
@@ -656,6 +694,12 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit repositoryItemPopupGalleryEdit1;
         private DevExpress.XtraBars.BarEditItem barEditItem6;
         private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit repositoryItemFontEdit1;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
     }
 }
 
