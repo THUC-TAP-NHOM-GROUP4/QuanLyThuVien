@@ -11383,10 +11383,10 @@
   <data name="ribbonGalleryBarItem1.Caption" xml:space="preserve">
     <value>ribbonGalleryBarItem1</value>
   </data>
-  <data name="galleryItemGroup1.Caption" xml:space="preserve">
+  <data name="galleryItemGroup3.Caption" xml:space="preserve">
     <value>Group1</value>
   </data>
-  <data name="galleryItemGroup2.Caption" xml:space="preserve">
+  <data name="galleryItemGroup4.Caption" xml:space="preserve">
     <value>Group2</value>
   </data>
   <data name="barDockingMenuItem1.Caption" xml:space="preserve">
@@ -11444,20 +11444,11 @@
   <data name="rbcMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="rbPGHT.Text" xml:space="preserve">
-    <value>Hệ thống</value>
-  </data>
   <data name="rPTrangChu.Text" xml:space="preserve">
     <value>Trang Chủ</value>
   </data>
   <data name="rPQLDG.Text" xml:space="preserve">
     <value>Quản lý độc giả</value>
-  </data>
-  <data name="rPGMuonSach.Text" xml:space="preserve">
-    <value>Mượn sách</value>
-  </data>
-  <data name="rPGTraSach.Text" xml:space="preserve">
-    <value>Trả sách</value>
   </data>
   <data name="rPQLMT.Text" xml:space="preserve">
     <value>Quản lý mượn trả</value>
@@ -11501,6 +11492,15 @@
   <data name="&gt;&gt;rbcMenu.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="rbPGHT.Text" xml:space="preserve">
+    <value>Hệ thống</value>
+  </data>
+  <data name="rPGMuonSach.Text" xml:space="preserve">
+    <value>Mượn sách</value>
+  </data>
+  <data name="rPGTraSach.Text" xml:space="preserve">
+    <value>Trả sách</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -11528,6 +11528,9 @@
   <data name="NBGNoiQuy.Caption" xml:space="preserve">
     <value>Nội Quy</value>
   </data>
+  <data name="nbgHD.Caption" xml:space="preserve">
+    <value>Hướng dẫn sử dụng</value>
+  </data>
   <data name="nvbiQDMS.Caption" xml:space="preserve">
     <value>Quy Định Mượn Sách</value>
   </data>
@@ -11536,9 +11539,6 @@
   </data>
   <data name="nbiQDC.Caption" xml:space="preserve">
     <value>Quy Định Chung</value>
-  </data>
-  <data name="nbgHD.Caption" xml:space="preserve">
-    <value>Hướng dẫn sử dụng</value>
   </data>
   <data name="nbiHDQLDG.Caption" xml:space="preserve">
     <value>Hướng dẫn quản lý độc giả</value>
@@ -11556,7 +11556,7 @@
     <value>207</value>
   </data>
   <data name="navBarControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 356</value>
+    <value>207, 436</value>
   </data>
   <data name="navBarControl1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -11608,7 +11608,7 @@
     <value>5, 0</value>
   </data>
   <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>866, 479</value>
+    <value>842, 473</value>
   </data>
   <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -16479,6 +16479,12 @@
         AMABAADAAQAAwAEAAMABAADAAQAA4AEAAPA/AADgPwAA4B8AAPA/AAD+fwAA
 </value>
   </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1074, 616</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1074, 616</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -16587,6 +16593,84 @@
   </data>
   <data name="&gt;&gt;bbtiDSSDocGia.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonGalleryBarItem1.Name" xml:space="preserve">
+    <value>ribbonGalleryBarItem1</value>
+  </data>
+  <data name="&gt;&gt;ribbonGalleryBarItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.RibbonGalleryBarItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barDockingMenuItem1.Name" xml:space="preserve">
+    <value>barDockingMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;barDockingMenuItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarDockingMenuItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;skinRibbonGalleryBarItem1.Name" xml:space="preserve">
+    <value>skinRibbonGalleryBarItem1</value>
+  </data>
+  <data name="&gt;&gt;skinRibbonGalleryBarItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.SkinRibbonGalleryBarItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEditItem2.Name" xml:space="preserve">
+    <value>barEditItem2</value>
+  </data>
+  <data name="&gt;&gt;barEditItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemColorPickEdit1.Name" xml:space="preserve">
+    <value>repositoryItemColorPickEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemColorPickEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEditItem3.Name" xml:space="preserve">
+    <value>barEditItem3</value>
+  </data>
+  <data name="&gt;&gt;barEditItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemColorEdit1.Name" xml:space="preserve">
+    <value>repositoryItemColorEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemColorEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemColorEdit, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEditItem4.Name" xml:space="preserve">
+    <value>barEditItem4</value>
+  </data>
+  <data name="&gt;&gt;barEditItem4.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemImageEdit1.Name" xml:space="preserve">
+    <value>repositoryItemImageEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemImageEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemImageEdit, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEditItem5.Name" xml:space="preserve">
+    <value>barEditItem5</value>
+  </data>
+  <data name="&gt;&gt;barEditItem5.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPopupGalleryEdit1.Name" xml:space="preserve">
+    <value>repositoryItemPopupGalleryEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemPopupGalleryEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEditItem6.Name" xml:space="preserve">
+    <value>barEditItem6</value>
+  </data>
+  <data name="&gt;&gt;barEditItem6.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemFontEdit1.Name" xml:space="preserve">
+    <value>repositoryItemFontEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemFontEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemFontEdit, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;rPTrangChu.Name" xml:space="preserve">
     <value>rPTrangChu</value>
@@ -16713,84 +16797,6 @@
   </data>
   <data name="&gt;&gt;bbiDSDG.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonGalleryBarItem1.Name" xml:space="preserve">
-    <value>ribbonGalleryBarItem1</value>
-  </data>
-  <data name="&gt;&gt;ribbonGalleryBarItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.RibbonGalleryBarItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barDockingMenuItem1.Name" xml:space="preserve">
-    <value>barDockingMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;barDockingMenuItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarDockingMenuItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;skinRibbonGalleryBarItem1.Name" xml:space="preserve">
-    <value>skinRibbonGalleryBarItem1</value>
-  </data>
-  <data name="&gt;&gt;skinRibbonGalleryBarItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.SkinRibbonGalleryBarItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barEditItem2.Name" xml:space="preserve">
-    <value>barEditItem2</value>
-  </data>
-  <data name="&gt;&gt;barEditItem2.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemColorPickEdit1.Name" xml:space="preserve">
-    <value>repositoryItemColorPickEdit1</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemColorPickEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemColorPickEdit, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barEditItem3.Name" xml:space="preserve">
-    <value>barEditItem3</value>
-  </data>
-  <data name="&gt;&gt;barEditItem3.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemColorEdit1.Name" xml:space="preserve">
-    <value>repositoryItemColorEdit1</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemColorEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemColorEdit, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barEditItem4.Name" xml:space="preserve">
-    <value>barEditItem4</value>
-  </data>
-  <data name="&gt;&gt;barEditItem4.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemImageEdit1.Name" xml:space="preserve">
-    <value>repositoryItemImageEdit1</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemImageEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemImageEdit, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barEditItem5.Name" xml:space="preserve">
-    <value>barEditItem5</value>
-  </data>
-  <data name="&gt;&gt;barEditItem5.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemPopupGalleryEdit1.Name" xml:space="preserve">
-    <value>repositoryItemPopupGalleryEdit1</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemPopupGalleryEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;barEditItem6.Name" xml:space="preserve">
-    <value>barEditItem6</value>
-  </data>
-  <data name="&gt;&gt;barEditItem6.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemFontEdit1.Name" xml:space="preserve">
-    <value>repositoryItemFontEdit1</value>
-  </data>
-  <data name="&gt;&gt;repositoryItemFontEdit1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.Repository.RepositoryItemFontEdit, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Main</value>

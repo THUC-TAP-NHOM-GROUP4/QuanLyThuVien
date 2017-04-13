@@ -57,6 +57,7 @@
             this.ssbtnTimkiemDG.Size = new System.Drawing.Size(103, 44);
             this.ssbtnTimkiemDG.TabIndex = 10;
             this.ssbtnTimkiemDG.Text = "Tìm Kiếm";
+            this.ssbtnTimkiemDG.Click += new System.EventHandler(this.ssbtnTimkiemDG_Click);
             // 
             // sbtnXoaDG
             // 

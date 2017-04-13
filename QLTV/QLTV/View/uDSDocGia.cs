@@ -16,5 +16,10 @@ namespace QLTV
         {
             InitializeComponent();
         }
+
+        private void ssbtnTimkiemDG_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

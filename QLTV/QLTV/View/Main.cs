@@ -116,5 +116,10 @@ namespace QLTV
 
 
         }
+
+        private void bbiXoaDS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

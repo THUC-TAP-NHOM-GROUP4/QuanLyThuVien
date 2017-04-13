@@ -16,5 +16,10 @@ namespace QLTV
         {
             InitializeComponent();
         }
+
+        private void sbtnXoaDS_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
