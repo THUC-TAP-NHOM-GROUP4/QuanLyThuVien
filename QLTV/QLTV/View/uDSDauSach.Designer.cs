@@ -81,6 +81,7 @@
             this.sbtnXoaDS.Size = new System.Drawing.Size(103, 44);
             this.sbtnXoaDS.TabIndex = 3;
             this.sbtnXoaDS.Text = "Xóa";
+            this.sbtnXoaDS.Click += new System.EventHandler(this.sbtnXoaDS_Click);
             // 
             // ssbtnTimkiemDS
             // 
@@ -90,6 +91,7 @@
             this.ssbtnTimkiemDS.Size = new System.Drawing.Size(103, 44);
             this.ssbtnTimkiemDS.TabIndex = 4;
             this.ssbtnTimkiemDS.Text = "Tìm Kiếm";
+            this.ssbtnTimkiemDS.Click += new System.EventHandler(this.ssbtnTimkiemDS_Click);
             // 
             // labelControl1
             // 
@@ -113,6 +115,7 @@
             this.Controls.Add(this.grcDSDauSach);
             this.Name = "uDSDauSach";
             this.Size = new System.Drawing.Size(896, 479);
+            this.Load += new System.EventHandler(this.uDSDauSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcDSDauSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

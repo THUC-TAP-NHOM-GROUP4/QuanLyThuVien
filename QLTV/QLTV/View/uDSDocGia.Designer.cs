@@ -57,6 +57,7 @@
             this.ssbtnTimkiemDG.Size = new System.Drawing.Size(103, 44);
             this.ssbtnTimkiemDG.TabIndex = 10;
             this.ssbtnTimkiemDG.Text = "Tìm Kiếm";
+            this.ssbtnTimkiemDG.Click += new System.EventHandler(this.ssbtnTimkiemDG_Click);
             // 
             // sbtnXoaDG
             // 
@@ -113,6 +114,7 @@
             this.Controls.Add(this.grcDSDocGia);
             this.Name = "uDSDocGia";
             this.Size = new System.Drawing.Size(896, 479);
+            this.Load += new System.EventHandler(this.uDSDocGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcDSDocGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
