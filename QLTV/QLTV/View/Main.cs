@@ -23,14 +23,23 @@ namespace QLTV
           
 
         }
-        
+        public void Skins()
+        {
+            DevExpress.UserSkins.BonusSkins.Register();
+
+            DevExpress.UserSkins.OfficeSkins.Register();
+
+            DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(skinRibbonGalleryBarItem2, true);
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
-        //    foreach (Control child in this.Controls)
-        //    {
-        //        if (child.Name!="bbiDN")
-        //            child.IsEnabled = false;
-        //    }
+            Skins();
+            //    foreach (Control child in this.Controls)
+            //    {
+            //        if (child.Name!="bbiDN")
+            //            child.IsEnabled = false;
+            //    }
         }
 
 
