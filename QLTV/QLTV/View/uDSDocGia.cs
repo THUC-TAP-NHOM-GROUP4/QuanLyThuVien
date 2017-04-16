@@ -34,7 +34,7 @@ namespace QLTV
             listDocGia = controller.getListDocGia();
             grcDSDocGia.DataSource = listDocGia;
 
-
+        
             
         }
     }

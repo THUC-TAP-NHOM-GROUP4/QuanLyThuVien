@@ -19,9 +19,9 @@ namespace QLTV.Controller
         public List<DocGia> getListDocGia()
         {
             List<DocGia> listDocGia = new List<DocGia>();
-            DataTable table = dataAcess.Query("select nv.ma, nv.ten, "
-                + " nv.gioitinh, nv.ngaysinh, nv.dienthoai, nv.diachi, nv.email, nv.matkhau, nv.quyenhan "
-                + " from NhanVien nv");
+            DataTable table = dataAcess.Query("select dg.ma, dg.ten, dg.ngaysinh, dg.gioitinh, "
+                + " dg.diachi, dg.ngaylamthe, dg.ngayhethan, dg.hoatdong from docgia dg ");
+               
             int n = table.Rows.Count;
             int i;
             if (n == 0) return null;
@@ -60,9 +60,33 @@ namespace QLTV.Controller
         }
         public DocGia getDocGia(DataRow row)
         {
+            //select dg.ma, dg.ten, dg.ngaysinh, dg.gioitinh, 
+            //dg.diachi, dg.ngaylamthe, dg.ngayhethan, dg.hoatdong from docgia dg
             DocGia docgia = new DocGia();
-
-
+            docgia.ma = row["ma"].ToString().Trim();
+            docgia.ten = row["ten"].ToString().Trim();
+            DateTime datetime = new DateTime();
+            if (DateTime.TryParse(row["ngaysinh"].ToString().Trim(), out datetime))
+            {
+                docgia.ngaysinh = datetime;
+            }
+            if (row["gioitinh"].ToString().Trim().Equals("1"))
+            {
+                docgia.gioitinh = true;
+            }
+           
+            if (DateTime.TryParse(row["ngaylamthe"].ToString().Trim(), out datetime))
+            {
+                docgia.ngaylamthe = datetime;
+            }
+            if (DateTime.TryParse(row["ngayhethan"].ToString().Trim(), out datetime))
+            {
+                docgia.ngayhethan = datetime;
+            }
+            if (row["hoatdong"].ToString().Trim().Equals("1"))
+            {
+                docgia.hoatdong = true;
+            }
             return docgia;
         }
     }
