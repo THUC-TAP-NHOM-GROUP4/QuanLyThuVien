@@ -37,5 +37,10 @@ namespace QLTV
         
             
         }
+
+        private void grcDSDocGia_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
