@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.rbcMenu = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiDSDS = new DevExpress.XtraBars.BarButtonItem();
             this.bbiThemDG = new DevExpress.XtraBars.BarButtonItem();
@@ -71,11 +71,11 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rPQLDG = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rPGDG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rPQLDS = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rPGDS = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rPQLMT = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rPGMuonSach = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rPGTraSach = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rPQLDS = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rPGDS = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rPTaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.rbpgTK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -293,11 +293,11 @@
             // 
             // 
             // 
-            resources.ApplyResources(galleryItemGroup1, "galleryItemGroup1");
-            resources.ApplyResources(galleryItemGroup2, "galleryItemGroup2");
+            resources.ApplyResources(galleryItemGroup3, "galleryItemGroup3");
+            resources.ApplyResources(galleryItemGroup4, "galleryItemGroup4");
             this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1,
-            galleryItemGroup2});
+            galleryItemGroup3,
+            galleryItemGroup4});
             this.ribbonGalleryBarItem1.Id = 19;
             this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
             // 
@@ -440,6 +440,22 @@
             this.rPGDG.ItemLinks.Add(this.bbtiDSSDocGia);
             this.rPGDG.Name = "rPGDG";
             // 
+            // rPQLDS
+            // 
+            this.rPQLDS.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rPGDS});
+            this.rPQLDS.Name = "rPQLDS";
+            resources.ApplyResources(this.rPQLDS, "rPQLDS");
+            // 
+            // rPGDS
+            // 
+            this.rPGDS.ItemLinks.Add(this.bbiThemDS);
+            this.rPGDS.ItemLinks.Add(this.bbiSuaDS);
+            this.rPGDS.ItemLinks.Add(this.bbiXoaDS);
+            this.rPGDS.ItemLinks.Add(this.bbiTimKiem);
+            this.rPGDS.ItemLinks.Add(this.bbiDSDS);
+            this.rPGDS.Name = "rPGDS";
+            // 
             // rPQLMT
             // 
             this.rPQLMT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -457,22 +473,6 @@
             // 
             this.rPGTraSach.Name = "rPGTraSach";
             resources.ApplyResources(this.rPGTraSach, "rPGTraSach");
-            // 
-            // rPQLDS
-            // 
-            this.rPQLDS.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rPGDS});
-            this.rPQLDS.Name = "rPQLDS";
-            resources.ApplyResources(this.rPQLDS, "rPQLDS");
-            // 
-            // rPGDS
-            // 
-            this.rPGDS.ItemLinks.Add(this.bbiThemDS);
-            this.rPGDS.ItemLinks.Add(this.bbiSuaDS);
-            this.rPGDS.ItemLinks.Add(this.bbiXoaDS);
-            this.rPGDS.ItemLinks.Add(this.bbiTimKiem);
-            this.rPGDS.ItemLinks.Add(this.bbiDSDS);
-            this.rPGDS.Name = "rPGDS";
             // 
             // rPTaiKhoan
             // 

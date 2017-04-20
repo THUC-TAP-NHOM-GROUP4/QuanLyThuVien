@@ -52,7 +52,7 @@
             // ssbtnTimkiemDG
             // 
             this.ssbtnTimkiemDG.Image = ((System.Drawing.Image)(resources.GetObject("ssbtnTimkiemDG.Image")));
-            this.ssbtnTimkiemDG.Location = new System.Drawing.Point(789, 408);
+            this.ssbtnTimkiemDG.Location = new System.Drawing.Point(783, 408);
             this.ssbtnTimkiemDG.Name = "ssbtnTimkiemDG";
             this.ssbtnTimkiemDG.Size = new System.Drawing.Size(103, 44);
             this.ssbtnTimkiemDG.TabIndex = 10;
@@ -62,7 +62,7 @@
             // sbtnXoaDG
             // 
             this.sbtnXoaDG.Image = ((System.Drawing.Image)(resources.GetObject("sbtnXoaDG.Image")));
-            this.sbtnXoaDG.Location = new System.Drawing.Point(685, 408);
+            this.sbtnXoaDG.Location = new System.Drawing.Point(679, 408);
             this.sbtnXoaDG.Name = "sbtnXoaDG";
             this.sbtnXoaDG.Size = new System.Drawing.Size(103, 44);
             this.sbtnXoaDG.TabIndex = 9;
@@ -71,7 +71,7 @@
             // sbtnSuaDG
             // 
             this.sbtnSuaDG.Image = ((System.Drawing.Image)(resources.GetObject("sbtnSuaDG.Image")));
-            this.sbtnSuaDG.Location = new System.Drawing.Point(581, 408);
+            this.sbtnSuaDG.Location = new System.Drawing.Point(575, 408);
             this.sbtnSuaDG.Name = "sbtnSuaDG";
             this.sbtnSuaDG.Size = new System.Drawing.Size(103, 44);
             this.sbtnSuaDG.TabIndex = 8;
@@ -80,7 +80,7 @@
             // ssbtnThemDG
             // 
             this.ssbtnThemDG.Image = ((System.Drawing.Image)(resources.GetObject("ssbtnThemDG.Image")));
-            this.ssbtnThemDG.Location = new System.Drawing.Point(477, 408);
+            this.ssbtnThemDG.Location = new System.Drawing.Point(471, 408);
             this.ssbtnThemDG.Name = "ssbtnThemDG";
             this.ssbtnThemDG.Size = new System.Drawing.Size(103, 44);
             this.ssbtnThemDG.TabIndex = 7;
@@ -91,10 +91,11 @@
             this.grcDSDocGia.Location = new System.Drawing.Point(3, 34);
             this.grcDSDocGia.MainView = this.gridView1;
             this.grcDSDocGia.Name = "grcDSDocGia";
-            this.grcDSDocGia.Size = new System.Drawing.Size(890, 368);
+            this.grcDSDocGia.Size = new System.Drawing.Size(883, 368);
             this.grcDSDocGia.TabIndex = 6;
             this.grcDSDocGia.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grcDSDocGia.Click += new System.EventHandler(this.grcDSDocGia_Click);
             // 
             // gridView1
             // 
@@ -113,7 +114,7 @@
             this.Controls.Add(this.ssbtnThemDG);
             this.Controls.Add(this.grcDSDocGia);
             this.Name = "uDSDocGia";
-            this.Size = new System.Drawing.Size(896, 479);
+            this.Size = new System.Drawing.Size(889, 473);
             this.Load += new System.EventHandler(this.uDSDocGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcDSDocGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
