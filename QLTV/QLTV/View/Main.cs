@@ -19,7 +19,6 @@ namespace QLTV
         {
             InitializeComponent();
             tabstatic = xtraTabControl1;
-           
           
 
         }

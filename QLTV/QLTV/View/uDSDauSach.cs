@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLTV.Controller;
 using QLTV.Model;
+using QLTV.View;
 
 namespace QLTV
 {
@@ -17,6 +18,7 @@ namespace QLTV
         private Controllers controller;
         List<DocGia> listDocGia;
         List<Sach> listSach;
+        AddBook ab;
         public uDSDauSach()
         {
             InitializeComponent();
@@ -43,6 +45,13 @@ namespace QLTV
 
         }
 
-      
+        private void ssbtnThemDS_Click(object sender, EventArgs e)
+        {
+            ab = new AddBook();
+            ab.ShowDialog();
+            listSach = controller.getListSach();
+            grcDSDauSach.DataSource = listSach;
+
+        }
     }
 }

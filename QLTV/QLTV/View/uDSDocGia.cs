@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLTV.Controller;
 using QLTV.Model;
-
+using QLTV.View;
 namespace QLTV
 {
     public partial class uDSDocGia : UserControl
     {
         private Controllers controller;
         private List<DocGia> listDocGia;
-
+        AddReader ar = new AddReader();
         public uDSDocGia()
         {
             InitializeComponent();
@@ -41,6 +41,13 @@ namespace QLTV
         private void grcDSDocGia_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ssbtnThemDG_Click(object sender, EventArgs e)
+        {
+            ar.ShowDialog();
+            listDocGia = controller.getListDocGia();
+            grcDSDocGia.DataSource = listDocGia;
         }
     }
 }

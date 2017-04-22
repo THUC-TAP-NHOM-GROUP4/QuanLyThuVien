@@ -63,6 +63,7 @@
             this.ssbtnThemDS.Size = new System.Drawing.Size(103, 44);
             this.ssbtnThemDS.TabIndex = 1;
             this.ssbtnThemDS.Text = "Thêm";
+            this.ssbtnThemDS.Click += new System.EventHandler(this.ssbtnThemDS_Click);
             // 
             // sbtnSuaDS
             // 
