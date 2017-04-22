@@ -85,6 +85,7 @@
             this.ssbtnThemDG.Size = new System.Drawing.Size(103, 44);
             this.ssbtnThemDG.TabIndex = 7;
             this.ssbtnThemDG.Text = "Thêm";
+            this.ssbtnThemDG.Click += new System.EventHandler(this.ssbtnThemDG_Click);
             // 
             // grcDSDocGia
             // 

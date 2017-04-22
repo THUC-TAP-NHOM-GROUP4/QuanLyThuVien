@@ -1,5 +1,61 @@
 ﻿create database TTN_QLTV
 
+
+create function auto_maDocGia() returns varchar(6)
+as
+begin
+declare @ma varchar(6)
+if(select count(ma) from DocGia)=0
+set @ma='0'
+else 
+select @ma=max(right(ma,4)) from DocGia
+set @ma=case
+when 
+@ma>=0 and @ma<9 then 'DG000'+CONVERT(char,convert(int,@ma)+1)
+when @ma>=9 and @ma<99 then 'DG00'+CONVERT(char,convert(int,@ma)+1)
+when @ma>=99 and @ma<999 then 'DG0'+CONVERT(char,convert(int,@ma)+1)
+end
+return 
+@ma
+end
+exec procedure_insertDocGia 'NL','2017-1-1',1,'','2017-1-1','2017-1-1',1
+create proc procedure_insertDocGia(@ten nvarchar(30),@ngaysinh date,@gioitinh bit,@diachi nvarchar(50),@ngaylamthe date,@ngayhethan date,@hoatdong bit)
+as
+begin
+insert into DocGia(ma,ten,ngaysinh,gioitinh,diachi,ngaylamthe,ngayhethan,hoatdong)
+values(dbo.auto_maDocGia(),@ten,@ngaysinh ,@gioitinh,@diachi,@ngaylamthe ,@ngayhethan,@hoatdong)
+end
+
+
+
+create function auto_maSach() returns varchar(6)
+as
+begin
+declare @ma varchar(6)
+if(select count(ma) from Sach)=0
+set @ma='0'
+else 
+select @ma=max(right(ma,4)) from Sach
+set @ma=case
+when 
+@ma>=0 and @ma<9 then 'S0000'+CONVERT(char,convert(int,@ma)+1)
+when @ma>=9 and @ma<99 then 'S000'+CONVERT(char,convert(int,@ma)+1)
+when @ma>=99 and @ma<999 then 'S00'+CONVERT(char,convert(int,@ma)+1)
+end
+return 
+@ma
+end
+
+
+create proc procedure_insertSach(@ten nvarchar(30),@noidungtomtat nvarchar(200),@sotrang int,@gia bigint,@soluong int,@nhaxuatbanma varchar(20),@tacgiama varchar(20),@theloaima varchar(20),@tinhtrang bit)
+as
+begin
+insert into Sach(ma,ten,noidungtomtat,sotrang,gia,soluong,ngaynhap,NXBma,TacGiama,TheLoaima,tinhtrang)
+values(dbo.auto_maSach(),@ten,@noidungtomtat,@sotrang,@gia,@soluong,GETDATE(),@nhaxuatbanma,@tacgiama,@theloaima,@tinhtrang)
+end
+
+
+
 create table TacGia(
 ma varchar(20) primary key not null,
 ten nvarchar(30)
