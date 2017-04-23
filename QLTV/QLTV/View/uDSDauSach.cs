@@ -37,7 +37,18 @@ namespace QLTV
 
         private void sbtnXoaDS_Click(object sender, EventArgs e)
         {
-            
+            Sach sach = new Sach();
+            sach.ma = grvSach.GetFocusedRowCellValue("ma").ToString();
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn xóa ?" + sach.ma , "Xóa sách", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                controller.deleteSach(sach.ma);
+                uDSDauSach_Load(sender, e);
+            }
+            else
+            {
+                uDSDauSach_Load(sender, e);
+            }
         }
 
         private void ssbtnTimkiemDS_Click(object sender, EventArgs e)

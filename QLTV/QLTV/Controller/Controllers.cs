@@ -140,5 +140,14 @@ namespace QLTV.Controller
             dataAcess.Query("deleteDocGia", para);
             return true;
         }
+        public bool deleteSach(String ma)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("ma", ma),
+            };
+            dataAcess.Query("deleteSach", para);
+            return true;
+        }
     }
 }

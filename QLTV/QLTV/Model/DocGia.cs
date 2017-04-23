@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLTV.Model
 {
-    class DocGia
+    public class DocGia
     {
         public string ma { get; set; }
         public string ten { get; set; }
