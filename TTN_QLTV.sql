@@ -111,6 +111,7 @@ TheLoaima varchar(20) not null,
 foreign key (TheLoaima) references TheLoai(ma),
 tinhtrang bit not null
 )
+
 create table PhieuMuon
 (
 ma varchar(20) primary key not null,
@@ -119,15 +120,8 @@ foreign key(DocGiama) references DocGia(ma),
 ngaymuon date not null,
 Sachma varchar(20) not null,
 foreign key(Sachma) references Sach(ma),
-hantra date not null
-
-)
-create table PhieuTra(
-ma varchar(20) primary key not null,
-Sachma varchar(20) not null,
-foreign key(Sachma) references Sach(ma),
-NhanVienma varchar(20) not null,
-foreign key(NhanVienma) references NhanVien(ma),
+NhanVienma varchar(20) not null foreign key(NhanVienma) references NhanVien(ma),
+hantra date not null,
 ngaytra date not null,
 phathong bigint,
 phatquahan bigint,
@@ -225,11 +219,9 @@ insert into NhanVien values('NV0010',N'Nguyễn Thị Gấm',0,'1979-2-11','0123
 
 select *from PhieuMuon
 
-insert into PhieuMuon values('PM00001','DG0001','2016-8-20','S00001','2017-7-7')
-insert into PhieuMuon values('PM00002','DG0002','2016-8-20','S00002','2017-7-7')
-insert into PhieuMuon values('PM00003','DG0003','2016-8-20','S00003','2017-7-7')
-insert into PhieuMuon values('PM00004','DG0004','2016-8-20','S00004','2017-7-7')
-insert into PhieuMuon values('PM00005','DG0005','2016-8-20','S00005','2017-7-7')
+insert into PhieuMuon values('PM00001','DG0001','2016-8-20','S00001','NV0001','2017-7-7','2017-7-1',0,0,0)
+insert into PhieuMuon values('PM00002','DG0002','2016-8-20','S00002','NV0001','2017-7-7','2017-7-1',0,0,0)
+insert into PhieuMuon values('PM00003','DG0003','2016-8-20','S00003','NV0001','2017-7-7','2017-7-1',0,0,0)
+insert into PhieuMuon values('PM00004','DG0004','2016-8-20','S00004','NV0001','2017-7-7','2017-7-1',0,0,0)
+insert into PhieuMuon values('PM00005','DG0005','2016-8-20','S00005','NV0001','2017-7-7','2017-7-1',0,0,0)
 
-SELECT *FROM PhieuTra
-insert into PhieuTra(ma,Sachma,NhanVienma,ngaytra) values('PT0001','S00005','NV0001','2017-4-1')
