@@ -30,30 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uDSDauSach));
             this.grcDSDauSach = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grvSach = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ssbtnThemDS = new DevExpress.XtraEditors.SimpleButton();
             this.sbtnSuaDS = new DevExpress.XtraEditors.SimpleButton();
             this.sbtnXoaDS = new DevExpress.XtraEditors.SimpleButton();
             this.ssbtnTimkiemDS = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grcDSDauSach)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvSach)).BeginInit();
             this.SuspendLayout();
             // 
             // grcDSDauSach
             // 
             this.grcDSDauSach.Location = new System.Drawing.Point(0, 29);
-            this.grcDSDauSach.MainView = this.gridView1;
+            this.grcDSDauSach.MainView = this.grvSach;
             this.grcDSDauSach.Name = "grcDSDauSach";
             this.grcDSDauSach.Size = new System.Drawing.Size(886, 373);
             this.grcDSDauSach.TabIndex = 0;
             this.grcDSDauSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.grvSach});
             // 
-            // gridView1
+            // grvSach
             // 
-            this.gridView1.GridControl = this.grcDSDauSach;
-            this.gridView1.Name = "gridView1";
+            this.grvSach.GridControl = this.grcDSDauSach;
+            this.grvSach.Name = "grvSach";
             // 
             // ssbtnThemDS
             // 
@@ -118,7 +118,7 @@
             this.Size = new System.Drawing.Size(889, 473);
             this.Load += new System.EventHandler(this.uDSDauSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcDSDauSach)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvSach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +127,7 @@
         #endregion
 
         private DevExpress.XtraGrid.GridControl grcDSDauSach;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvSach;
         private DevExpress.XtraEditors.SimpleButton ssbtnThemDS;
         private DevExpress.XtraEditors.SimpleButton sbtnSuaDS;
         private DevExpress.XtraEditors.SimpleButton sbtnXoaDS;

@@ -130,5 +130,15 @@ namespace QLTV.Controller
             dataAcess.Query("procedure_insertDocGia", para);
             return true;
         }
+
+        public bool deleteDocGia(String ma)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("ma", ma),
+            };
+            dataAcess.Query("deleteDocGia", para);
+            return true;
+        }
     }
 }

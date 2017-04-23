@@ -35,9 +35,9 @@
             this.sbtnSuaDG = new DevExpress.XtraEditors.SimpleButton();
             this.ssbtnThemDG = new DevExpress.XtraEditors.SimpleButton();
             this.grcDSDocGia = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grvDocGia = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.grcDSDocGia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvDocGia)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -67,6 +67,7 @@
             this.sbtnXoaDG.Size = new System.Drawing.Size(103, 44);
             this.sbtnXoaDG.TabIndex = 9;
             this.sbtnXoaDG.Text = "Xóa";
+            this.sbtnXoaDG.Click += new System.EventHandler(this.sbtnXoaDG_Click);
             // 
             // sbtnSuaDG
             // 
@@ -90,18 +91,18 @@
             // grcDSDocGia
             // 
             this.grcDSDocGia.Location = new System.Drawing.Point(3, 34);
-            this.grcDSDocGia.MainView = this.gridView1;
+            this.grcDSDocGia.MainView = this.grvDocGia;
             this.grcDSDocGia.Name = "grcDSDocGia";
             this.grcDSDocGia.Size = new System.Drawing.Size(883, 368);
             this.grcDSDocGia.TabIndex = 6;
             this.grcDSDocGia.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.grvDocGia});
             this.grcDSDocGia.Click += new System.EventHandler(this.grcDSDocGia_Click);
             // 
-            // gridView1
+            // grvDocGia
             // 
-            this.gridView1.GridControl = this.grcDSDocGia;
-            this.gridView1.Name = "gridView1";
+            this.grvDocGia.GridControl = this.grcDSDocGia;
+            this.grvDocGia.Name = "grvDocGia";
             // 
             // uDSDocGia
             // 
@@ -118,7 +119,7 @@
             this.Size = new System.Drawing.Size(889, 473);
             this.Load += new System.EventHandler(this.uDSDocGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcDSDocGia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvDocGia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,6 +133,6 @@
         private DevExpress.XtraEditors.SimpleButton sbtnSuaDG;
         private DevExpress.XtraEditors.SimpleButton ssbtnThemDG;
         private DevExpress.XtraGrid.GridControl grcDSDocGia;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvDocGia;
     }
 }

@@ -33,9 +33,7 @@ namespace QLTV
         {
             listDocGia = controller.getListDocGia();
             grcDSDocGia.DataSource = listDocGia;
-
-        
-            
+   
         }
 
         private void grcDSDocGia_Click(object sender, EventArgs e)
@@ -48,6 +46,22 @@ namespace QLTV
             ar.ShowDialog();
             listDocGia = controller.getListDocGia();
             grcDSDocGia.DataSource = listDocGia;
+        }
+
+        private void sbtnXoaDG_Click(object sender, EventArgs e)
+        {
+            DocGia docgia = new DocGia();
+            docgia.ma = grvDocGia.GetFocusedRowCellValue("ma").ToString();
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn xóa ?" + docgia.ma , "Xóa độc giả", MessageBoxButtons.OKCancel);
+            if(result == DialogResult.OK)
+            {
+                controller.deleteDocGia(docgia.ma);
+                uDSDocGia_Load(sender, e);
+            }
+            else
+            {
+                uDSDocGia_Load(sender, e);
+            }
         }
     }
 }

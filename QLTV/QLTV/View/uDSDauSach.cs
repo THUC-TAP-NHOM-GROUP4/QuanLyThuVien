@@ -37,7 +37,7 @@ namespace QLTV
 
         private void sbtnXoaDS_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void ssbtnTimkiemDS_Click(object sender, EventArgs e)
