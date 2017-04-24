@@ -122,7 +122,7 @@ Sachma varchar(20) not null,
 foreign key(Sachma) references Sach(ma),
 NhanVienma varchar(20) not null foreign key(NhanVienma) references NhanVien(ma),
 hantra date not null,
-ngaytra date not null,
+ngaytra date ,
 phathong bigint,
 phatquahan bigint,
 phatmat bigint
