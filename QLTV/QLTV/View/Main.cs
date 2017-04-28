@@ -95,10 +95,7 @@ namespace QLTV
             ds.Dock = DockStyle.Fill;
             ds.Show();
             xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabDSDauSach.Text)];
-
-          
-
-                
+      
         }
 
         private void bbiDN_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -128,6 +125,11 @@ namespace QLTV
         private void bbiXoaDS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
+        }
+
+        private void nvbiQDMS_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            MessageBox.Show("AHIHI");
         }
     }
 }

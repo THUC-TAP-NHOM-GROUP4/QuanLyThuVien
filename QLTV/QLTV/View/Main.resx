@@ -11383,10 +11383,10 @@
   <data name="ribbonGalleryBarItem1.Caption" xml:space="preserve">
     <value>ribbonGalleryBarItem1</value>
   </data>
-  <data name="galleryItemGroup3.Caption" xml:space="preserve">
+  <data name="galleryItemGroup1.Caption" xml:space="preserve">
     <value>Group1</value>
   </data>
-  <data name="galleryItemGroup4.Caption" xml:space="preserve">
+  <data name="galleryItemGroup2.Caption" xml:space="preserve">
     <value>Group2</value>
   </data>
   <data name="barDockingMenuItem1.Caption" xml:space="preserve">
@@ -11453,6 +11453,12 @@
   <data name="rbcMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="rbPGHT.Text" xml:space="preserve">
+    <value>Hệ thống</value>
+  </data>
+  <data name="ribbonPageGroup1.Text" xml:space="preserve">
+    <value>Chọn giao diện</value>
+  </data>
   <data name="rPTrangChu.Text" xml:space="preserve">
     <value>Trang Chủ</value>
   </data>
@@ -11461,6 +11467,12 @@
   </data>
   <data name="rPQLDS.Text" xml:space="preserve">
     <value>Quản lý đầu sách</value>
+  </data>
+  <data name="rPGMuonSach.Text" xml:space="preserve">
+    <value>Mượn sách</value>
+  </data>
+  <data name="rPGTraSach.Text" xml:space="preserve">
+    <value>Trả sách</value>
   </data>
   <data name="rPQLMT.Text" xml:space="preserve">
     <value>Quản lý mượn trả</value>
@@ -11501,18 +11513,6 @@
   <data name="&gt;&gt;rbcMenu.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="rbPGHT.Text" xml:space="preserve">
-    <value>Hệ thống</value>
-  </data>
-  <data name="ribbonPageGroup1.Text" xml:space="preserve">
-    <value>Chọn giao diện</value>
-  </data>
-  <data name="rPGMuonSach.Text" xml:space="preserve">
-    <value>Mượn sách</value>
-  </data>
-  <data name="rPGTraSach.Text" xml:space="preserve">
-    <value>Trả sách</value>
-  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -11540,9 +11540,6 @@
   <data name="NBGNoiQuy.Caption" xml:space="preserve">
     <value>Nội Quy</value>
   </data>
-  <data name="nbgHD.Caption" xml:space="preserve">
-    <value>Hướng dẫn sử dụng</value>
-  </data>
   <data name="nvbiQDMS.Caption" xml:space="preserve">
     <value>Quy Định Mượn Sách</value>
   </data>
@@ -11551,6 +11548,9 @@
   </data>
   <data name="nbiQDC.Caption" xml:space="preserve">
     <value>Quy Định Chung</value>
+  </data>
+  <data name="nbgHD.Caption" xml:space="preserve">
+    <value>Hướng dẫn sử dụng</value>
   </data>
   <data name="nbiHDQLDG.Caption" xml:space="preserve">
     <value>Hướng dẫn quản lý độc giả</value>
