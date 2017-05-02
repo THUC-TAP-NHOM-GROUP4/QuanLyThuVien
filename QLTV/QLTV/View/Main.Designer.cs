@@ -194,6 +194,7 @@
             this.bbiXoaDG.Id = 5;
             this.bbiXoaDG.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiXoaDG.LargeGlyph")));
             this.bbiXoaDG.Name = "bbiXoaDG";
+            this.bbiXoaDG.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiXoaDG_ItemClick);
             // 
             // bbiTimKiemDG
             // 
@@ -201,6 +202,7 @@
             this.bbiTimKiemDG.Id = 6;
             this.bbiTimKiemDG.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiTimKiemDG.LargeGlyph")));
             this.bbiTimKiemDG.Name = "bbiTimKiemDG";
+            this.bbiTimKiemDG.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiTimKiemDG_ItemClick);
             // 
             // bbiThemDS
             // 
@@ -208,6 +210,7 @@
             this.bbiThemDS.Id = 7;
             this.bbiThemDS.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiThemDS.LargeGlyph")));
             this.bbiThemDS.Name = "bbiThemDS";
+            this.bbiThemDS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiThemDS_ItemClick);
             // 
             // bbiSuaDS
             // 
@@ -534,11 +537,13 @@
             // 
             resources.ApplyResources(this.nbiQDTS, "nbiQDTS");
             this.nbiQDTS.Name = "nbiQDTS";
+            this.nbiQDTS.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiQDTS_LinkClicked);
             // 
             // nbiQDC
             // 
             resources.ApplyResources(this.nbiQDC, "nbiQDC");
             this.nbiQDC.Name = "nbiQDC";
+            this.nbiQDC.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiQDC_LinkClicked);
             // 
             // nbgHD
             // 

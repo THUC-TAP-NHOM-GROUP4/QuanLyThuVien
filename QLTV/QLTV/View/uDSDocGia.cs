@@ -48,7 +48,7 @@ namespace QLTV
             grcDSDocGia.DataSource = listDocGia;
         }
 
-        private void sbtnXoaDG_Click(object sender, EventArgs e)
+        public void sbtnXoaDG_Click(object sender, EventArgs e)
         {
             DocGia docgia = new DocGia();
             docgia.ma = grvDocGia.GetFocusedRowCellValue("ma").ToString();

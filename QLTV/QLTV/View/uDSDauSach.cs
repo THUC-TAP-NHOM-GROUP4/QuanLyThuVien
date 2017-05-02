@@ -35,7 +35,7 @@ namespace QLTV
            
         }
 
-        private void sbtnXoaDS_Click(object sender, EventArgs e)
+        public void sbtnXoaDS_Click(object sender, EventArgs e)
         {
             Sach sach = new Sach();
             sach.ma = grvSach.GetFocusedRowCellValue("ma").ToString();

@@ -146,7 +146,7 @@ namespace QLTV.Controller
             {
                 new SqlParameter("ma", ma),
             };
-            dataAcess.Query("deleteSach", para);
+            dataAcess.Query("procedure_deleteSach", para);
             return true;
         }
     }

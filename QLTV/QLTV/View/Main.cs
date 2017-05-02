@@ -124,12 +124,37 @@ namespace QLTV
 
         private void bbiXoaDS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            (new uDSDauSach()).sbtnXoaDS_Click(sender, e);
         }
 
         private void nvbiQDMS_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            MessageBox.Show("AHIHI");
+            MessageBox.Show("quy dinh muon sach");
+        }
+
+        private void nbiQDTS_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            MessageBox.Show("quy dinh tra sach");
+        }
+
+        private void nbiQDC_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            MessageBox.Show("quy dinh chung");
+        }
+
+        private void bbiXoaDG_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new uDSDocGia()).sbtnXoaDG_Click(sender, e);
+        }
+
+        private void bbiTimKiemDG_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bbiThemDS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }
