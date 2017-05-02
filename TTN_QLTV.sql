@@ -225,3 +225,46 @@ insert into PhieuMuon values('PM00003','DG0003','2016-8-20','S00003','NV0001','2
 insert into PhieuMuon values('PM00004','DG0004','2016-8-20','S00004','NV0001','2017-7-7','2017-7-1',0,0,0)
 insert into PhieuMuon values('PM00005','DG0005','2016-8-20','S00005','NV0001','2017-7-7','2017-7-1',0,0,0)
 
+CREATE proc [dbo].[deleteDocGia](@ma varchar(20))
+as
+begin
+	if(exists (select ma from DocGia where ma = @ma ))
+	begin
+		if(exists (select DocGiama  from PhieuMuon where ma = @ma ))
+		begin 
+			rollback tran 
+		end
+		else update DocGia set hoatdong = 0 where DocGia.ma = @ma
+	end
+end
+
+
+CREATE proc [dbo].[procedure_deleteSach](@ma varchar(20))
+as
+begin
+	if not exists (select sachma from PhieuMuon where PhieuMuon.Sachma = @ma AND (PhieuMuon.trangthai != 1)  ) 
+	--= 0 chưa trả
+	--= 1 đã trả
+	--default lỗi
+	begin 
+		update sach set tinhtrang = 0 where sach.ma = @ma
+	end
+	
+end
+GO
+
+create proc [dbo].[procedure_insertDocGia](@ten nvarchar(30),@ngaysinh date,@gioitinh bit,@diachi nvarchar(50),@ngaylamthe date,@ngayhethan date,@hoatdong bit)
+as
+begin
+insert into DocGia(ma,ten,ngaysinh,gioitinh,diachi,ngaylamthe,ngayhethan,hoatdong)
+values(dbo.auto_maDocGia(),@ten,@ngaysinh ,@gioitinh,@diachi,@ngaylamthe ,@ngayhethan,@hoatdong)
+end
+GO
+
+create proc [dbo].[procedure_insertSach](@ten nvarchar(30),@noidungtomtat nvarchar(200),@sotrang int,@gia bigint,@soluong int,@nhaxuatbanma varchar(20),@tacgiama varchar(20),@theloaima varchar(20),@tinhtrang bit)
+as
+begin
+insert into Sach(ma,ten,noidungtomtat,sotrang,gia,soluong,ngaynhap,NXBma,TacGiama,TheLoaima,tinhtrang)
+values(dbo.auto_maSach(),@ten,@noidungtomtat,@sotrang,@gia,@soluong,GETDATE(),@nhaxuatbanma,@tacgiama,@theloaima,@tinhtrang)
+end
+GO
