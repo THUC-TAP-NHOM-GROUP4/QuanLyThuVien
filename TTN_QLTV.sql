@@ -125,7 +125,8 @@ hantra date not null,
 ngaytra date ,
 phathong bigint,
 phatquahan bigint,
-phatmat bigint
+phatmat bigint,
+trangthai bit
 )
 
 
