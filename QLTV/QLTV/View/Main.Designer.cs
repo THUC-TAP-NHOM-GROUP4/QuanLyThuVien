@@ -80,11 +80,13 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.rbpgTK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
-            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.nvbiQDTN = new DevExpress.XtraNavBar.NavBarControl();
             this.NBGNoiQuy = new DevExpress.XtraNavBar.NavBarGroup();
             this.nvbiQDMS = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbiQDTS = new DevExpress.XtraNavBar.NavBarItem();
             this.nbiQDC = new DevExpress.XtraNavBar.NavBarItem();
+            this.nvbiQDLT = new DevExpress.XtraNavBar.NavBarItem();
+            this.nvbiQDBVTL = new DevExpress.XtraNavBar.NavBarItem();
+            this.nvbiHVUX = new DevExpress.XtraNavBar.NavBarItem();
             this.nbgHD = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbiHDQLDG = new DevExpress.XtraNavBar.NavBarItem();
             this.nbiHDQLDS = new DevExpress.XtraNavBar.NavBarItem();
@@ -102,7 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupGalleryEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nvbiQDTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -500,22 +502,24 @@
             this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
             this.imageCollection1.Images.SetKeyName(0, "19.png");
             // 
-            // navBarControl1
+            // nvbiQDTN
             // 
-            this.navBarControl1.ActiveGroup = this.NBGNoiQuy;
-            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.nvbiQDTN.ActiveGroup = this.NBGNoiQuy;
+            this.nvbiQDTN.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.NBGNoiQuy,
             this.nbgHD});
-            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.nvbiQDTN.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
             this.nvbiQDMS,
-            this.nbiQDTS,
             this.nbiQDC,
             this.nbiHDQLDG,
             this.nbiHDQLDS,
-            this.nbiHDQLMT});
-            resources.ApplyResources(this.navBarControl1, "navBarControl1");
-            this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = ((int)(resources.GetObject("resource.ExpandedWidth")));
+            this.nbiHDQLMT,
+            this.nvbiQDLT,
+            this.nvbiQDBVTL,
+            this.nvbiHVUX});
+            resources.ApplyResources(this.nvbiQDTN, "nvbiQDTN");
+            this.nvbiQDTN.Name = "nvbiQDTN";
+            this.nvbiQDTN.OptionsNavPane.ExpandedWidth = ((int)(resources.GetObject("resource.ExpandedWidth")));
             // 
             // NBGNoiQuy
             // 
@@ -523,8 +527,10 @@
             this.NBGNoiQuy.Expanded = true;
             this.NBGNoiQuy.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.nvbiQDMS),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiQDTS),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiQDC)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiQDC),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nvbiQDLT),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nvbiQDBVTL),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nvbiHVUX)});
             this.NBGNoiQuy.Name = "NBGNoiQuy";
             // 
             // nvbiQDMS
@@ -533,17 +539,29 @@
             this.nvbiQDMS.Name = "nvbiQDMS";
             this.nvbiQDMS.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nvbiQDMS_LinkClicked);
             // 
-            // nbiQDTS
-            // 
-            resources.ApplyResources(this.nbiQDTS, "nbiQDTS");
-            this.nbiQDTS.Name = "nbiQDTS";
-            this.nbiQDTS.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiQDTS_LinkClicked);
-            // 
             // nbiQDC
             // 
             resources.ApplyResources(this.nbiQDC, "nbiQDC");
             this.nbiQDC.Name = "nbiQDC";
             this.nbiQDC.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiQDC_LinkClicked);
+            // 
+            // nvbiQDLT
+            // 
+            resources.ApplyResources(this.nvbiQDLT, "nvbiQDLT");
+            this.nvbiQDLT.Name = "nvbiQDLT";
+            this.nvbiQDLT.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nvbiQDLT_LinkClicked);
+            // 
+            // nvbiQDBVTL
+            // 
+            resources.ApplyResources(this.nvbiQDBVTL, "nvbiQDBVTL");
+            this.nvbiQDBVTL.Name = "nvbiQDBVTL";
+            this.nvbiQDBVTL.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nvbiQDBVTL_LinkClicked);
+            // 
+            // nvbiHVUX
+            // 
+            resources.ApplyResources(this.nvbiHVUX, "nvbiHVUX");
+            this.nvbiHVUX.Name = "nvbiHVUX";
+            this.nvbiHVUX.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nvbiHVUX_LinkClicked);
             // 
             // nbgHD
             // 
@@ -572,7 +590,7 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Controls.Add(this.navBarControl1);
+            this.panelControl1.Controls.Add(this.nvbiQDTN);
             resources.ApplyResources(this.panelControl1, "panelControl1");
             this.panelControl1.Name = "panelControl1";
             // 
@@ -630,7 +648,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupGalleryEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nvbiQDTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -672,10 +690,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.Utils.ImageCollection imageCollection1;
-        private DevExpress.XtraNavBar.NavBarControl navBarControl1;
+        private DevExpress.XtraNavBar.NavBarControl nvbiQDTN;
         private DevExpress.XtraNavBar.NavBarGroup NBGNoiQuy;
         private DevExpress.XtraNavBar.NavBarItem nvbiQDMS;
-        private DevExpress.XtraNavBar.NavBarItem nbiQDTS;
         private DevExpress.XtraNavBar.NavBarItem nbiQDC;
         private DevExpress.XtraNavBar.NavBarGroup nbgHD;
         private DevExpress.XtraNavBar.NavBarItem nbiHDQLDG;
@@ -707,6 +724,9 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraNavBar.NavBarItem nvbiQDLT;
+        private DevExpress.XtraNavBar.NavBarItem nvbiQDBVTL;
+        private DevExpress.XtraNavBar.NavBarItem nvbiHVUX;
     }
 }
 

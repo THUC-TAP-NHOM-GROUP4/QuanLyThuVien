@@ -101,6 +101,13 @@
             // 
             // grvDocGia
             // 
+            this.grvDocGia.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.grvDocGia.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.grvDocGia.Appearance.FocusedRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.grvDocGia.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.grvDocGia.Appearance.FocusedRow.Options.UseBorderColor = true;
+            this.grvDocGia.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
+            this.grvDocGia.Appearance.Row.Options.UseBackColor = true;
             this.grvDocGia.GridControl = this.grcDSDocGia;
             this.grvDocGia.Name = "grvDocGia";
             // 
