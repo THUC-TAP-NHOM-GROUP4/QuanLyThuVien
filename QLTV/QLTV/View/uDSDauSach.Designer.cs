@@ -49,9 +49,17 @@
             this.grcDSDauSach.TabIndex = 0;
             this.grcDSDauSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvSach});
+            this.grcDSDauSach.Click += new System.EventHandler(this.grcDSDauSach_Click);
             // 
             // grvSach
             // 
+            this.grvSach.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.grvSach.Appearance.FocusedRow.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.grvSach.Appearance.FocusedRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.grvSach.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.grvSach.Appearance.FocusedRow.Options.UseBorderColor = true;
+            this.grvSach.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
+            this.grvSach.Appearance.Row.Options.UseBackColor = true;
             this.grvSach.GridControl = this.grcDSDauSach;
             this.grvSach.Name = "grvSach";
             // 

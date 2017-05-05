@@ -33,7 +33,9 @@ namespace QLTV
         {
             listDocGia = controller.getListDocGia();
             grcDSDocGia.DataSource = listDocGia;
-   
+            grvDocGia.OptionsBehavior.Editable = false;
+            grvDocGia.OptionsSelection.EnableAppearanceFocusedCell = false;
+
         }
 
         private void grcDSDocGia_Click(object sender, EventArgs e)

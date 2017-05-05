@@ -108,6 +108,36 @@
     <Compile Include="View\uDSDocGia.Designer.cs">
       <DependentUpon>uDSDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\uHanhViUngXu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uHanhViUngXu.Designer.cs">
+      <DependentUpon>uHanhViUngXu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\uQuyDinhBaoVeTaiLieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uQuyDinhBaoVeTaiLieu.Designer.cs">
+      <DependentUpon>uQuyDinhBaoVeTaiLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\uQuyDinhChung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uQuyDinhChung.Designer.cs">
+      <DependentUpon>uQuyDinhChung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\uQuyDinhLamThe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uQuyDinhLamThe.Designer.cs">
+      <DependentUpon>uQuyDinhLamThe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\uQuyDinhMuonSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uQuyDinhMuonSach.Designer.cs">
+      <DependentUpon>uQuyDinhMuonSach.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +166,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\uDSDocGia.resx">
       <DependentUpon>uDSDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uHanhViUngXu.resx">
+      <DependentUpon>uHanhViUngXu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uQuyDinhBaoVeTaiLieu.resx">
+      <DependentUpon>uQuyDinhBaoVeTaiLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uQuyDinhChung.resx">
+      <DependentUpon>uQuyDinhChung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uQuyDinhLamThe.resx">
+      <DependentUpon>uQuyDinhLamThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uQuyDinhMuonSach.resx">
+      <DependentUpon>uQuyDinhMuonSach.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

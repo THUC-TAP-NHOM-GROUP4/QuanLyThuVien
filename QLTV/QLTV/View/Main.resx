@@ -11543,11 +11543,17 @@
   <data name="nvbiQDMS.Caption" xml:space="preserve">
     <value>Quy Định Mượn Sách</value>
   </data>
-  <data name="nbiQDTS.Caption" xml:space="preserve">
-    <value>Quy Định Trả Sách</value>
-  </data>
   <data name="nbiQDC.Caption" xml:space="preserve">
     <value>Quy Định Chung</value>
+  </data>
+  <data name="nvbiQDLT.Caption" xml:space="preserve">
+    <value>Quy Định Làm Thẻ</value>
+  </data>
+  <data name="nvbiQDBVTL.Caption" xml:space="preserve">
+    <value>Quy Định Bảo Vệ Tài Liệu</value>
+  </data>
+  <data name="nvbiHVUX.Caption" xml:space="preserve">
+    <value>Hành vi và ứng xử</value>
   </data>
   <data name="nbgHD.Caption" xml:space="preserve">
     <value>Hướng dẫn sử dụng</value>
@@ -11561,31 +11567,31 @@
   <data name="nbiHDQLMT.Caption" xml:space="preserve">
     <value>Hướng dẫn quản lý mượn trả</value>
   </data>
-  <data name="navBarControl1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="nvbiQDTN.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 5</value>
   </data>
   <data name="resource.ExpandedWidth" type="System.Int32, mscorlib">
     <value>207</value>
   </data>
-  <data name="navBarControl1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="nvbiQDTN.Size" type="System.Drawing.Size, System.Drawing">
     <value>207, 436</value>
   </data>
-  <data name="navBarControl1.TabIndex" type="System.Int32, mscorlib">
+  <data name="nvbiQDTN.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="navBarControl1.Text" xml:space="preserve">
-    <value>navBarControl1</value>
+  <data name="nvbiQDTN.Text" xml:space="preserve">
+    <value>Hành vi và ứng xử</value>
   </data>
-  <data name="&gt;&gt;navBarControl1.Name" xml:space="preserve">
-    <value>navBarControl1</value>
+  <data name="&gt;&gt;nvbiQDTN.Name" xml:space="preserve">
+    <value>nvbiQDTN</value>
   </data>
-  <data name="&gt;&gt;navBarControl1.Type" xml:space="preserve">
+  <data name="&gt;&gt;nvbiQDTN.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarControl, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;navBarControl1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;nvbiQDTN.Parent" xml:space="preserve">
     <value>panelControl1</value>
   </data>
-  <data name="&gt;&gt;navBarControl1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;nvbiQDTN.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="panelControl1.Location" type="System.Drawing.Point, System.Drawing">
@@ -16287,16 +16293,28 @@
   <data name="&gt;&gt;nvbiQDMS.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;nbiQDTS.Name" xml:space="preserve">
-    <value>nbiQDTS</value>
-  </data>
-  <data name="&gt;&gt;nbiQDTS.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;nbiQDC.Name" xml:space="preserve">
     <value>nbiQDC</value>
   </data>
   <data name="&gt;&gt;nbiQDC.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;nvbiQDLT.Name" xml:space="preserve">
+    <value>nvbiQDLT</value>
+  </data>
+  <data name="&gt;&gt;nvbiQDLT.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;nvbiQDBVTL.Name" xml:space="preserve">
+    <value>nvbiQDBVTL</value>
+  </data>
+  <data name="&gt;&gt;nvbiQDBVTL.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;nvbiHVUX.Name" xml:space="preserve">
+    <value>nvbiHVUX</value>
+  </data>
+  <data name="&gt;&gt;nvbiHVUX.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;nbgHD.Name" xml:space="preserve">

@@ -32,7 +32,9 @@ namespace QLTV
             listSach = controller.getListSach();
 
             grcDSDauSach.DataSource = listSach;
-           
+            grvSach.OptionsBehavior.Editable = false;
+            grvSach.OptionsSelection.EnableAppearanceFocusedCell = false;
+
         }
 
         public void sbtnXoaDS_Click(object sender, EventArgs e)
@@ -62,6 +64,11 @@ namespace QLTV
             ab.ShowDialog();
             listSach = controller.getListSach();
             grcDSDauSach.DataSource = listSach;
+
+        }
+
+        private void grcDSDauSach_Click(object sender, EventArgs e)
+        {
 
         }
     }
