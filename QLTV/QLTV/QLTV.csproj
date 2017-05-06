@@ -45,6 +45,7 @@
     <Reference Include="DevExpress.Sparkline.v16.1.Core" />
     <Reference Include="DevExpress.XtraEditors.v16.1" />
     <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -82,6 +83,18 @@
     <Compile Include="View\AddReader.Designer.cs">
       <DependentUpon>AddReader.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EditBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditBook.Designer.cs">
+      <DependentUpon>EditBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditReader.Designer.cs">
+      <DependentUpon>EditReader.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +109,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\SearchBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SearchBook.Designer.cs">
+      <DependentUpon>SearchBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\uDSDauSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +162,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddReader.resx">
       <DependentUpon>AddReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditBook.resx">
+      <DependentUpon>EditBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditReader.resx">
+      <DependentUpon>EditReader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

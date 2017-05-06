@@ -131,6 +131,46 @@ namespace QLTV.Controller
             return true;
         }
 
+
+        public bool editBook(Sach s)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("ma", s.ma),
+                new SqlParameter("ten",s.ten),
+                new SqlParameter("noidungtomtat",s.noidungtomtat),
+                new SqlParameter("sotrang",s.sotrang),
+                new SqlParameter("gia",s.gia),
+                new SqlParameter("soluong",s.soluong),
+                new SqlParameter("nhaxuatban",s.nhaxuatbanma),
+                new SqlParameter("tacgiama",s.tacgiama),
+                new SqlParameter("tinhtrang",s.tinhtrang)
+
+            };
+            dataAcess.Query("procedure_updateSach", para);
+            return true;
+        }
+
+        public bool editReader(DocGia dg)
+        {
+            //select dg.ma, dg.ten, dg.ngaysinh, dg.gioitinh, 
+            //dg.diachi, dg.ngaylamthe, dg.ngayhethan, dg.hoatdong from docgia dg
+            SqlParameter[] para =
+           {
+                new SqlParameter("ma",dg.ma),
+                new SqlParameter("ten",dg.ten),
+                new SqlParameter("ngaysinh",dg.ngaysinh),
+                new SqlParameter("gioitinh",dg.gioitinh),
+                new SqlParameter("diachi",dg.diachi),
+                new SqlParameter("ngaylamthe",dg.ngaylamthe),
+                new SqlParameter("ngayhethan",dg.ngayhethan),
+                new SqlParameter("hoatdong",dg.hoatdong),
+
+            };
+            dataAcess.Query("procedure_updateDocGia", para);
+            return true;
+        }
+
         public bool deleteDocGia(String ma)
         {
             SqlParameter[] para =

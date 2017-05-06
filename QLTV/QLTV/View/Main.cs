@@ -224,5 +224,10 @@ namespace QLTV
             ds.Show();
             xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabHanhVi.Text)];
         }
+
+        private void nvbiQDTN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -65,5 +65,30 @@ namespace QLTV
                 uDSDocGia_Load(sender, e);
             }
         }
+
+        private void sbtnSuaDG_Click(object sender, EventArgs e)
+        {
+            DocGia docgia = new DocGia();
+            docgia.ma = grvDocGia.GetFocusedRowCellValue("ma").ToString();
+            docgia.ten = grvDocGia.GetFocusedRowCellValue("ten").ToString();
+            docgia.ngaysinh = DateTime.Parse(grvDocGia.GetFocusedRowCellValue("ngaysinh").ToString());
+            if (bool.Parse(grvDocGia.GetFocusedRowCellValue("gioitinh").ToString()) == true)
+                docgia.gioitinh = true;
+            //sach.tinhtrang = true;
+            else docgia.gioitinh = false;
+            docgia.diachi = grvDocGia.GetFocusedRowCellValue("diachi").ToString();
+            docgia.ngaylamthe = DateTime.Parse(grvDocGia.GetFocusedRowCellValue("ngaylamthe").ToString());
+            docgia.ngayhethan = DateTime.Parse(grvDocGia.GetFocusedRowCellValue("ngayhethan").ToString());
+            if (bool.Parse(grvDocGia.GetFocusedRowCellValue("hoatdong").ToString()) == true)
+                docgia.hoatdong = true;
+            //sach.tinhtrang = true;
+            else docgia.hoatdong = false;
+
+            EditReader editreader = new EditReader(docgia);
+            editreader.ShowDialog();
+            listDocGia = controller.getListDocGia();
+            grcDSDocGia.DataSource = listDocGia;
+
+        }
     }
 }

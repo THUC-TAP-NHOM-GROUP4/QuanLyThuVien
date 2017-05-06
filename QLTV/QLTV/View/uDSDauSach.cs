@@ -67,8 +67,28 @@ namespace QLTV
 
         }
 
-        private void grcDSDauSach_Click(object sender, EventArgs e)
+        private void sbtnSuaDS_Click(object sender, EventArgs e)
         {
+            Sach sach = new Sach();
+            sach.ma = grvSach.GetFocusedRowCellValue("ma").ToString();
+            sach.ten = grvSach.GetFocusedRowCellValue("ten").ToString();
+            sach.sotrang = int.Parse(grvSach.GetFocusedRowCellValue("sotrang").ToString());
+            sach.gia = int.Parse(grvSach.GetFocusedRowCellValue("gia").ToString());
+            sach.soluong = int.Parse(grvSach.GetFocusedRowCellValue("soluong").ToString());
+            // sach.ngaynhap = DateTime.Parse(grvSach.GetFocusedRowCellValue("ngaynhap").ToString());
+            sach.nhaxuatbanma = grvSach.GetFocusedRowCellValue("nhaxuatbanma").ToString();
+            sach.tacgiama = grvSach.GetFocusedRowCellValue("tacgiama").ToString();
+            sach.theloaima = grvSach.GetFocusedRowCellValue("theloaima").ToString();
+            if (bool.Parse(grvSach.GetFocusedRowCellValue("tinhtrang").ToString()) == true)
+                sach.tinhtrang = true;
+            //sach.tinhtrang = true;
+            else sach.tinhtrang = false;
+            sach.noidungtomtat = grvSach.GetFocusedRowCellValue("noidungtomtat").ToString();
+            EditBook edit = new EditBook(sach);
+            edit.ShowDialog();
+            listSach = controller.getListSach();
+            grcDSDauSach.DataSource = listSach;
+
 
         }
     }
