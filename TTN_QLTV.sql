@@ -1,5 +1,61 @@
 ﻿create database TTN_QLTV
 
+
+create function auto_maDocGia() returns varchar(6)
+as
+begin
+declare @ma varchar(6)
+if(select count(ma) from DocGia)=0
+set @ma='0'
+else 
+select @ma=max(right(ma,4)) from DocGia
+set @ma=case
+when 
+@ma>=0 and @ma<9 then 'DG000'+CONVERT(char,convert(int,@ma)+1)
+when @ma>=9 and @ma<99 then 'DG00'+CONVERT(char,convert(int,@ma)+1)
+when @ma>=99 and @ma<999 then 'DG0'+CONVERT(char,convert(int,@ma)+1)
+end
+return 
+@ma
+end
+exec procedure_insertDocGia 'NL','2017-1-1',1,'','2017-1-1','2017-1-1',1
+create proc procedure_insertDocGia(@ten nvarchar(30),@ngaysinh date,@gioitinh bit,@diachi nvarchar(50),@ngaylamthe date,@ngayhethan date,@hoatdong bit)
+as
+begin
+insert into DocGia(ma,ten,ngaysinh,gioitinh,diachi,ngaylamthe,ngayhethan,hoatdong)
+values(dbo.auto_maDocGia(),@ten,@ngaysinh ,@gioitinh,@diachi,@ngaylamthe ,@ngayhethan,@hoatdong)
+end
+
+
+
+create function auto_maSach() returns varchar(6)
+as
+begin
+declare @ma varchar(6)
+if(select count(ma) from Sach)=0
+set @ma='0'
+else 
+select @ma=max(right(ma,4)) from Sach
+set @ma=case
+when 
+@ma>=0 and @ma<9 then 'S0000'+CONVERT(char,convert(int,@ma)+1)
+when @ma>=9 and @ma<99 then 'S000'+CONVERT(char,convert(int,@ma)+1)
+when @ma>=99 and @ma<999 then 'S00'+CONVERT(char,convert(int,@ma)+1)
+end
+return 
+@ma
+end
+
+
+create proc procedure_insertSach(@ten nvarchar(30),@noidungtomtat nvarchar(200),@sotrang int,@gia bigint,@soluong int,@nhaxuatbanma varchar(20),@tacgiama varchar(20),@theloaima varchar(20),@tinhtrang bit)
+as
+begin
+insert into Sach(ma,ten,noidungtomtat,sotrang,gia,soluong,ngaynhap,NXBma,TacGiama,TheLoaima,tinhtrang)
+values(dbo.auto_maSach(),@ten,@noidungtomtat,@sotrang,@gia,@soluong,GETDATE(),@nhaxuatbanma,@tacgiama,@theloaima,@tinhtrang)
+end
+
+
+
 create table TacGia(
 ma varchar(20) primary key not null,
 ten nvarchar(30)
@@ -55,6 +111,7 @@ TheLoaima varchar(20) not null,
 foreign key (TheLoaima) references TheLoai(ma),
 tinhtrang bit not null
 )
+
 create table PhieuMuon
 (
 ma varchar(20) primary key not null,
@@ -63,19 +120,13 @@ foreign key(DocGiama) references DocGia(ma),
 ngaymuon date not null,
 Sachma varchar(20) not null,
 foreign key(Sachma) references Sach(ma),
-hantra date not null
-
-)
-create table PhieuTra(
-ma varchar(20) primary key not null,
-Sachma varchar(20) not null,
-foreign key(Sachma) references Sach(ma),
-NhanVienma varchar(20) not null,
-foreign key(NhanVienma) references NhanVien(ma),
-ngaytra date not null,
+NhanVienma varchar(20) not null foreign key(NhanVienma) references NhanVien(ma),
+hantra date not null,
+ngaytra date ,
 phathong bigint,
 phatquahan bigint,
-phatmat bigint
+phatmat bigint,
+trangthai bit
 )
 
 
@@ -169,11 +220,52 @@ insert into NhanVien values('NV0010',N'Nguyễn Thị Gấm',0,'1979-2-11','0123
 
 select *from PhieuMuon
 
-insert into PhieuMuon values('PM00001','DG0001','2016-8-20','S00001','2017-7-7')
-insert into PhieuMuon values('PM00002','DG0002','2016-8-20','S00002','2017-7-7')
-insert into PhieuMuon values('PM00003','DG0003','2016-8-20','S00003','2017-7-7')
-insert into PhieuMuon values('PM00004','DG0004','2016-8-20','S00004','2017-7-7')
-insert into PhieuMuon values('PM00005','DG0005','2016-8-20','S00005','2017-7-7')
+insert into PhieuMuon values('PM00001','DG0001','2016-8-20','S00001','NV0001','2017-7-7','2017-7-1',0,0,0)
+insert into PhieuMuon values('PM00002','DG0002','2016-8-20','S00002','NV0001','2017-7-7','2017-7-1',0,0,0)
+insert into PhieuMuon values('PM00003','DG0003','2016-8-20','S00003','NV0001','2017-7-7','2017-7-1',0,0,0)
+insert into PhieuMuon values('PM00004','DG0004','2016-8-20','S00004','NV0001','2017-7-7','2017-7-1',0,0,0)
+insert into PhieuMuon values('PM00005','DG0005','2016-8-20','S00005','NV0001','2017-7-7','2017-7-1',0,0,0)
 
-SELECT *FROM PhieuTra
-insert into PhieuTra(ma,Sachma,NhanVienma,ngaytra) values('PT0001','S00005','NV0001','2017-4-1')
+CREATE proc [dbo].[deleteDocGia](@ma varchar(20))
+as
+begin
+	if(exists (select ma from DocGia where ma = @ma ))
+	begin
+		if(exists (select DocGiama  from PhieuMuon where ma = @ma ))
+		begin 
+			rollback tran 
+		end
+		else update DocGia set hoatdong = 0 where DocGia.ma = @ma
+	end
+end
+
+
+CREATE proc [dbo].[procedure_deleteSach](@ma varchar(20))
+as
+begin
+	if not exists (select sachma from PhieuMuon where PhieuMuon.Sachma = @ma AND (PhieuMuon.trangthai != 1)  ) 
+	--= 0 chưa trả
+	--= 1 đã trả
+	--default lỗi
+	begin 
+		update sach set tinhtrang = 0 where sach.ma = @ma
+	end
+	
+end
+GO
+
+create proc [dbo].[procedure_insertDocGia](@ten nvarchar(30),@ngaysinh date,@gioitinh bit,@diachi nvarchar(50),@ngaylamthe date,@ngayhethan date,@hoatdong bit)
+as
+begin
+insert into DocGia(ma,ten,ngaysinh,gioitinh,diachi,ngaylamthe,ngayhethan,hoatdong)
+values(dbo.auto_maDocGia(),@ten,@ngaysinh ,@gioitinh,@diachi,@ngaylamthe ,@ngayhethan,@hoatdong)
+end
+GO
+
+create proc [dbo].[procedure_insertSach](@ten nvarchar(30),@noidungtomtat nvarchar(200),@sotrang int,@gia bigint,@soluong int,@nhaxuatbanma varchar(20),@tacgiama varchar(20),@theloaima varchar(20),@tinhtrang bit)
+as
+begin
+insert into Sach(ma,ten,noidungtomtat,sotrang,gia,soluong,ngaynhap,NXBma,TacGiama,TheLoaima,tinhtrang)
+values(dbo.auto_maSach(),@ten,@noidungtomtat,@sotrang,@gia,@soluong,GETDATE(),@nhaxuatbanma,@tacgiama,@theloaima,@tinhtrang)
+end
+GO

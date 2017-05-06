@@ -50,32 +50,6 @@
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemRichTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit();
             this.bbtiDSSDocGia = new DevExpress.XtraBars.BarButtonItem();
-            this.rPTrangChu = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rbPGHT = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rPQLDG = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rPGDG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rPQLMT = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rPGMuonSach = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rPGTraSach = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rPQLDS = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.rPGDS = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rPTaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.rbpgTK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
-            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.NBGNoiQuy = new DevExpress.XtraNavBar.NavBarGroup();
-            this.nvbiQDMS = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbiQDTS = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbiQDC = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbgHD = new DevExpress.XtraNavBar.NavBarGroup();
-            this.nbiHDQLDG = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbiHDQLDS = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbiHDQLMT = new DevExpress.XtraNavBar.NavBarItem();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.bbiDSDG = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonGalleryBarItem1 = new DevExpress.XtraBars.RibbonGalleryBarItem();
             this.barDockingMenuItem1 = new DevExpress.XtraBars.BarDockingMenuItem();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
@@ -89,20 +63,55 @@
             this.repositoryItemPopupGalleryEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit();
             this.barEditItem6 = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
+            this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.rPTrangChu = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rbPGHT = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rPQLDG = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rPGDG = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rPQLDS = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rPGDS = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rPQLMT = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rPGMuonSach = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rPGTraSach = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rPTaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.rbpgTK = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
+            this.nvbiQDTN = new DevExpress.XtraNavBar.NavBarControl();
+            this.NBGNoiQuy = new DevExpress.XtraNavBar.NavBarGroup();
+            this.nvbiQDMS = new DevExpress.XtraNavBar.NavBarItem();
+            this.nbiQDC = new DevExpress.XtraNavBar.NavBarItem();
+            this.nvbiQDLT = new DevExpress.XtraNavBar.NavBarItem();
+            this.nvbiQDBVTL = new DevExpress.XtraNavBar.NavBarItem();
+            this.nvbiHVUX = new DevExpress.XtraNavBar.NavBarItem();
+            this.nbgHD = new DevExpress.XtraNavBar.NavBarGroup();
+            this.nbiHDQLDG = new DevExpress.XtraNavBar.NavBarItem();
+            this.nbiHDQLDS = new DevExpress.XtraNavBar.NavBarItem();
+            this.nbiHDQLMT = new DevExpress.XtraNavBar.NavBarItem();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.bbiDSDG = new DevExpress.XtraBars.BarButtonItem();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.rbcMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupGalleryEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nvbiQDTN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // rbcMenu
@@ -136,15 +145,18 @@
             this.barEditItem3,
             this.barEditItem4,
             this.barEditItem5,
-            this.barEditItem6});
-            this.rbcMenu.MaxItemId = 27;
+            this.barEditItem6,
+            this.skinRibbonGalleryBarItem2,
+            this.barStaticItem1,
+            this.barStaticItem2});
+            this.rbcMenu.MaxItemId = 30;
             this.rbcMenu.Name = "rbcMenu";
             this.rbcMenu.PageHeaderItemLinks.Add(this.barButtonItem3);
             this.rbcMenu.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rPTrangChu,
             this.rPQLDG,
-            this.rPQLMT,
             this.rPQLDS,
+            this.rPQLMT,
             this.rPTaiKhoan});
             this.rbcMenu.QuickToolbarItemLinks.Add(this.barButtonItem2);
             this.rbcMenu.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -184,6 +196,7 @@
             this.bbiXoaDG.Id = 5;
             this.bbiXoaDG.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiXoaDG.LargeGlyph")));
             this.bbiXoaDG.Name = "bbiXoaDG";
+            this.bbiXoaDG.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiXoaDG_ItemClick);
             // 
             // bbiTimKiemDG
             // 
@@ -191,6 +204,7 @@
             this.bbiTimKiemDG.Id = 6;
             this.bbiTimKiemDG.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiTimKiemDG.LargeGlyph")));
             this.bbiTimKiemDG.Name = "bbiTimKiemDG";
+            this.bbiTimKiemDG.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiTimKiemDG_ItemClick);
             // 
             // bbiThemDS
             // 
@@ -198,6 +212,7 @@
             this.bbiThemDS.Id = 7;
             this.bbiThemDS.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiThemDS.LargeGlyph")));
             this.bbiThemDS.Name = "bbiThemDS";
+            this.bbiThemDS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiThemDS_ItemClick);
             // 
             // bbiSuaDS
             // 
@@ -212,6 +227,7 @@
             this.bbiXoaDS.Id = 9;
             this.bbiXoaDS.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiXoaDS.LargeGlyph")));
             this.bbiXoaDS.Name = "bbiXoaDS";
+            this.bbiXoaDS.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiXoaDS_ItemClick);
             // 
             // bbiTimKiem
             // 
@@ -275,191 +291,6 @@
             this.bbtiDSSDocGia.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbtiDSSDocGia.LargeGlyph")));
             this.bbtiDSSDocGia.Name = "bbtiDSSDocGia";
             this.bbtiDSSDocGia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtiDSSDocGia_ItemClick);
-            // 
-            // rPTrangChu
-            // 
-            this.rPTrangChu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rbPGHT});
-            this.rPTrangChu.Name = "rPTrangChu";
-            resources.ApplyResources(this.rPTrangChu, "rPTrangChu");
-            // 
-            // rbPGHT
-            // 
-            this.rbPGHT.ItemLinks.Add(this.bbiDN);
-            this.rbPGHT.ItemLinks.Add(this.bbiDX);
-            this.rbPGHT.ItemLinks.Add(this.barEditItem3);
-            this.rbPGHT.ItemLinks.Add(this.barEditItem4);
-            this.rbPGHT.ItemLinks.Add(this.barEditItem5);
-            this.rbPGHT.ItemLinks.Add(this.barEditItem6);
-            this.rbPGHT.Name = "rbPGHT";
-            resources.ApplyResources(this.rbPGHT, "rbPGHT");
-            // 
-            // rPQLDG
-            // 
-            this.rPQLDG.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rPGDG});
-            this.rPQLDG.Name = "rPQLDG";
-            resources.ApplyResources(this.rPQLDG, "rPQLDG");
-            // 
-            // rPGDG
-            // 
-            this.rPGDG.ItemLinks.Add(this.bbiThemDG);
-            this.rPGDG.ItemLinks.Add(this.bbiSuaDG);
-            this.rPGDG.ItemLinks.Add(this.bbiXoaDG);
-            this.rPGDG.ItemLinks.Add(this.bbiTimKiemDG);
-            this.rPGDG.ItemLinks.Add(this.bbtiDSSDocGia);
-            this.rPGDG.Name = "rPGDG";
-            // 
-            // rPQLMT
-            // 
-            this.rPQLMT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rPGMuonSach,
-            this.rPGTraSach});
-            this.rPQLMT.Name = "rPQLMT";
-            resources.ApplyResources(this.rPQLMT, "rPQLMT");
-            // 
-            // rPGMuonSach
-            // 
-            this.rPGMuonSach.Name = "rPGMuonSach";
-            resources.ApplyResources(this.rPGMuonSach, "rPGMuonSach");
-            // 
-            // rPGTraSach
-            // 
-            this.rPGTraSach.Name = "rPGTraSach";
-            resources.ApplyResources(this.rPGTraSach, "rPGTraSach");
-            // 
-            // rPQLDS
-            // 
-            this.rPQLDS.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rPGDS});
-            this.rPQLDS.Name = "rPQLDS";
-            resources.ApplyResources(this.rPQLDS, "rPQLDS");
-            // 
-            // rPGDS
-            // 
-            this.rPGDS.ItemLinks.Add(this.bbiThemDS);
-            this.rPGDS.ItemLinks.Add(this.bbiSuaDS);
-            this.rPGDS.ItemLinks.Add(this.bbiXoaDS);
-            this.rPGDS.ItemLinks.Add(this.bbiTimKiem);
-            this.rPGDS.ItemLinks.Add(this.bbiDSDS);
-            this.rPGDS.Name = "rPGDS";
-            // 
-            // rPTaiKhoan
-            // 
-            this.rPTaiKhoan.Name = "rPTaiKhoan";
-            resources.ApplyResources(this.rPTaiKhoan, "rPTaiKhoan");
-            // 
-            // ribbonStatusBar1
-            // 
-            this.ribbonStatusBar1.ItemLinks.Add(this.barEditItem1);
-            resources.ApplyResources(this.ribbonStatusBar1, "ribbonStatusBar1");
-            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-            this.ribbonStatusBar1.Ribbon = this.rbcMenu;
-            // 
-            // rbpgTK
-            // 
-            this.rbpgTK.ItemLinks.Add(this.bbiDN);
-            this.rbpgTK.ItemLinks.Add(this.bbiDX);
-            this.rbpgTK.Name = "rbpgTK";
-            // 
-            // imageCollection1
-            // 
-            this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
-            this.imageCollection1.Images.SetKeyName(0, "19.png");
-            // 
-            // navBarControl1
-            // 
-            this.navBarControl1.ActiveGroup = this.NBGNoiQuy;
-            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.NBGNoiQuy,
-            this.nbgHD});
-            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.nvbiQDMS,
-            this.nbiQDTS,
-            this.nbiQDC,
-            this.nbiHDQLDG,
-            this.nbiHDQLDS,
-            this.nbiHDQLMT});
-            resources.ApplyResources(this.navBarControl1, "navBarControl1");
-            this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = ((int)(resources.GetObject("resource.ExpandedWidth")));
-            // 
-            // NBGNoiQuy
-            // 
-            resources.ApplyResources(this.NBGNoiQuy, "NBGNoiQuy");
-            this.NBGNoiQuy.Expanded = true;
-            this.NBGNoiQuy.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nvbiQDMS),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiQDTS),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiQDC)});
-            this.NBGNoiQuy.Name = "NBGNoiQuy";
-            // 
-            // nvbiQDMS
-            // 
-            resources.ApplyResources(this.nvbiQDMS, "nvbiQDMS");
-            this.nvbiQDMS.Name = "nvbiQDMS";
-            // 
-            // nbiQDTS
-            // 
-            resources.ApplyResources(this.nbiQDTS, "nbiQDTS");
-            this.nbiQDTS.Name = "nbiQDTS";
-            // 
-            // nbiQDC
-            // 
-            resources.ApplyResources(this.nbiQDC, "nbiQDC");
-            this.nbiQDC.Name = "nbiQDC";
-            // 
-            // nbgHD
-            // 
-            resources.ApplyResources(this.nbgHD, "nbgHD");
-            this.nbgHD.Expanded = true;
-            this.nbgHD.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLDG),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLDS),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLMT)});
-            this.nbgHD.Name = "nbgHD";
-            // 
-            // nbiHDQLDG
-            // 
-            resources.ApplyResources(this.nbiHDQLDG, "nbiHDQLDG");
-            this.nbiHDQLDG.Name = "nbiHDQLDG";
-            // 
-            // nbiHDQLDS
-            // 
-            resources.ApplyResources(this.nbiHDQLDS, "nbiHDQLDS");
-            this.nbiHDQLDS.Name = "nbiHDQLDS";
-            // 
-            // nbiHDQLMT
-            // 
-            resources.ApplyResources(this.nbiHDQLMT, "nbiHDQLMT");
-            this.nbiHDQLMT.Name = "nbiHDQLMT";
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.navBarControl1);
-            resources.ApplyResources(this.panelControl1, "panelControl1");
-            this.panelControl1.Name = "panelControl1";
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("panelControl2.Appearance.BackColor")));
-            this.panelControl2.Appearance.Options.UseBackColor = true;
-            this.panelControl2.Controls.Add(this.xtraTabControl1);
-            resources.ApplyResources(this.panelControl2, "panelControl2");
-            this.panelControl2.Name = "panelControl2";
-            // 
-            // xtraTabControl1
-            // 
-            resources.ApplyResources(this.xtraTabControl1, "xtraTabControl1");
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
-            // 
-            // bbiDSDG
-            // 
-            resources.ApplyResources(this.bbiDSDG, "bbiDSDG");
-            this.bbiDSDG.Id = 1;
-            this.bbiDSDG.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiDSDG.LargeGlyph")));
-            this.bbiDSDG.Name = "bbiDSDG";
             // 
             // ribbonGalleryBarItem1
             // 
@@ -557,6 +388,239 @@
             new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemFontEdit1.Buttons"))))});
             this.repositoryItemFontEdit1.Name = "repositoryItemFontEdit1";
             // 
+            // skinRibbonGalleryBarItem2
+            // 
+            resources.ApplyResources(this.skinRibbonGalleryBarItem2, "skinRibbonGalleryBarItem2");
+            this.skinRibbonGalleryBarItem2.Id = 27;
+            this.skinRibbonGalleryBarItem2.Name = "skinRibbonGalleryBarItem2";
+            // 
+            // barStaticItem1
+            // 
+            resources.ApplyResources(this.barStaticItem1, "barStaticItem1");
+            this.barStaticItem1.Id = 28;
+            this.barStaticItem1.Name = "barStaticItem1";
+            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barStaticItem2
+            // 
+            resources.ApplyResources(this.barStaticItem2, "barStaticItem2");
+            this.barStaticItem2.Id = 29;
+            this.barStaticItem2.Name = "barStaticItem2";
+            this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // rPTrangChu
+            // 
+            this.rPTrangChu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rbPGHT,
+            this.ribbonPageGroup1});
+            this.rPTrangChu.Name = "rPTrangChu";
+            resources.ApplyResources(this.rPTrangChu, "rPTrangChu");
+            // 
+            // rbPGHT
+            // 
+            this.rbPGHT.ItemLinks.Add(this.bbiDN);
+            this.rbPGHT.ItemLinks.Add(this.bbiDX);
+            this.rbPGHT.Name = "rbPGHT";
+            resources.ApplyResources(this.rbPGHT, "rbPGHT");
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.skinRibbonGalleryBarItem2);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            resources.ApplyResources(this.ribbonPageGroup1, "ribbonPageGroup1");
+            // 
+            // rPQLDG
+            // 
+            this.rPQLDG.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rPGDG});
+            this.rPQLDG.Name = "rPQLDG";
+            resources.ApplyResources(this.rPQLDG, "rPQLDG");
+            // 
+            // rPGDG
+            // 
+            this.rPGDG.ItemLinks.Add(this.bbiThemDG);
+            this.rPGDG.ItemLinks.Add(this.bbiSuaDG);
+            this.rPGDG.ItemLinks.Add(this.bbiXoaDG);
+            this.rPGDG.ItemLinks.Add(this.bbiTimKiemDG);
+            this.rPGDG.ItemLinks.Add(this.bbtiDSSDocGia);
+            this.rPGDG.Name = "rPGDG";
+            // 
+            // rPQLDS
+            // 
+            this.rPQLDS.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rPGDS});
+            this.rPQLDS.Name = "rPQLDS";
+            resources.ApplyResources(this.rPQLDS, "rPQLDS");
+            // 
+            // rPGDS
+            // 
+            this.rPGDS.ItemLinks.Add(this.bbiThemDS);
+            this.rPGDS.ItemLinks.Add(this.bbiSuaDS);
+            this.rPGDS.ItemLinks.Add(this.bbiXoaDS);
+            this.rPGDS.ItemLinks.Add(this.bbiTimKiem);
+            this.rPGDS.ItemLinks.Add(this.bbiDSDS);
+            this.rPGDS.Name = "rPGDS";
+            // 
+            // rPQLMT
+            // 
+            this.rPQLMT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rPGMuonSach,
+            this.rPGTraSach});
+            this.rPQLMT.Name = "rPQLMT";
+            resources.ApplyResources(this.rPQLMT, "rPQLMT");
+            // 
+            // rPGMuonSach
+            // 
+            this.rPGMuonSach.Name = "rPGMuonSach";
+            resources.ApplyResources(this.rPGMuonSach, "rPGMuonSach");
+            // 
+            // rPGTraSach
+            // 
+            this.rPGTraSach.Name = "rPGTraSach";
+            resources.ApplyResources(this.rPGTraSach, "rPGTraSach");
+            // 
+            // rPTaiKhoan
+            // 
+            this.rPTaiKhoan.Name = "rPTaiKhoan";
+            resources.ApplyResources(this.rPTaiKhoan, "rPTaiKhoan");
+            // 
+            // ribbonStatusBar1
+            // 
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem2);
+            resources.ApplyResources(this.ribbonStatusBar1, "ribbonStatusBar1");
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.rbcMenu;
+            // 
+            // rbpgTK
+            // 
+            this.rbpgTK.ItemLinks.Add(this.bbiDN);
+            this.rbpgTK.ItemLinks.Add(this.bbiDX);
+            this.rbpgTK.Name = "rbpgTK";
+            // 
+            // imageCollection1
+            // 
+            this.imageCollection1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollection1.ImageStream")));
+            this.imageCollection1.Images.SetKeyName(0, "19.png");
+            // 
+            // nvbiQDTN
+            // 
+            this.nvbiQDTN.ActiveGroup = this.NBGNoiQuy;
+            this.nvbiQDTN.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.NBGNoiQuy,
+            this.nbgHD});
+            this.nvbiQDTN.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.nvbiQDMS,
+            this.nbiQDC,
+            this.nbiHDQLDG,
+            this.nbiHDQLDS,
+            this.nbiHDQLMT,
+            this.nvbiQDLT,
+            this.nvbiQDBVTL,
+            this.nvbiHVUX});
+            resources.ApplyResources(this.nvbiQDTN, "nvbiQDTN");
+            this.nvbiQDTN.Name = "nvbiQDTN";
+            this.nvbiQDTN.OptionsNavPane.ExpandedWidth = ((int)(resources.GetObject("resource.ExpandedWidth")));
+            // 
+            // NBGNoiQuy
+            // 
+            resources.ApplyResources(this.NBGNoiQuy, "NBGNoiQuy");
+            this.NBGNoiQuy.Expanded = true;
+            this.NBGNoiQuy.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nvbiQDMS),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiQDC),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nvbiQDLT),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nvbiQDBVTL),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nvbiHVUX)});
+            this.NBGNoiQuy.Name = "NBGNoiQuy";
+            // 
+            // nvbiQDMS
+            // 
+            resources.ApplyResources(this.nvbiQDMS, "nvbiQDMS");
+            this.nvbiQDMS.Name = "nvbiQDMS";
+            this.nvbiQDMS.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nvbiQDMS_LinkClicked);
+            // 
+            // nbiQDC
+            // 
+            resources.ApplyResources(this.nbiQDC, "nbiQDC");
+            this.nbiQDC.Name = "nbiQDC";
+            this.nbiQDC.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiQDC_LinkClicked);
+            // 
+            // nvbiQDLT
+            // 
+            resources.ApplyResources(this.nvbiQDLT, "nvbiQDLT");
+            this.nvbiQDLT.Name = "nvbiQDLT";
+            this.nvbiQDLT.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nvbiQDLT_LinkClicked);
+            // 
+            // nvbiQDBVTL
+            // 
+            resources.ApplyResources(this.nvbiQDBVTL, "nvbiQDBVTL");
+            this.nvbiQDBVTL.Name = "nvbiQDBVTL";
+            this.nvbiQDBVTL.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nvbiQDBVTL_LinkClicked);
+            // 
+            // nvbiHVUX
+            // 
+            resources.ApplyResources(this.nvbiHVUX, "nvbiHVUX");
+            this.nvbiHVUX.Name = "nvbiHVUX";
+            this.nvbiHVUX.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nvbiHVUX_LinkClicked);
+            // 
+            // nbgHD
+            // 
+            resources.ApplyResources(this.nbgHD, "nbgHD");
+            this.nbgHD.Expanded = true;
+            this.nbgHD.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLDG),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLDS),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLMT)});
+            this.nbgHD.Name = "nbgHD";
+            // 
+            // nbiHDQLDG
+            // 
+            resources.ApplyResources(this.nbiHDQLDG, "nbiHDQLDG");
+            this.nbiHDQLDG.Name = "nbiHDQLDG";
+            // 
+            // nbiHDQLDS
+            // 
+            resources.ApplyResources(this.nbiHDQLDS, "nbiHDQLDS");
+            this.nbiHDQLDS.Name = "nbiHDQLDS";
+            // 
+            // nbiHDQLMT
+            // 
+            resources.ApplyResources(this.nbiHDQLMT, "nbiHDQLMT");
+            this.nbiHDQLMT.Name = "nbiHDQLMT";
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.nvbiQDTN);
+            resources.ApplyResources(this.panelControl1, "panelControl1");
+            this.panelControl1.Name = "panelControl1";
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("panelControl2.Appearance.BackColor")));
+            this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.panelControl2.Controls.Add(this.xtraTabControl1);
+            resources.ApplyResources(this.panelControl2, "panelControl2");
+            this.panelControl2.Name = "panelControl2";
+            // 
+            // xtraTabControl1
+            // 
+            resources.ApplyResources(this.xtraTabControl1, "xtraTabControl1");
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
+            // 
+            // bbiDSDG
+            // 
+            resources.ApplyResources(this.bbiDSDG, "bbiDSDG");
+            this.bbiDSDG.Id = 1;
+            this.bbiDSDG.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiDSDG.LargeGlyph")));
+            this.bbiDSDG.Name = "bbiDSDG";
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Controls.Add(this.ribbonStatusBar1);
+            resources.ApplyResources(this.panelControl3, "panelControl3");
+            this.panelControl3.Name = "panelControl3";
+            // 
             // Main
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -567,9 +631,7 @@
             this.Appearance.Options.UseForeColor = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
-            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
-            this.Controls.Add(this.ribbonStatusBar1);
+            this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.rbcMenu);
@@ -580,18 +642,20 @@
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rbcMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupGalleryEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nvbiQDTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,10 +690,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.Utils.ImageCollection imageCollection1;
-        private DevExpress.XtraNavBar.NavBarControl navBarControl1;
+        private DevExpress.XtraNavBar.NavBarControl nvbiQDTN;
         private DevExpress.XtraNavBar.NavBarGroup NBGNoiQuy;
         private DevExpress.XtraNavBar.NavBarItem nvbiQDMS;
-        private DevExpress.XtraNavBar.NavBarItem nbiQDTS;
         private DevExpress.XtraNavBar.NavBarItem nbiQDC;
         private DevExpress.XtraNavBar.NavBarGroup nbgHD;
         private DevExpress.XtraNavBar.NavBarItem nbiHDQLDG;
@@ -638,7 +701,6 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit repositoryItemRichTextEdit1;
-        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraBars.BarButtonItem bbtiDSSDocGia;
@@ -656,6 +718,15 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemPopupGalleryEdit repositoryItemPopupGalleryEdit1;
         private DevExpress.XtraBars.BarEditItem barEditItem6;
         private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit repositoryItemFontEdit1;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraNavBar.NavBarItem nvbiQDLT;
+        private DevExpress.XtraNavBar.NavBarItem nvbiQDBVTL;
+        private DevExpress.XtraNavBar.NavBarItem nvbiHVUX;
     }
 }
 

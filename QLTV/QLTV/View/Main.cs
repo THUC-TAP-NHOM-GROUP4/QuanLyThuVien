@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraTab;
 using DevExpress.XtraTab.ViewInfo;
+using QLTV.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,18 +20,26 @@ namespace QLTV
         {
             InitializeComponent();
             tabstatic = xtraTabControl1;
-           
           
 
         }
-        
+        public void Skins()
+        {
+            DevExpress.UserSkins.BonusSkins.Register();
+
+            DevExpress.UserSkins.OfficeSkins.Register();
+
+            DevExpress.XtraBars.Helpers.SkinHelper.InitSkinGallery(skinRibbonGalleryBarItem2, true);
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
-        //    foreach (Control child in this.Controls)
-        //    {
-        //        if (child.Name!="bbiDN")
-        //            child.IsEnabled = false;
-        //    }
+            Skins();
+            //    foreach (Control child in this.Controls)
+            //    {
+            //        if (child.Name!="bbiDN")
+            //            child.IsEnabled = false;
+            //    }
         }
 
 
@@ -87,10 +96,7 @@ namespace QLTV
             ds.Dock = DockStyle.Fill;
             ds.Show();
             xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabDSDauSach.Text)];
-
-          
-
-                
+      
         }
 
         private void bbiDN_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -115,6 +121,108 @@ namespace QLTV
             xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabDSDocGia.Text)];
 
 
+        }
+
+        private void bbiXoaDS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new uDSDauSach()).sbtnXoaDS_Click(sender, e);
+        }
+
+        private void nvbiQDMS_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            XtraTabPage tabQuyDinhMuonSach = new XtraTabPage();
+            tabQuyDinhMuonSach.Text = "Quy định mượn sách";
+            if (KiemTraTabPage(tabQuyDinhMuonSach.Text) == false)
+                xtraTabControl1.TabPages.Add(tabQuyDinhMuonSach);
+            else
+                tabQuyDinhMuonSach.PageVisible = true;
+            uQuyDinhMuonSach ds = new uQuyDinhMuonSach();
+            ds.Parent = xtraTabControl1.TabPages[ViTriTabPage(tabQuyDinhMuonSach.Text)];
+            ds.Dock = DockStyle.Fill;
+            ds.Show();
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabQuyDinhMuonSach.Text)];
+
+        }
+
+      
+
+        private void nbiQDC_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+            XtraTabPage tabQuyDinhChung = new XtraTabPage();
+            tabQuyDinhChung.Text = "Quy định chung";
+            if (KiemTraTabPage(tabQuyDinhChung.Text) == false)
+                xtraTabControl1.TabPages.Add(tabQuyDinhChung);
+            else
+                tabQuyDinhChung.PageVisible = true;
+            uQuyDinhChung ds = new uQuyDinhChung();
+            ds.Parent = xtraTabControl1.TabPages[ViTriTabPage(tabQuyDinhChung.Text)];
+            ds.Dock = DockStyle.Fill;
+            ds.Show();
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabQuyDinhChung.Text)];
+
+        }
+
+        private void bbiXoaDG_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            (new uDSDocGia()).sbtnXoaDG_Click(sender, e);
+        }
+
+        private void bbiTimKiemDG_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void bbiThemDS_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void nvbiQDBVTL_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+            XtraTabPage tabQuyDinhBaoVeTaiLieu = new XtraTabPage();
+            tabQuyDinhBaoVeTaiLieu.Text = "Quy định bảo vệ tài liệu";
+            if (KiemTraTabPage(tabQuyDinhBaoVeTaiLieu.Text) == false)
+                xtraTabControl1.TabPages.Add(tabQuyDinhBaoVeTaiLieu);
+            else
+                tabQuyDinhBaoVeTaiLieu.PageVisible = true;
+            uQuyDinhBaoVeTaiLieu ds = new uQuyDinhBaoVeTaiLieu();
+            ds.Parent = xtraTabControl1.TabPages[ViTriTabPage(tabQuyDinhBaoVeTaiLieu.Text)];
+            ds.Dock = DockStyle.Fill;
+            ds.Show();
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabQuyDinhBaoVeTaiLieu.Text)];
+        }
+
+        private void nvbiQDLT_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+
+            XtraTabPage tabQuyDinhLamThe = new XtraTabPage();
+            tabQuyDinhLamThe.Text = "Quy định làm thẻ";
+            if (KiemTraTabPage(tabQuyDinhLamThe.Text) == false)
+                xtraTabControl1.TabPages.Add(tabQuyDinhLamThe);
+            else
+                tabQuyDinhLamThe.PageVisible = true;
+            uQuyDinhLamThe ds = new uQuyDinhLamThe();
+            ds.Parent = xtraTabControl1.TabPages[ViTriTabPage(tabQuyDinhLamThe.Text)];
+            ds.Dock = DockStyle.Fill;
+            ds.Show();
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabQuyDinhLamThe.Text)];
+        }
+
+        private void nvbiHVUX_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            XtraTabPage tabHanhVi = new XtraTabPage();
+            tabHanhVi.Text = "Hành vi ứng xử";
+            if (KiemTraTabPage(tabHanhVi.Text) == false)
+                xtraTabControl1.TabPages.Add(tabHanhVi);
+            else
+                tabHanhVi.PageVisible = true;
+            uHanhViUngXu ds = new uHanhViUngXu();
+            ds.Parent = xtraTabControl1.TabPages[ViTriTabPage(tabHanhVi.Text)];
+            ds.Dock = DockStyle.Fill;
+            ds.Show();
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabHanhVi.Text)];
         }
     }
 }
