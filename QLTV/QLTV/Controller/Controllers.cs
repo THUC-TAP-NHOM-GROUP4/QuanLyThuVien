@@ -21,7 +21,7 @@ namespace QLTV.Controller
         {
             List<DocGia> listDocGia = new List<DocGia>();
             DataTable table = dataAcess.Query("select dg.ma, dg.ten, dg.ngaysinh, dg.gioitinh,dg.diachi, dg.ngaylamthe, dg.ngayhethan, dg.hoatdong from docgia dg ");
-               
+
             int n = table.Rows.Count;
             int i;
             if (n == 0) return null;
@@ -33,6 +33,7 @@ namespace QLTV.Controller
 
             return listDocGia;
         }
+        
         public List<Sach> getListSach()
         {
             List<Sach> listSach = new List<Sach>();
@@ -47,7 +48,15 @@ namespace QLTV.Controller
             }
             return listSach;
         }
-
+        DataAcess da;
+        public void Update(DateTime ngaytra,int phathong, int phatquahan,int phatmat)
+        {
+            da = new DataAcess();
+            da.NonQuery("ProcUpdate", new SqlParameter("@ngaytra", ngaytra),
+                                      new SqlParameter("@phathong", phathong),
+                                      new SqlParameter("@phatquahan", phatquahan),
+                                      new SqlParameter("@phatmat", phatmat));
+        }
 
         public Sach getSach(DataRow row)
         {
