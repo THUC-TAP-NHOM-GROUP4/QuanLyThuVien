@@ -56,5 +56,16 @@ namespace QLTV.Controller
             }
             return lst;
         }
+        public int Dieukhien(params string[] str)
+        {
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] == "")
+                    return 0;
+                else
+                    continue;
+            }
+            return 1;
+        }
     }
 }
