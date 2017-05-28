@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Controller\Controllers.cs" />
     <Compile Include="Controller\DataAcess.cs" />
+    <Compile Include="Model\ChiTietPhieuMuon.cs" />
     <Compile Include="Model\DocGia.cs" />
     <Compile Include="Model\NhanVien.cs" />
     <Compile Include="Model\PhieuMuon.cs" />

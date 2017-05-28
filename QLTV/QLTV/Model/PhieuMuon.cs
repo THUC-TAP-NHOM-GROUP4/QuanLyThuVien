@@ -1,5 +1,7 @@
-﻿using System;
+﻿using QLTV.Controller;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,5 +20,13 @@ namespace QLTV.Model
         public float phathong { get; set; }
         public float phatmat { get; set; }
         public float phatquahan { get; set; }
+        DataAcess da = new DataAcess();
+        public void ThemPhieuMuon(string docgiama, DateTime ngaymuon,string nhanvienma,DateTime hantra)
+        {
+            da.NonQuery("ThemVaoPhieuMuon", new SqlParameter("@docgiama", docgiama),
+                                             new SqlParameter("@ngaymuon", ngaymuon),
+                                             new SqlParameter("@nhanvienma", nhanvienma),
+                                             new SqlParameter("@hantra", hantra));
+        }
     }
 }

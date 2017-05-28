@@ -22,55 +22,44 @@ namespace QLTV.View
             cbbnhanvienma.DataSource = da.Convert(da.Query("select ten from NhanVien"));
         }
         DataAcess da = new DataAcess();
+        List<ChiTietPhieuMuon> lst = new List<ChiTietPhieuMuon>();
         private void btnthem_Click(object sender, EventArgs e)
         {
-            PhieuMuon pm = new PhieuMuon();
-            List<object> lst = new List<object>();
-            lst = da.Convert(da.Query("select ma from DocGia"));
-            foreach (object o in lst)
+            string[] str = {txtdocgiama.Text,txthantra.Text,txtngaymuon.Text,cbbnhanvienma.Text,cbbsach.Text};
+            if (da.Dieukhien(str) == 1)
             {
-                if (txtdocgiama.Text.Equals(o.ToString()))
-                {
+               
+                ChiTietPhieuMuon ctpm = new ChiTietPhieuMuon();
+                ctpm.sachma = cbbsach.Text;
+                lst.Add(ctpm);
+                MessageBox.Show("Thành công");
 
 
-                    pm.docgiama = txtdocgiama.Text;
-                    List<object> lst1 = new List<object>();
-                    lst1 = da.Convert(da.Query("select ma from Sach where ten=N'" + cbbsach.Text + "'"));
-                    cbbsach.Text = lst1[0].ToString();
-                    pm.sachma = cbbsach.Text;
-                    pm.ngaymuon = DateTime.Parse(txtngaymuon.Text);
-                    pm.ngaytra = DateTime.Parse(txtngaymuon.Text);
-                    pm.hantra = DateTime.Parse(txthantra.Text);
-                    pm.phatmat = 0;
-                    pm.phatquahan = 0;
-                    pm.phathong = 0;
-                    lst1 = da.Convert(da.Query("select ma from NhanVien where ten=N'" + cbbnhanvienma.Text + "'"));
-                    cbbnhanvienma.Text = lst1[0].ToString();
-                    pm.nhanvienma = cbbnhanvienma.Text;
-                    da.NonQuery("dbo.procedure_insertPhieuMuon", new SqlParameter("@docgiama", pm.docgiama),
-                                                                 new SqlParameter("@ngaymuon", pm.ngaymuon)
-                                                                 , new SqlParameter("@sachma", pm.sachma)
-                                                                 , new SqlParameter("@nhanvienma", pm.nhanvienma)
-                                                                 , new SqlParameter("@hantra", pm.hantra)
-                                                                  , new SqlParameter("@ngaytra", pm.ngaytra)
-                                                                  , new SqlParameter("@phathong", pm.phathong)
-                                                                  , new SqlParameter("@phatquahan", pm.phatquahan)
-                                                                  , new SqlParameter("@phatmat", pm.phatmat));
-                    MessageBox.Show("Thành công");
-                    cbbsach.DataSource = da.Convert(da.Query("select ten from Sach"));
-                    break;
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng xem lại, không tồn tại mã này");
-                    break;
-                }
             }
+            else
+                MessageBox.Show("Vui long dien day du thong tin");
         }
 
         private void btnthoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnluulai_Click(object sender, EventArgs e)
+        {
+            PhieuMuon pm = new PhieuMuon();
+            pm.docgiama = txtdocgiama.Text;
+            pm.ngaymuon = DateTime.Parse(txtngaymuon.Text);
+            pm.nhanvienma = cbbnhanvienma.Text;
+            pm.hantra = DateTime.Parse(txthantra.Text);
+            pm.ThemPhieuMuon(pm.docgiama, pm.ngaymuon, pm.nhanvienma, pm.hantra);
+            foreach(var item in lst)
+            {
+                ChiTietPhieuMuon chitiet = new ChiTietPhieuMuon();
+                chitiet.sachma = item.sachma;
+                chitiet.ThemVaoChiTietPhieuMuon(chitiet.sachma);
+            }
+            MessageBox.Show("Thanh công");
         }
     }
 }
