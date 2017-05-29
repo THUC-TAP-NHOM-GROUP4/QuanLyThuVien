@@ -36,8 +36,6 @@
             this.ssbtnThemDG = new DevExpress.XtraEditors.SimpleButton();
             this.grcDSDocGia = new DevExpress.XtraGrid.GridControl();
             this.grvDocGia = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.cbbmasv = new System.Windows.Forms.ComboBox();
-            this.lbmasv = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grcDSDocGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvDocGia)).BeginInit();
             this.SuspendLayout();
@@ -114,31 +112,11 @@
             this.grvDocGia.GridControl = this.grcDSDocGia;
             this.grvDocGia.Name = "grvDocGia";
             // 
-            // cbbmasv
-            // 
-            this.cbbmasv.FormattingEnabled = true;
-            this.cbbmasv.Location = new System.Drawing.Point(163, 425);
-            this.cbbmasv.Name = "cbbmasv";
-            this.cbbmasv.Size = new System.Drawing.Size(178, 21);
-            this.cbbmasv.TabIndex = 12;
-            this.cbbmasv.SelectedIndexChanged += new System.EventHandler(this.cbbmasv_SelectedIndexChanged);
-            // 
-            // lbmasv
-            // 
-            this.lbmasv.AutoSize = true;
-            this.lbmasv.Location = new System.Drawing.Point(85, 425);
-            this.lbmasv.Name = "lbmasv";
-            this.lbmasv.Size = new System.Drawing.Size(61, 13);
-            this.lbmasv.TabIndex = 13;
-            this.lbmasv.Text = "Mã độc giả";
-            // 
             // uDSDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Controls.Add(this.lbmasv);
-            this.Controls.Add(this.cbbmasv);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.ssbtnTimkiemDG);
             this.Controls.Add(this.sbtnXoaDG);
@@ -164,7 +142,5 @@
         private DevExpress.XtraEditors.SimpleButton ssbtnThemDG;
         private DevExpress.XtraGrid.GridControl grcDSDocGia;
         private DevExpress.XtraGrid.Views.Grid.GridView grvDocGia;
-        private System.Windows.Forms.ComboBox cbbmasv;
-        private System.Windows.Forms.Label lbmasv;
     }
 }

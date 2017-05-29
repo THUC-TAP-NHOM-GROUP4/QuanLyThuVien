@@ -30,27 +30,28 @@ namespace QLTV.View
             string[] str1 = str.Split('_');
             txtma.Text = str1[0];
             txtdocgiama.Text = str1[1];
-            cbbsach.Text = str1[2];
-            txtngaymuon.Text = str1[3];
-            cbbnhanvienma.Text = str1[4];
-            txtngaytra.Text = str1[5];
-            txthantra.Text = str1[6];
-            txtphathong.Text = str1[7];
-            txtphatquahan.Text = str1[8];
-            txtphatmat.Text = str1[9];
+            txtngaymuon.Text = str1[2];
+            txtngaytra.Text = str1[3];
+            txthantra.Text = str1[4];
+            txtphathong.Text = str1[5];
+            txtphatmat.Text = str1[6];
+            txtphatquahan.Text = str1[7];
         }
         DataAcess da = new DataAcess();
         private void btnsua_Click(object sender, EventArgs e)
         {
-            if (txtngaytra.Text != "" && txtphathong.Text != "" && txtphatmat.Text != "" && txtphatquahan.Text != "")
+            if (txthantra.Text != "" && txtphathong.Text != "" && txtphatmat.Text != "" && txtphatquahan.Text != "")
             {
                 PhieuMuon pm = new PhieuMuon();
-                pm.ngaytra = DateTime.Parse(txtngaytra.Text);
+                pm.ngaytra = DateTime.Parse(txthantra.Text);
                 pm.phathong = int.Parse(txtphathong.Text);
                 pm.phatmat = int.Parse(txtphatmat.Text);
                 pm.phatquahan = int.Parse(txtphatquahan.Text);
                 pm.ma = txtma.Text;
-                da.NonQuery("update PhieuMuon set ngaytra='" + pm.ngaytra + "',phathong='" + pm.phathong + "',phatquahan='" + pm.phatquahan + "',phatmat='" + pm.phatmat + "' where ma='" + pm.ma + "'");
+                if (rdbdatra.Checked)
+                    pm.trangthai = 1;
+
+                da.NonQuery("update PhieuMuon set ngaytra='" + pm.ngaytra + "',phathong='" + pm.phathong + "',phatquahan='" + pm.phatquahan + "',phatmat='" + pm.phatmat + "' ,trangthai='" + pm.trangthai + "' where ma='" + pm.ma + "'");
                 MessageBox.Show("Thành công");
             }
         }
