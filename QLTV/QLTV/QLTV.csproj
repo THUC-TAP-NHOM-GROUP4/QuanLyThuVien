@@ -115,6 +115,12 @@
     <Compile Include="View\SearchBook.Designer.cs">
       <DependentUpon>SearchBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\SearchReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SearchReader.Designer.cs">
+      <DependentUpon>SearchReader.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\uDSDauSach.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +192,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\SearchBook.resx">
+      <DependentUpon>SearchBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SearchReader.resx">
+      <DependentUpon>SearchReader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\uDSDauSach.resx">
       <DependentUpon>uDSDauSach.cs</DependentUpon>
     </EmbeddedResource>

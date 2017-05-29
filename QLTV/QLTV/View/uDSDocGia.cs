@@ -26,7 +26,10 @@ namespace QLTV
 
         private void ssbtnTimkiemDG_Click(object sender, EventArgs e)
         {
-
+            SearchReader searchRD = new SearchReader();
+            searchRD.ShowDialog();
+            listDocGia = controller.getListDocGia();
+            grcDSDocGia.DataSource = listDocGia;
         }
 
         private void uDSDocGia_Load(object sender, EventArgs e)

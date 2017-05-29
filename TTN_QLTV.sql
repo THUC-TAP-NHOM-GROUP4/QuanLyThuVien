@@ -55,6 +55,32 @@ values(dbo.auto_maSach(),@ten,@noidungtomtat,@sotrang,@gia,@soluong,GETDATE(),@n
 end
 
 
+create proc [dbo].[procedure_updateSach](@ma varchar(20),@ten nvarchar(30) ,@noidungtomtat nvarchar(200) , @sotrang int , @gia bigint , @soluong int ,@nhaxuatban varchar(20) , @tacgiama varchar(20) , @tinhtrang bit)
+as
+begin
+if(@ten like '') SET @ten = N'null' 
+if(@noidungtomtat = '') set @noidungtomtat = N'null'
+if(@sotrang like 0) SET @sotrang = 0
+if(@gia like 0) SET @ten = 0
+if(@soluong like 0) SET @soluong = 0 
+if(@nhaxuatban like '') SET @nhaxuatban = N'null' 
+if(@tacgiama like '') SET @tacgiama = N'null' 
+if(@tinhtrang like '') SET @tinhtrang = N'null' 
+update Sach set ten = @ten, noidungtomtat = @noidungtomtat , sotrang = @sotrang , gia = @gia , soluong = @soluong , NXBma = @nhaxuatban , tacgiama = @tacgiama , tinhtrang = @tinhtrang
+ where Ma = @ma
+end
+
+
+create proc [dbo].[procedure_updateDocGia](@ma varchar(20),@ten nvarchar(30),@ngaysinh date,@gioitinh bit,@diachi nvarchar(50),@ngaylamthe date,@ngayhethan date,@hoatdong bit)
+as
+begin
+if(@ten like '') SET @ten = N'null' 
+if(@gioitinh like 0) SET @gioitinh = 0
+if(@diachi like '') SET @diachi = N'null'
+if(@hoatdong like '') SET @hoatdong = N'null' 
+update DocGia set ten = @ten, ngaysinh = @ngaysinh, gioitinh = @gioitinh, diachi = @diachi, ngaylamthe = @ngaylamthe , ngayhethan = @ngayhethan, hoatdong = @hoatdong
+ where Ma = @ma
+end
 
 create table TacGia(
 ma varchar(20) primary key not null,

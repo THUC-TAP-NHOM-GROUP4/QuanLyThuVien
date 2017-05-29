@@ -1,4 +1,6 @@
 ﻿using QLTV.Controller;
+using QLTV.Model;
+using QLTV.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,26 +10,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLTV.Model;
-using QLTV.View;
+
 namespace QLTV.View
 {
-    public partial class SearchBook : Form
+    public partial class SearchReader : Form
     {
         Controllers control = new Controllers();
-        public SearchBook()
+
+        public SearchReader()
         {
             InitializeComponent();
         }
 
-        private void SearchBook_Load(object sender, EventArgs e)
+        private void SearchReader_Load(object sender, EventArgs e)
         {
-            dgvBook.DataSource = control.getListSach();
+            dgvReader.DataSource = control.getListDocGia();
+
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+        private void btnTKDG_Click(object sender, EventArgs e)
         {
-            if (txtTimKiem.Text.Trim() == "")
+            if (txtTKDG.Text.Trim() == "")
             {
                 MessageBox.Show("Bạn chưa nhập thông tin tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
@@ -37,9 +40,9 @@ namespace QLTV.View
                 //bắt đầu tìm kiếm
                 DataTable dt = new DataTable();
                 Sach sach = new Sach();
-                sach.ma = txtTimKiem.Text;
-                dgvBook.DataSource = da.Query("select *from Sach where ma='" + sach.ma + "'");
-             }
+                sach.ma = txtTKDG.Text;
+                dgvReader.DataSource = da.Query("select *from Sach where ma='" + sach.ma + "'");
+            }
         }
     }
 }

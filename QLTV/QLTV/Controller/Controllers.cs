@@ -180,6 +180,8 @@ namespace QLTV.Controller
             dataAcess.Query("deleteDocGia", para);
             return true;
         }
+
+
         public bool deleteSach(String ma)
         {
             SqlParameter[] para =
@@ -187,6 +189,16 @@ namespace QLTV.Controller
                 new SqlParameter("ma", ma),
             };
             dataAcess.Query("procedure_deleteSach", para);
+            return true;
+        }
+
+        public bool SearchBook(string ma)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("ma", ma),
+            };
+            dataAcess.Query("procedure_searchBook", para);
             return true;
         }
     }

@@ -56,6 +56,10 @@ namespace QLTV
         private void ssbtnTimkiemDS_Click(object sender, EventArgs e)
         {
 
+            SearchBook search = new SearchBook();
+            search.ShowDialog();
+            listSach = controller.getListSach();
+            grcDSDauSach.DataSource = listSach;
         }
 
         private void ssbtnThemDS_Click(object sender, EventArgs e)
