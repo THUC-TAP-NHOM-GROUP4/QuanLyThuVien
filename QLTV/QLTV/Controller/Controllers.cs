@@ -115,8 +115,7 @@ namespace QLTV.Controller
                 new SqlParameter("nhaxuatbanma",s.nhaxuatbanma),
                 new SqlParameter("tacgiama",s.tacgiama),
                 new SqlParameter("theloaima",s.theloaima),
-                new SqlParameter("tinhtrang",s.tinhtrang)
-
+         
             };
             dataAcess.Query("procedure_insertSach", para);
             return true;
@@ -131,9 +130,7 @@ namespace QLTV.Controller
                 new SqlParameter("ngaysinh",dg.ngaysinh),
                 new SqlParameter("gioitinh",dg.gioitinh),
                 new SqlParameter("diachi",dg.diachi),
-                new SqlParameter("ngaylamthe",dg.ngaylamthe),
-                new SqlParameter("ngayhethan",dg.ngayhethan),
-                new SqlParameter("hoatdong",dg.hoatdong),
+            
              
             };
             dataAcess.Query("procedure_insertDocGia", para);

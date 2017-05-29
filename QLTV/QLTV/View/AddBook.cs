@@ -38,9 +38,7 @@ namespace QLTV.View
                 s.theloaima = txtTheLoaiMa.Text.ToString().Trim();
                 s.soluong = int.Parse(txtSoLuong.Text);
                 s.noidungtomtat = rtbNoiDungTomTat.Text;
-                if (rdbTrue.Checked)
-                    s.tinhtrang = true;
-                else s.tinhtrang = false;
+                
                 if (control.addnewBook(s))
                 {
                     this.Close();
@@ -99,11 +97,11 @@ namespace QLTV.View
                 return false;
             }
             errNoiDungTomTat.Clear();
-            if (!(rdbFalse.Checked||rdbTrue.Checked))
-            {
-                errTinhTrang.SetError(rdbFalse, "Chưa nhập tình trạng");
-                return false;
-            }
+            //if (!(rdbFalse.Checked||rdbTrue.Checked))
+            //{
+            //    errTinhTrang.SetError(rdbFalse, "Chưa nhập tình trạng");
+            //    return false;
+            //}
       
             errTinhTrang.Clear();
             return true;
