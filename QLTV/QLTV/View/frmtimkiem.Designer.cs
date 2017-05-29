@@ -30,14 +30,14 @@
         {
             this.dgrtimkiemphieumuon = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbmadocgia = new System.Windows.Forms.RadioButton();
-            this.rdbngaymuon = new System.Windows.Forms.RadioButton();
-            this.rdbmasach = new System.Windows.Forms.RadioButton();
-            this.rdbhantra = new System.Windows.Forms.RadioButton();
-            this.txttukhoa = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btntimkiem = new System.Windows.Forms.Button();
             this.btnthoat = new System.Windows.Forms.Button();
+            this.btntimkiem = new System.Windows.Forms.Button();
+            this.txttukhoa = new System.Windows.Forms.TextBox();
+            this.rdbhantra = new System.Windows.Forms.RadioButton();
+            this.rdbmasach = new System.Windows.Forms.RadioButton();
+            this.rdbphieumuonma = new System.Windows.Forms.RadioButton();
+            this.rdbmadocgia = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrtimkiemphieumuon)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.groupBox1.Controls.Add(this.txttukhoa);
             this.groupBox1.Controls.Add(this.rdbhantra);
             this.groupBox1.Controls.Add(this.rdbmasach);
-            this.groupBox1.Controls.Add(this.rdbngaymuon);
+            this.groupBox1.Controls.Add(this.rdbphieumuonma);
             this.groupBox1.Controls.Add(this.rdbmadocgia);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -68,38 +68,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm theo";
             // 
-            // rdbmadocgia
+            // btnthoat
             // 
-            this.rdbmadocgia.AutoSize = true;
-            this.rdbmadocgia.Location = new System.Drawing.Point(566, 19);
-            this.rdbmadocgia.Name = "rdbmadocgia";
-            this.rdbmadocgia.Size = new System.Drawing.Size(62, 17);
-            this.rdbmadocgia.TabIndex = 0;
-            this.rdbmadocgia.TabStop = true;
-            this.rdbmadocgia.Text = "Độc giả";
-            this.rdbmadocgia.UseVisualStyleBackColor = true;
+            this.btnthoat.Location = new System.Drawing.Point(176, 59);
+            this.btnthoat.Name = "btnthoat";
+            this.btnthoat.Size = new System.Drawing.Size(75, 23);
+            this.btnthoat.TabIndex = 6;
+            this.btnthoat.Text = "Thoát";
+            this.btnthoat.UseVisualStyleBackColor = true;
             // 
-            // rdbngaymuon
+            // btntimkiem
             // 
-            this.rdbngaymuon.AutoSize = true;
-            this.rdbngaymuon.Location = new System.Drawing.Point(566, 42);
-            this.rdbngaymuon.Name = "rdbngaymuon";
-            this.rdbngaymuon.Size = new System.Drawing.Size(79, 17);
-            this.rdbngaymuon.TabIndex = 1;
-            this.rdbngaymuon.TabStop = true;
-            this.rdbngaymuon.Text = "Ngày mượn";
-            this.rdbngaymuon.UseVisualStyleBackColor = true;
+            this.btntimkiem.Location = new System.Drawing.Point(176, 16);
+            this.btntimkiem.Name = "btntimkiem";
+            this.btntimkiem.Size = new System.Drawing.Size(75, 23);
+            this.btntimkiem.TabIndex = 5;
+            this.btntimkiem.Text = "Tìm kiếm";
+            this.btntimkiem.UseVisualStyleBackColor = true;
+            this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
             // 
-            // rdbmasach
+            // txttukhoa
             // 
-            this.rdbmasach.AutoSize = true;
-            this.rdbmasach.Location = new System.Drawing.Point(566, 65);
-            this.rdbmasach.Name = "rdbmasach";
-            this.rdbmasach.Size = new System.Drawing.Size(66, 17);
-            this.rdbmasach.TabIndex = 2;
-            this.rdbmasach.TabStop = true;
-            this.rdbmasach.Text = "Mã sách";
-            this.rdbmasach.UseVisualStyleBackColor = true;
+            this.txttukhoa.Location = new System.Drawing.Point(265, 20);
+            this.txttukhoa.Name = "txttukhoa";
+            this.txttukhoa.Size = new System.Drawing.Size(245, 20);
+            this.txttukhoa.TabIndex = 4;
+            this.txttukhoa.Text = "  ---Nhập từ khóa---";
+            this.txttukhoa.TextChanged += new System.EventHandler(this.txttukhoa_TextChanged);
             // 
             // rdbhantra
             // 
@@ -112,13 +107,38 @@
             this.rdbhantra.Text = "Hạn trả";
             this.rdbhantra.UseVisualStyleBackColor = true;
             // 
-            // txttukhoa
+            // rdbmasach
             // 
-            this.txttukhoa.Location = new System.Drawing.Point(265, 20);
-            this.txttukhoa.Name = "txttukhoa";
-            this.txttukhoa.Size = new System.Drawing.Size(245, 20);
-            this.txttukhoa.TabIndex = 4;
-            this.txttukhoa.Text = "  ---Nhập từ khóa---";
+            this.rdbmasach.AutoSize = true;
+            this.rdbmasach.Location = new System.Drawing.Point(566, 65);
+            this.rdbmasach.Name = "rdbmasach";
+            this.rdbmasach.Size = new System.Drawing.Size(66, 17);
+            this.rdbmasach.TabIndex = 2;
+            this.rdbmasach.TabStop = true;
+            this.rdbmasach.Text = "Mã sách";
+            this.rdbmasach.UseVisualStyleBackColor = true;
+            // 
+            // rdbphieumuonma
+            // 
+            this.rdbphieumuonma.AutoSize = true;
+            this.rdbphieumuonma.Location = new System.Drawing.Point(566, 42);
+            this.rdbphieumuonma.Name = "rdbphieumuonma";
+            this.rdbphieumuonma.Size = new System.Drawing.Size(98, 17);
+            this.rdbphieumuonma.TabIndex = 1;
+            this.rdbphieumuonma.TabStop = true;
+            this.rdbphieumuonma.Text = "Mã phiếu mượn";
+            this.rdbphieumuonma.UseVisualStyleBackColor = true;
+            // 
+            // rdbmadocgia
+            // 
+            this.rdbmadocgia.AutoSize = true;
+            this.rdbmadocgia.Location = new System.Drawing.Point(566, 19);
+            this.rdbmadocgia.Name = "rdbmadocgia";
+            this.rdbmadocgia.Size = new System.Drawing.Size(62, 17);
+            this.rdbmadocgia.TabIndex = 0;
+            this.rdbmadocgia.TabStop = true;
+            this.rdbmadocgia.Text = "Độc giả";
+            this.rdbmadocgia.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -128,25 +148,6 @@
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Danh sách ";
-            // 
-            // btntimkiem
-            // 
-            this.btntimkiem.Location = new System.Drawing.Point(176, 16);
-            this.btntimkiem.Name = "btntimkiem";
-            this.btntimkiem.Size = new System.Drawing.Size(75, 23);
-            this.btntimkiem.TabIndex = 5;
-            this.btntimkiem.Text = "Tìm kiếm";
-            this.btntimkiem.UseVisualStyleBackColor = true;
-            this.btntimkiem.Click += new System.EventHandler(this.btntimkiem_Click);
-            // 
-            // btnthoat
-            // 
-            this.btnthoat.Location = new System.Drawing.Point(176, 59);
-            this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(75, 23);
-            this.btnthoat.TabIndex = 6;
-            this.btnthoat.Text = "Thoát";
-            this.btnthoat.UseVisualStyleBackColor = true;
             // 
             // frmtimkiem
             // 
@@ -158,6 +159,7 @@
             this.Controls.Add(this.dgrtimkiemphieumuon);
             this.Name = "frmtimkiem";
             this.Text = "frmtimkiem";
+            this.Load += new System.EventHandler(this.frmtimkiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgrtimkiemphieumuon)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -170,7 +172,7 @@
 
         private System.Windows.Forms.DataGridView dgrtimkiemphieumuon;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rdbngaymuon;
+        private System.Windows.Forms.RadioButton rdbphieumuonma;
         private System.Windows.Forms.RadioButton rdbmadocgia;
         private System.Windows.Forms.RadioButton rdbhantra;
         private System.Windows.Forms.RadioButton rdbmasach;

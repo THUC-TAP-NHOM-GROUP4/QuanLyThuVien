@@ -20,8 +20,10 @@ namespace QLTV.Model
         public float phathong { get; set; }
         public float phatmat { get; set; }
         public float phatquahan { get; set; }
+        public int trangthai { get; set; }
+        public string phieumuonma { get; set; }
         DataAcess da = new DataAcess();
-        public void ThemPhieuMuon(string docgiama, DateTime ngaymuon,string nhanvienma,DateTime hantra)
+        public void ThemPhieuMuon(string docgiama, DateTime ngaymuon, string nhanvienma, DateTime hantra)
         {
             da.NonQuery("ThemVaoPhieuMuon", new SqlParameter("@docgiama", docgiama),
                                              new SqlParameter("@ngaymuon", ngaymuon),

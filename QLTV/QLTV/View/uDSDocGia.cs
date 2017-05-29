@@ -33,20 +33,20 @@ namespace QLTV
         }
         private void ssbtnTimkiemDG_Click(object sender, EventArgs e)
         {
-            frmtimkiem frm = new frmtimkiem();
-            frm.ShowDialog();
+            if (str == "1")
+            {
+                frmtimkiem frm = new frmtimkiem();
+                frm.ShowDialog();
+            }
         }
         DataAcess da = new DataAcess();
         private void uDSDocGia_Load(object sender, EventArgs e)
         {
             if (str == "1")
             {
-                lbmasv.Visible = true;
-                cbbmasv.Visible = true;
-
-                labelControl1.Text = "Danh sách mượn";
-                cbbmasv.DataSource = da.Convert(da.Query("SELECT ma FROM DocGia"));
                 
+                labelControl1.Text = "Danh sách mượn";
+                grcDSDocGia.DataSource = da.Query("DanhSachPhieuMuon");
             }
             else if (str=="2")
             {
@@ -54,11 +54,10 @@ namespace QLTV
                 ssbtnTimkiemDG.Visible = false;
                 sbtnSuaDG.Visible = false;
                 sbtnXoaDG.Visible = false;
-                lbmasv.Visible = true;
-                cbbmasv.Visible = true;
+
                 labelControl1.Text = "Danh sách trả sách";
-                cbbmasv.DataSource = da.Convert(da.Query("SELECT ma FROM DocGia"));
-               
+                grcDSDocGia.DataSource = da.Query("DanhSachTraSach");
+
             }
             else
             {
@@ -94,8 +93,12 @@ namespace QLTV
             if (str == "1")
             {
                 PhieuMuon pm = new PhieuMuon();
-                pm.ma = grvDocGia.GetFocusedRowCellValue("ma").ToString();
-                DialogResult result = MessageBox.Show("Bạn có thực sự muốn xóa ?" + pm.ma, "Xóa sách", MessageBoxButtons.OKCancel);
+                string str =
+                pm.ma = grvDocGia.GetFocusedRowCellValue("Mã phiếu").ToString();
+                DialogResult result = new DialogResult();
+                result = MessageBox.Show("Bạn có thực sự muốn xóa ?" + pm.ma, "Xóa sách", MessageBoxButtons.OKCancel);
+                da.NonQuery("delete PhieuMuon where ma='" + pm.ma + "'");
+                grcDSDocGia.DataSource = da.Query("DanhSachPhieuMuon");
             }
             else
             {
@@ -119,29 +122,24 @@ namespace QLTV
             if (str == "1")
             {
                 PhieuMuon pm = new PhieuMuon();
-                pm.ma= grvDocGia.GetFocusedRowCellValue("ma").ToString();
-                pm.docgiama = grvDocGia.GetFocusedRowCellValue("DocGiama").ToString();
-                pm.sachma = grvDocGia.GetFocusedRowCellValue("Sachma").ToString();
-                pm.ngaymuon = DateTime.Parse(grvDocGia.GetFocusedRowCellValue("ngaymuon").ToString());
-                pm.nhanvienma = grvDocGia.GetFocusedRowCellValue("NhanVienma").ToString();
-                pm.ngaytra = DateTime.Parse(grvDocGia.GetFocusedRowCellValue("ngaytra").ToString());
-                pm.hantra = DateTime.Parse(grvDocGia.GetFocusedRowCellValue("hantra").ToString());
-                pm.phatquahan =int.Parse( grvDocGia.GetFocusedRowCellValue("phatquahan").ToString());
-                pm.phathong = int.Parse(grvDocGia.GetFocusedRowCellValue("phathong").ToString());
-                pm.phatmat = int.Parse(grvDocGia.GetFocusedRowCellValue("phatmat").ToString());
-                string str1 = pm.ma + "_" + pm.docgiama + "_" + pm.sachma + "_" + pm.ngaymuon + "_"
-                    + pm.nhanvienma + "_" + pm.ngaytra + "_" + pm.hantra + "_" + pm.phathong + "_" + pm.phatmat + "_" + pm.phatquahan;
-                frmUpdate frm = new frmUpdate("1");
+                pm.ma = grvDocGia.GetFocusedRowCellValue("Mã phiếu").ToString();
+                pm.docgiama = grvDocGia.GetFocusedRowCellValue("Mã độc giả").ToString();
+                pm.ngaymuon = DateTime.Parse(grvDocGia.GetFocusedRowCellValue("Ngày mượn").ToString());
+                pm.hantra = DateTime.Parse(grvDocGia.GetFocusedRowCellValue("Hạn trả").ToString());
+                pm.phathong = 0;
+                pm.phatmat = 0;
+                pm.phatquahan = 0;
+                pm.ngaytra = DateTime.Now;
+                string str1 = pm.ma + "_" + pm.docgiama + "_" + pm.ngaymuon + "_"
+                    + pm.ngaytra + "_" + pm.hantra + "_" + pm.phathong + "_" + pm.phatmat + "_" + pm.phatquahan;
+                frmUpdate frm = new frmUpdate(str1);
                 frm.ShowDialog();
+                grcDSDocGia.DataSource = da.Query("DanhSachPhieuMuon");
             }
         }
 
         private void cbbmasv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(str=="2")
-            grcDSDocGia.DataSource = da.Query("ProcPhieuTra", new SqlParameter("@docgiama", cbbmasv.Text));
-            if (str=="1")
-                grcDSDocGia.DataSource = da.Query("DSPhieuMuon", new SqlParameter("@docgiama", cbbmasv.Text));
             
         }
     }

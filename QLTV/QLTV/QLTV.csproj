@@ -86,6 +86,12 @@
     <Compile Include="View\AddReader.Designer.cs">
       <DependentUpon>AddReader.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmchitietmuonsach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmchitietmuonsach.Designer.cs">
+      <DependentUpon>frmchitietmuonsach.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmthem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddReader.resx">
       <DependentUpon>AddReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmchitietmuonsach.resx">
+      <DependentUpon>frmchitietmuonsach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmthem.resx">
       <DependentUpon>frmthem.cs</DependentUpon>
