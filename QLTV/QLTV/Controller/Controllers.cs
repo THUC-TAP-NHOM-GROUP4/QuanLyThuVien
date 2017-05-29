@@ -33,7 +33,57 @@ namespace QLTV.Controller
 
             return listDocGia;
         }
-        
+        public string  getNXBMa(string ma)
+        {
+            DataTable table = dataAcess.Query("select ma from NhaXuatBan where ma='" + ma + "'");
+            string manxb = "";
+          
+            if (table.Rows.Count == 1)
+                return table.Rows[0]["ma"].ToString().Trim();
+            return manxb;
+        }
+        public List<TacGia> getListTacGia()
+        {
+            List<TacGia> ls = new List<TacGia>();
+            DataTable table = dataAcess.Query("select ma,ten from TacGia");
+            int n = table.Rows.Count;
+            int i;
+            if (n == 0) return null;
+
+            for (i = 0; i < n; i++)
+            {
+                ls.Add(getTacGia(table.Rows[i]));
+            }
+            return ls;
+        }
+        public List<TheLoai> getListTheLoai()
+        {
+            List<TheLoai> ls = new List<TheLoai>();
+            DataTable table = dataAcess.Query("select ma,ten from TheLoai");
+            int n = table.Rows.Count;
+            int i;
+            if (n == 0) return null;
+
+            for (i = 0; i < n; i++)
+            {
+                ls.Add(getTheLoai(table.Rows[i]));
+            }
+            return ls;
+        }
+        public List<NhaXuatBan> getListNhaXuatBan()
+        {
+            List<NhaXuatBan> ls = new List<NhaXuatBan>();
+            DataTable table = dataAcess.Query("select ma,ten from NhaXuatBan");
+            int n = table.Rows.Count;
+            int i;
+            if (n == 0) return null;
+
+            for (i = 0; i < n; i++)
+            {
+                ls.Add(getNhaXuatBan(table.Rows[i]));
+            }
+            return ls;
+        }
         public List<Sach> getListSach()
         {
             List<Sach> listSach = new List<Sach>();
@@ -57,7 +107,27 @@ namespace QLTV.Controller
                                       new SqlParameter("@phatquahan", phatquahan),
                                       new SqlParameter("@phatmat", phatmat));
         }
-
+        public TheLoai getTheLoai(DataRow row)
+        {
+            TheLoai tl = new TheLoai();
+            tl.ma = row["ma"].ToString().Trim();
+            tl.ten = row["ten"].ToString().Trim();
+            return tl;
+        }
+        public TacGia getTacGia(DataRow row)
+        {
+            TacGia tg = new TacGia();
+            tg.ma= row["ma"].ToString().Trim();
+            tg.ten = row["ten"].ToString().Trim();
+            return tg;
+        }
+        public NhaXuatBan getNhaXuatBan(DataRow row)
+        {
+            NhaXuatBan nxb = new NhaXuatBan();
+            nxb.ma = row["ma"].ToString().Trim();
+            nxb.ten = row["ten"].ToString().Trim();
+            return nxb;
+        }
         public Sach getSach(DataRow row)
         {
             Sach sach = new Sach();

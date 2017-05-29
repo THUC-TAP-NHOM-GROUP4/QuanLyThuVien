@@ -23,6 +23,16 @@ namespace QLTV.View
         public AddBook()
         {
             InitializeComponent();
+
+            cbbNhaXuatBanMa.DataSource = control.getListNhaXuatBan();
+            cbbNhaXuatBanMa.DisplayMember = "ten";
+            cbbNhaXuatBanMa.ValueMember = "ma";
+            cbbTacGiaMa.DataSource = control.getListTacGia();
+            cbbTacGiaMa.DisplayMember = "ten";
+            cbbTacGiaMa.ValueMember = "ma";
+            cbbTheLoaiMa.DataSource = control.getListTheLoai();
+            cbbTheLoaiMa.DisplayMember = "ten";
+            cbbTheLoaiMa.ValueMember = "ma";
          
         }
         private void ssbtnThemDS_Click(object sender, EventArgs e)
@@ -33,9 +43,10 @@ namespace QLTV.View
                 s.ten = txtTenSach.Text.ToString().Trim();
                 s.sotrang = int.Parse(txtSoTrang.Text.ToString().Trim());
                 s.gia = int.Parse(txtGia.Text);
-                s.nhaxuatbanma = txtNhaXuatBanMa.Text.ToString().Trim();
-                s.tacgiama = txtTacGiaMa.Text.ToString().Trim();
-                s.theloaima = txtTheLoaiMa.Text.ToString().Trim();
+                s.nhaxuatbanma = cbbNhaXuatBanMa.SelectedValue.ToString().Trim();
+               
+                s.tacgiama = cbbTacGiaMa.SelectedValue.ToString().Trim();
+                s.theloaima = cbbTheLoaiMa.SelectedValue.ToString().Trim();
                 s.soluong = int.Parse(txtSoLuong.Text);
                 s.noidungtomtat = rtbNoiDungTomTat.Text;
                 
@@ -72,21 +83,21 @@ namespace QLTV.View
                 return false;
             }
             errSoLuong.Clear();
-            if (txtNhaXuatBanMa.Text.ToString().Trim().Equals(""))
+            if (cbbNhaXuatBanMa.Text.ToString().Trim().Equals(""))
             {
-                errNXBMa.SetError(txtNhaXuatBanMa, "Chưa nhập mã nhà xuất bản");
+                errNXBMa.SetError(cbbNhaXuatBanMa, "Chưa nhập mã nhà xuất bản");
                 return false;
             }
             errNXBMa.Clear();
-            if (txtTacGiaMa.Text.ToString().Trim().Equals(""))
+            if (cbbTacGiaMa.Text.ToString().Trim().Equals(""))
             {
-                errTacGiaMa.SetError(txtTacGiaMa, "Chưa nhập mã tác giả");
+                errTacGiaMa.SetError(cbbTacGiaMa, "Chưa nhập mã tác giả");
                 return false;
             }
             errTacGiaMa.Clear();
-            if (txtTheLoaiMa.Text.ToString().Trim().Equals(""))
+            if (cbbTheLoaiMa.Text.ToString().Trim().Equals(""))
             {
-                errTheLoaiMa.SetError(txtTheLoaiMa, "Chưa nhập mã thể loại");
+                errTheLoaiMa.SetError(cbbTheLoaiMa, "Chưa nhập mã thể loại");
                 return false;
             }
 

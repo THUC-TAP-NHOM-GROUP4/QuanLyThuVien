@@ -40,10 +40,8 @@
             this.txtSoTrang = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtTacGiaMa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtTheLoaiMa = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.rtbNoiDungTomTat = new System.Windows.Forms.RichTextBox();
             this.ssbtnThemDS = new DevExpress.XtraEditors.SimpleButton();
@@ -57,7 +55,9 @@
             this.errTheLoaiMa = new System.Windows.Forms.ErrorProvider(this.components);
             this.errTinhTrang = new System.Windows.Forms.ErrorProvider(this.components);
             this.errNoiDungTomTat = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtNhaXuatBanMa = new System.Windows.Forms.TextBox();
+            this.cbbNhaXuatBanMa = new System.Windows.Forms.ComboBox();
+            this.cbbTacGiaMa = new System.Windows.Forms.ComboBox();
+            this.cbbTheLoaiMa = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errTen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errTrang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errGia)).BeginInit();
@@ -125,9 +125,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(16, 194);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 16);
+            this.label6.Size = new System.Drawing.Size(89, 16);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Nhà xuất bản mã:";
+            this.label6.Text = "Nhà xuất bản:";
             // 
             // txtTenSach
             // 
@@ -161,23 +161,15 @@
             this.txtSoLuong.Size = new System.Drawing.Size(224, 22);
             this.txtSoLuong.TabIndex = 9;
             // 
-            // txtTacGiaMa
-            // 
-            this.txtTacGiaMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTacGiaMa.Location = new System.Drawing.Point(144, 236);
-            this.txtTacGiaMa.Name = "txtTacGiaMa";
-            this.txtTacGiaMa.Size = new System.Drawing.Size(224, 22);
-            this.txtTacGiaMa.TabIndex = 12;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.Location = new System.Drawing.Point(16, 242);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 16);
+            this.label7.Size = new System.Drawing.Size(60, 16);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Tác giả mã:";
+            this.label7.Text = "Tác giả :";
             // 
             // label9
             // 
@@ -185,17 +177,9 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label9.Location = new System.Drawing.Point(13, 279);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 16);
+            this.label9.Size = new System.Drawing.Size(60, 16);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Thể loại mã:";
-            // 
-            // txtTheLoaiMa
-            // 
-            this.txtTheLoaiMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTheLoaiMa.Location = new System.Drawing.Point(144, 279);
-            this.txtTheLoaiMa.Name = "txtTheLoaiMa";
-            this.txtTheLoaiMa.Size = new System.Drawing.Size(224, 22);
-            this.txtTheLoaiMa.TabIndex = 16;
+            this.label9.Text = "Thể loại:";
             // 
             // label10
             // 
@@ -271,13 +255,32 @@
             // 
             this.errNoiDungTomTat.ContainerControl = this;
             // 
-            // txtNhaXuatBanMa
+            // cbbNhaXuatBanMa
             // 
-            this.txtNhaXuatBanMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtNhaXuatBanMa.Location = new System.Drawing.Point(144, 191);
-            this.txtNhaXuatBanMa.Name = "txtNhaXuatBanMa";
-            this.txtNhaXuatBanMa.Size = new System.Drawing.Size(224, 22);
-            this.txtNhaXuatBanMa.TabIndex = 10;
+            this.cbbNhaXuatBanMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbNhaXuatBanMa.FormattingEnabled = true;
+            this.cbbNhaXuatBanMa.Location = new System.Drawing.Point(146, 189);
+            this.cbbNhaXuatBanMa.Name = "cbbNhaXuatBanMa";
+            this.cbbNhaXuatBanMa.Size = new System.Drawing.Size(222, 24);
+            this.cbbNhaXuatBanMa.TabIndex = 23;
+            // 
+            // cbbTacGiaMa
+            // 
+            this.cbbTacGiaMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbTacGiaMa.FormattingEnabled = true;
+            this.cbbTacGiaMa.Location = new System.Drawing.Point(146, 226);
+            this.cbbTacGiaMa.Name = "cbbTacGiaMa";
+            this.cbbTacGiaMa.Size = new System.Drawing.Size(222, 24);
+            this.cbbTacGiaMa.TabIndex = 24;
+            // 
+            // cbbTheLoaiMa
+            // 
+            this.cbbTheLoaiMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbTheLoaiMa.FormattingEnabled = true;
+            this.cbbTheLoaiMa.Location = new System.Drawing.Point(146, 273);
+            this.cbbTheLoaiMa.Name = "cbbTheLoaiMa";
+            this.cbbTheLoaiMa.Size = new System.Drawing.Size(222, 24);
+            this.cbbTheLoaiMa.TabIndex = 25;
             // 
             // AddBook
             // 
@@ -285,15 +288,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(380, 465);
+            this.Controls.Add(this.cbbTheLoaiMa);
+            this.Controls.Add(this.cbbTacGiaMa);
+            this.Controls.Add(this.cbbNhaXuatBanMa);
             this.Controls.Add(this.sbtnThoat);
             this.Controls.Add(this.ssbtnThemDS);
             this.Controls.Add(this.rtbNoiDungTomTat);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtTheLoaiMa);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtTacGiaMa);
-            this.Controls.Add(this.txtNhaXuatBanMa);
             this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.txtGia);
             this.Controls.Add(this.txtSoTrang);
@@ -333,10 +336,8 @@
         private System.Windows.Forms.TextBox txtSoTrang;
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.TextBox txtTacGiaMa;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtTheLoaiMa;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.RichTextBox rtbNoiDungTomTat;
         private DevExpress.XtraEditors.SimpleButton ssbtnThemDS;
@@ -350,6 +351,8 @@
         private System.Windows.Forms.ErrorProvider errTheLoaiMa;
         private System.Windows.Forms.ErrorProvider errTinhTrang;
         private System.Windows.Forms.ErrorProvider errNoiDungTomTat;
-        private System.Windows.Forms.TextBox txtNhaXuatBanMa;
+        private System.Windows.Forms.ComboBox cbbTheLoaiMa;
+        private System.Windows.Forms.ComboBox cbbTacGiaMa;
+        private System.Windows.Forms.ComboBox cbbNhaXuatBanMa;
     }
 }
