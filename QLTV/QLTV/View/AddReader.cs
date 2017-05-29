@@ -42,11 +42,11 @@ namespace QLTV.View
             }
 
             errGioiTinh.Clear();
-            if (!(rdbFalse.Checked || rdbTrue.Checked))
-            {
-                errHoatDong.SetError(rdbFalse, "Chưa nhập hoạt động");
-                return false;
-            }
+            //if (!(rdbFalse.Checked || rdbTrue.Checked))
+            //{
+            //    errHoatDong.SetError(rdbFalse, "Chưa nhập hoạt động");
+            //    return false;
+            //}
 
             errHoatDong.Clear();
             return true;
@@ -60,14 +60,9 @@ namespace QLTV.View
                 dg.ten = txtTenDocGia.Text.ToString().Trim();
                 dg.ngaysinh = DateTime.Parse(dtpNgaySinh.Text.ToString().Trim());
                 dg.diachi = rtbDiaChi.Text.ToString().Trim();
-                dg.ngaylamthe = DateTime.Parse(dtpNgayLamThe.Text.ToString().Trim());
-                dg.ngayhethan = DateTime.Parse(dtpNgayHetHan.Text.ToString().Trim());
                 if (rdbNam.Checked)
                     dg.gioitinh = true;
-                else dg.gioitinh = false;
-                if (rdbTrue.Checked)
-                    dg.hoatdong = true;
-                else dg.hoatdong = false;
+                else dg.gioitinh = false;               
                 if (control.addnewReader(dg))
                 {
                     this.Close();

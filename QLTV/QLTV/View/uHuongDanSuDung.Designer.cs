@@ -36,7 +36,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(333, 16);
+            this.label1.Location = new System.Drawing.Point(323, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 18);
             this.label1.TabIndex = 6;
@@ -45,9 +45,9 @@
             // HuongDanMuonSach_rtb
             // 
             this.HuongDanMuonSach_rtb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.HuongDanMuonSach_rtb.Location = new System.Drawing.Point(0, 37);
+            this.HuongDanMuonSach_rtb.Location = new System.Drawing.Point(0, 21);
             this.HuongDanMuonSach_rtb.Name = "HuongDanMuonSach_rtb";
-            this.HuongDanMuonSach_rtb.Size = new System.Drawing.Size(881, 401);
+            this.HuongDanMuonSach_rtb.Size = new System.Drawing.Size(881, 417);
             this.HuongDanMuonSach_rtb.TabIndex = 0;
             this.HuongDanMuonSach_rtb.Text = "";
             // 

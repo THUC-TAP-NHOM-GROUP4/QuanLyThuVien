@@ -69,9 +69,11 @@
     <Compile Include="Model\ChiTietPhieuMuon.cs" />
     <Compile Include="Model\DocGia.cs" />
     <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\NhaXuatBan.cs" />
     <Compile Include="Model\PhieuMuon.cs" />
     <Compile Include="Model\Sach.cs" />
     <Compile Include="Model\TacGia.cs" />
+    <Compile Include="Model\TheLoai.cs" />
     <Compile Include="View\AddBook.cs">
       <SubType>Form</SubType>
     </Compile>
