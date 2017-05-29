@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.rbcMenu = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiDSDS = new DevExpress.XtraBars.BarButtonItem();
             this.bbiThemDG = new DevExpress.XtraBars.BarButtonItem();
@@ -304,11 +304,11 @@
             // 
             // 
             // 
-            resources.ApplyResources(galleryItemGroup3, "galleryItemGroup3");
-            resources.ApplyResources(galleryItemGroup4, "galleryItemGroup4");
+            resources.ApplyResources(galleryItemGroup1, "galleryItemGroup1");
+            resources.ApplyResources(galleryItemGroup2, "galleryItemGroup2");
             this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3,
-            galleryItemGroup4});
+            galleryItemGroup1,
+            galleryItemGroup2});
             this.ribbonGalleryBarItem1.Id = 19;
             this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
             // 
@@ -461,10 +461,6 @@
             // 
             // rPGDG
             // 
-            this.rPGDG.ItemLinks.Add(this.bbiThemDG);
-            this.rPGDG.ItemLinks.Add(this.bbiSuaDG);
-            this.rPGDG.ItemLinks.Add(this.bbiXoaDG);
-            this.rPGDG.ItemLinks.Add(this.bbiTimKiemDG);
             this.rPGDG.ItemLinks.Add(this.bbtiDSSDocGia);
             this.rPGDG.Name = "rPGDG";
             // 
@@ -477,10 +473,6 @@
             // 
             // rPGDS
             // 
-            this.rPGDS.ItemLinks.Add(this.bbiThemDS);
-            this.rPGDS.ItemLinks.Add(this.bbiSuaDS);
-            this.rPGDS.ItemLinks.Add(this.bbiXoaDS);
-            this.rPGDS.ItemLinks.Add(this.bbiTimKiem);
             this.rPGDS.ItemLinks.Add(this.bbiDSDS);
             this.rPGDS.Name = "rPGDS";
             // 
