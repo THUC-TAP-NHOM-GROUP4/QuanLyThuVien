@@ -134,6 +134,12 @@
     <Compile Include="View\uHanhViUngXu.Designer.cs">
       <DependentUpon>uHanhViUngXu.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\uHuongDanSuDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uHuongDanSuDung.Designer.cs">
+      <DependentUpon>uHuongDanSuDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\uQuyDinhBaoVeTaiLieu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     <EmbeddedResource Include="View\uHanhViUngXu.resx">
       <DependentUpon>uHanhViUngXu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\uHuongDanSuDung.resx">
+      <DependentUpon>uHuongDanSuDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\uQuyDinhBaoVeTaiLieu.resx">
       <DependentUpon>uQuyDinhBaoVeTaiLieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +231,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Html\HuongDanSuDung.html" />
     <Content Include="Image\list.png" />
     <Content Include="View\htmlNoiQuyChung.html" />
   </ItemGroup>

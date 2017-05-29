@@ -11,7 +11,7 @@ namespace QLTV.Controller
     class DataAcess
     {
 
-        static string constr = @"Data Source=DESKTOP-DCH69I1\SQLEXPRESS;Initial Catalog=TTN_QLTV;Integrated Security=True";
+        static string constr = @"Data Source=DESKTOP-4KR3HIP\SQLEXPRESS;Initial Catalog=TTN_QLTV;Integrated Security=True";
         private static SqlConnection con = new SqlConnection(constr);
         public DataTable Query(string sql, params SqlParameter[] pr)
         {

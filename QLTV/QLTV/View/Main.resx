@@ -11398,10 +11398,10 @@
   <data name="ribbonGalleryBarItem1.Caption" xml:space="preserve">
     <value>ribbonGalleryBarItem1</value>
   </data>
-  <data name="galleryItemGroup1.Caption" xml:space="preserve">
+  <data name="galleryItemGroup3.Caption" xml:space="preserve">
     <value>Group1</value>
   </data>
-  <data name="galleryItemGroup2.Caption" xml:space="preserve">
+  <data name="galleryItemGroup4.Caption" xml:space="preserve">
     <value>Group2</value>
   </data>
   <data name="barDockingMenuItem1.Caption" xml:space="preserve">
@@ -11474,12 +11474,6 @@
   <data name="rbcMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="rbPGHT.Text" xml:space="preserve">
-    <value>Hệ thống</value>
-  </data>
-  <data name="ribbonPageGroup1.Text" xml:space="preserve">
-    <value>Chọn giao diện</value>
-  </data>
   <data name="rPTrangChu.Text" xml:space="preserve">
     <value>Trang Chủ</value>
   </data>
@@ -11488,12 +11482,6 @@
   </data>
   <data name="rPQLDS.Text" xml:space="preserve">
     <value>Quản lý đầu sách</value>
-  </data>
-  <data name="rPGMuonSach.Text" xml:space="preserve">
-    <value>Mượn sách</value>
-  </data>
-  <data name="rPGTraSach.Text" xml:space="preserve">
-    <value>Trả sách</value>
   </data>
   <data name="rPQLMT.Text" xml:space="preserve">
     <value>Quản lý mượn trả</value>
@@ -11534,6 +11522,18 @@
   <data name="&gt;&gt;rbcMenu.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="rbPGHT.Text" xml:space="preserve">
+    <value>Hệ thống</value>
+  </data>
+  <data name="ribbonPageGroup1.Text" xml:space="preserve">
+    <value>Chọn giao diện</value>
+  </data>
+  <data name="rPGMuonSach.Text" xml:space="preserve">
+    <value>Mượn sách</value>
+  </data>
+  <data name="rPGTraSach.Text" xml:space="preserve">
+    <value>Trả sách</value>
+  </data>
   <metadata name="imageCollection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -11561,6 +11561,12 @@
   <data name="NBGNoiQuy.Caption" xml:space="preserve">
     <value>Nội Quy</value>
   </data>
+  <data name="nbgHD.Caption" xml:space="preserve">
+    <value>Hướng dẫn sử dụng</value>
+  </data>
+  <data name="nbiHDQLDG.Caption" xml:space="preserve">
+    <value>Hướng dẫn sử dụng phần mềm</value>
+  </data>
   <data name="nvbiQDMS.Caption" xml:space="preserve">
     <value>Quy Định Mượn Sách</value>
   </data>
@@ -11575,18 +11581,6 @@
   </data>
   <data name="nvbiHVUX.Caption" xml:space="preserve">
     <value>Hành vi và ứng xử</value>
-  </data>
-  <data name="nbgHD.Caption" xml:space="preserve">
-    <value>Hướng dẫn sử dụng</value>
-  </data>
-  <data name="nbiHDQLDG.Caption" xml:space="preserve">
-    <value>Hướng dẫn quản lý độc giả</value>
-  </data>
-  <data name="nbiHDQLDS.Caption" xml:space="preserve">
-    <value>Hướng dẫn quản lý đầu sách</value>
-  </data>
-  <data name="nbiHDQLMT.Caption" xml:space="preserve">
-    <value>Hướng dẫn quản lý mượn trả</value>
   </data>
   <data name="nvbiQDTN.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 5</value>
@@ -11639,19 +11633,6 @@
   <data name="panelControl2.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>235, 236, 239</value>
   </data>
-  <assembly alias="DevExpress.XtraEditors.v16.1" name="DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="xtraTabControl1.ClosePageButtonShowMode" type="DevExpress.XtraTab.ClosePageButtonShowMode, DevExpress.XtraEditors.v16.1">
-    <value>InAllTabPageHeaders</value>
-  </data>
-  <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>889, 473</value>
-  </data>
-  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
     <value>xtraTabControl1</value>
   </data>
@@ -11684,6 +11665,31 @@
   </data>
   <data name="&gt;&gt;panelControl2.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v16.1" name="DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xtraTabControl1.ClosePageButtonShowMode" type="DevExpress.XtraTab.ClosePageButtonShowMode, DevExpress.XtraEditors.v16.1">
+    <value>InAllTabPageHeaders</value>
+  </data>
+  <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
+  </data>
+  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>889, 473</value>
+  </data>
+  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Parent" xml:space="preserve">
+    <value>panelControl2</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="bbiDSDG.Caption" xml:space="preserve">
     <value>Danh sách độc giả</value>
@@ -16360,18 +16366,6 @@
     <value>nbiHDQLDG</value>
   </data>
   <data name="&gt;&gt;nbiHDQLDG.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;nbiHDQLDS.Name" xml:space="preserve">
-    <value>nbiHDQLDS</value>
-  </data>
-  <data name="&gt;&gt;nbiHDQLDS.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;nbiHDQLMT.Name" xml:space="preserve">
-    <value>nbiHDQLMT</value>
-  </data>
-  <data name="&gt;&gt;nbiHDQLMT.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;bbiDSDG.Name" xml:space="preserve">

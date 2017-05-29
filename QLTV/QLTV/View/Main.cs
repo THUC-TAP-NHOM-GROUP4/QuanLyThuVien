@@ -269,5 +269,20 @@ namespace QLTV
             ds.Show();
             xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabDSDocGia.Text)];
         }
+
+        private void nbiHDQLDG_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            XtraTabPage tabHanhVi = new XtraTabPage();
+            tabHanhVi.Text = "Hướng dẫn sử dụng phần mềm";
+            if (KiemTraTabPage(tabHanhVi.Text) == false)
+                xtraTabControl1.TabPages.Add(tabHanhVi);
+            else
+                tabHanhVi.PageVisible = true;
+            uHuongDanSuDung ds = new uHuongDanSuDung();
+            ds.Parent = xtraTabControl1.TabPages[ViTriTabPage(tabHanhVi.Text)];
+            ds.Dock = DockStyle.Fill;
+            ds.Show();
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabHanhVi.Text)];
+        }
     }
 }

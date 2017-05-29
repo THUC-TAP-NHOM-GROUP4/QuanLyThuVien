@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             this.rbcMenu = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiDSDS = new DevExpress.XtraBars.BarButtonItem();
             this.bbiThemDG = new DevExpress.XtraBars.BarButtonItem();
@@ -91,8 +91,6 @@
             this.nvbiHVUX = new DevExpress.XtraNavBar.NavBarItem();
             this.nbgHD = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbiHDQLDG = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbiHDQLDS = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbiHDQLMT = new DevExpress.XtraNavBar.NavBarItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
@@ -306,11 +304,11 @@
             // 
             // 
             // 
-            resources.ApplyResources(galleryItemGroup1, "galleryItemGroup1");
-            resources.ApplyResources(galleryItemGroup2, "galleryItemGroup2");
+            resources.ApplyResources(galleryItemGroup3, "galleryItemGroup3");
+            resources.ApplyResources(galleryItemGroup4, "galleryItemGroup4");
             this.ribbonGalleryBarItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1,
-            galleryItemGroup2});
+            galleryItemGroup3,
+            galleryItemGroup4});
             this.ribbonGalleryBarItem1.Id = 19;
             this.ribbonGalleryBarItem1.Name = "ribbonGalleryBarItem1";
             // 
@@ -541,8 +539,6 @@
             this.nvbiQDMS,
             this.nbiQDC,
             this.nbiHDQLDG,
-            this.nbiHDQLDS,
-            this.nbiHDQLMT,
             this.nvbiQDLT,
             this.nvbiQDBVTL,
             this.nvbiHVUX});
@@ -597,25 +593,14 @@
             resources.ApplyResources(this.nbgHD, "nbgHD");
             this.nbgHD.Expanded = true;
             this.nbgHD.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLDG),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLDS),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLMT)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLDG)});
             this.nbgHD.Name = "nbgHD";
             // 
             // nbiHDQLDG
             // 
             resources.ApplyResources(this.nbiHDQLDG, "nbiHDQLDG");
             this.nbiHDQLDG.Name = "nbiHDQLDG";
-            // 
-            // nbiHDQLDS
-            // 
-            resources.ApplyResources(this.nbiHDQLDS, "nbiHDQLDS");
-            this.nbiHDQLDS.Name = "nbiHDQLDS";
-            // 
-            // nbiHDQLMT
-            // 
-            resources.ApplyResources(this.nbiHDQLMT, "nbiHDQLMT");
-            this.nbiHDQLMT.Name = "nbiHDQLMT";
+            this.nbiHDQLDG.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiHDQLDG_LinkClicked);
             // 
             // panelControl1
             // 
@@ -736,8 +721,6 @@
         private DevExpress.XtraNavBar.NavBarItem nbiQDC;
         private DevExpress.XtraNavBar.NavBarGroup nbgHD;
         private DevExpress.XtraNavBar.NavBarItem nbiHDQLDG;
-        private DevExpress.XtraNavBar.NavBarItem nbiHDQLDS;
-        private DevExpress.XtraNavBar.NavBarItem nbiHDQLMT;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit repositoryItemRichTextEdit1;
