@@ -144,6 +144,7 @@
             this.txtSoTrang.Name = "txtSoTrang";
             this.txtSoTrang.Size = new System.Drawing.Size(224, 22);
             this.txtSoTrang.TabIndex = 7;
+            this.txtSoTrang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoTrang_KeyPress);
             // 
             // txtGia
             // 
@@ -152,6 +153,7 @@
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(224, 22);
             this.txtGia.TabIndex = 8;
+            this.txtGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGia_KeyPress);
             // 
             // txtSoLuong
             // 
@@ -160,6 +162,7 @@
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(224, 22);
             this.txtSoLuong.TabIndex = 9;
+            this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
             // 
             // label7
             // 
