@@ -537,6 +537,7 @@
             resources.ApplyResources(this.nvbiQDTN, "nvbiQDTN");
             this.nvbiQDTN.Name = "nvbiQDTN";
             this.nvbiQDTN.OptionsNavPane.ExpandedWidth = ((int)(resources.GetObject("resource.ExpandedWidth")));
+            this.nvbiQDTN.Click += new System.EventHandler(this.nvbiQDTN_Click);
             // 
             // NBGNoiQuy
             // 
