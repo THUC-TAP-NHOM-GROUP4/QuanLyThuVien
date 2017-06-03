@@ -46,5 +46,26 @@ namespace QLTV.Controller
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public List<Object> Convert(DataTable dt)
+        {
+            List<Object> lst = new List<object>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                foreach (DataColumn dc in dt.Columns)
+                    lst.Add(dr[dc]);
+            }
+            return lst;
+        }
+        public int Dieukhien(params string[] str)
+        {
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] == "")
+                    return 0;
+                else
+                    continue;
+            }
+            return 1;
+        }
     }
 }

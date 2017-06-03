@@ -8813,6 +8813,22 @@
         sm1va9l36JO5/9k=
 </value>
   </data>
+  <data name="uControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 31</value>
+  </data>
+  <data name="uControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>928, 395</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="uControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;uControl.Name" xml:space="preserve">
+    <value>uControl</value>
+  </data>
+  <data name="&gt;&gt;uControl.Type" xml:space="preserve">
+    <value>DevExpress.XtraGrid.Views.Grid.EditFormUserControl, DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="rbcMenu.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 9.75pt</value>
   </data>
@@ -8889,7 +8905,6 @@
         HgtH4ZReJa6s7P/ltKKJ/aFwUAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="bbiDSDS.LargeWidth" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
@@ -11450,6 +11465,12 @@
   <data name="barStaticItem2.Caption" xml:space="preserve">
     <value>Copyright by NHOM7-THUCTAPNHOM2017</value>
   </data>
+  <data name="btnmuonsach.Caption" xml:space="preserve">
+    <value>Phiếu mượn</value>
+  </data>
+  <data name="btntrasach.Caption" xml:space="preserve">
+    <value>Phiếu trả</value>
+  </data>
   <data name="rbcMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -11559,13 +11580,7 @@
     <value>Hướng dẫn sử dụng</value>
   </data>
   <data name="nbiHDQLDG.Caption" xml:space="preserve">
-    <value>Hướng dẫn quản lý độc giả</value>
-  </data>
-  <data name="nbiHDQLDS.Caption" xml:space="preserve">
-    <value>Hướng dẫn quản lý đầu sách</value>
-  </data>
-  <data name="nbiHDQLMT.Caption" xml:space="preserve">
-    <value>Hướng dẫn quản lý mượn trả</value>
+    <value>Hướng dẫn sử dụng phần mềm</value>
   </data>
   <data name="nvbiQDTN.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 5</value>
@@ -16203,6 +16218,18 @@
   <data name="&gt;&gt;barStaticItem2.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;btnmuonsach.Name" xml:space="preserve">
+    <value>btnmuonsach</value>
+  </data>
+  <data name="&gt;&gt;btnmuonsach.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btntrasach.Name" xml:space="preserve">
+    <value>btntrasach</value>
+  </data>
+  <data name="&gt;&gt;btntrasach.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;rPTrangChu.Name" xml:space="preserve">
     <value>rPTrangChu</value>
   </data>
@@ -16327,18 +16354,6 @@
     <value>nbiHDQLDG</value>
   </data>
   <data name="&gt;&gt;nbiHDQLDG.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;nbiHDQLDS.Name" xml:space="preserve">
-    <value>nbiHDQLDS</value>
-  </data>
-  <data name="&gt;&gt;nbiHDQLDS.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;nbiHDQLMT.Name" xml:space="preserve">
-    <value>nbiHDQLMT</value>
-  </data>
-  <data name="&gt;&gt;nbiHDQLMT.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;bbiDSDG.Name" xml:space="preserve">

@@ -49,11 +49,14 @@
     <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,10 +70,14 @@
   <ItemGroup>
     <Compile Include="Controller\Controllers.cs" />
     <Compile Include="Controller\DataAcess.cs" />
+    <Compile Include="Model\ChiTietPhieuMuon.cs" />
     <Compile Include="Model\DocGia.cs" />
     <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\NhaXuatBan.cs" />
+    <Compile Include="Model\PhieuMuon.cs" />
     <Compile Include="Model\Sach.cs" />
     <Compile Include="Model\TacGia.cs" />
+    <Compile Include="Model\TheLoai.cs" />
     <Compile Include="View\AddBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +90,7 @@
     <Compile Include="View\AddReader.Designer.cs">
       <DependentUpon>AddReader.cs</DependentUpon>
     </Compile>
+
     <Compile Include="View\EditBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +102,31 @@
     </Compile>
     <Compile Include="View\EditReader.Designer.cs">
       <DependentUpon>EditReader.cs</DependentUpon>
+
+    <Compile Include="View\frmchitietmuonsach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmchitietmuonsach.Designer.cs">
+      <DependentUpon>frmchitietmuonsach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmthem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmthem.Designer.cs">
+      <DependentUpon>frmthem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmtimkiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmtimkiem.Designer.cs">
+      <DependentUpon>frmtimkiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmUpdate.Designer.cs">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+
     </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
@@ -139,6 +172,12 @@
     <Compile Include="View\uHanhViUngXu.Designer.cs">
       <DependentUpon>uHanhViUngXu.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\uHuongDanSuDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uHuongDanSuDung.Designer.cs">
+      <DependentUpon>uHuongDanSuDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\uQuyDinhBaoVeTaiLieu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,11 +208,25 @@
     <EmbeddedResource Include="View\AddReader.resx">
       <DependentUpon>AddReader.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="View\EditBook.resx">
       <DependentUpon>EditBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditReader.resx">
       <DependentUpon>EditReader.cs</DependentUpon>
+
+    <EmbeddedResource Include="View\frmchitietmuonsach.resx">
+      <DependentUpon>frmchitietmuonsach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmthem.resx">
+      <DependentUpon>frmthem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmtimkiem.resx">
+      <DependentUpon>frmtimkiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmUpdate.resx">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -207,6 +260,9 @@
     <EmbeddedResource Include="View\uHanhViUngXu.resx">
       <DependentUpon>uHanhViUngXu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\uHuongDanSuDung.resx">
+      <DependentUpon>uHuongDanSuDung.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\uQuyDinhBaoVeTaiLieu.resx">
       <DependentUpon>uQuyDinhBaoVeTaiLieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +286,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Html\HuongDanSuDung.html" />
     <Content Include="Image\list.png" />
     <Content Include="View\htmlNoiQuyChung.html" />
   </ItemGroup>

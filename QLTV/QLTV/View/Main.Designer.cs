@@ -66,6 +66,8 @@
             this.skinRibbonGalleryBarItem2 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.btnmuonsach = new DevExpress.XtraBars.BarButtonItem();
+            this.btntrasach = new DevExpress.XtraBars.BarButtonItem();
             this.rPTrangChu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbPGHT = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -89,13 +91,12 @@
             this.nvbiHVUX = new DevExpress.XtraNavBar.NavBarItem();
             this.nbgHD = new DevExpress.XtraNavBar.NavBarGroup();
             this.nbiHDQLDG = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbiHDQLDS = new DevExpress.XtraNavBar.NavBarItem();
-            this.nbiHDQLMT = new DevExpress.XtraNavBar.NavBarItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.bbiDSDG = new DevExpress.XtraBars.BarButtonItem();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.uControl = new DevExpress.XtraGrid.Views.Grid.EditFormUserControl();
             ((System.ComponentModel.ISupportInitialize)(this.rbcMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemColorPickEdit1)).BeginInit();
@@ -119,6 +120,7 @@
             this.rbcMenu.AutoSizeItems = true;
             this.rbcMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             resources.ApplyResources(this.rbcMenu, "rbcMenu");
+            this.uControl.SetBoundPropertyName(this.rbcMenu, "");
             this.rbcMenu.ExpandCollapseItem.Id = 0;
             this.rbcMenu.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.rbcMenu.ExpandCollapseItem,
@@ -148,8 +150,10 @@
             this.barEditItem6,
             this.skinRibbonGalleryBarItem2,
             this.barStaticItem1,
-            this.barStaticItem2});
-            this.rbcMenu.MaxItemId = 30;
+            this.barStaticItem2,
+            this.btnmuonsach,
+            this.btntrasach});
+            this.rbcMenu.MaxItemId = 32;
             this.rbcMenu.Name = "rbcMenu";
             this.rbcMenu.PageHeaderItemLinks.Add(this.barButtonItem3);
             this.rbcMenu.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -167,6 +171,7 @@
             this.repositoryItemPopupGalleryEdit1,
             this.repositoryItemFontEdit1});
             this.rbcMenu.StatusBar = this.ribbonStatusBar1;
+            this.rbcMenu.Click += new System.EventHandler(this.rbcMenu_Click);
             // 
             // bbiDSDS
             // 
@@ -182,6 +187,7 @@
             this.bbiThemDG.Id = 3;
             this.bbiThemDG.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bbiThemDG.LargeGlyph")));
             this.bbiThemDG.Name = "bbiThemDG";
+            this.bbiThemDG.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiThemDG_ItemClick);
             // 
             // bbiSuaDG
             // 
@@ -408,6 +414,23 @@
             this.barStaticItem2.Name = "barStaticItem2";
             this.barStaticItem2.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
+            // btnmuonsach
+            // 
+            resources.ApplyResources(this.btnmuonsach, "btnmuonsach");
+            this.btnmuonsach.Id = 30;
+            this.btnmuonsach.ImageUri.Uri = "Add";
+            this.btnmuonsach.Name = "btnmuonsach";
+            this.btnmuonsach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnmuonsach_ItemClick);
+            // 
+            // btntrasach
+            // 
+            resources.ApplyResources(this.btntrasach, "btntrasach");
+            this.btntrasach.CloseRadialMenuOnItemClick = true;
+            this.btntrasach.Id = 31;
+            this.btntrasach.ImageUri.Uri = "Cancel";
+            this.btntrasach.Name = "btntrasach";
+            this.btntrasach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btntrasach_ItemClick);
+            // 
             // rPTrangChu
             // 
             this.rPTrangChu.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -438,10 +461,6 @@
             // 
             // rPGDG
             // 
-            this.rPGDG.ItemLinks.Add(this.bbiThemDG);
-            this.rPGDG.ItemLinks.Add(this.bbiSuaDG);
-            this.rPGDG.ItemLinks.Add(this.bbiXoaDG);
-            this.rPGDG.ItemLinks.Add(this.bbiTimKiemDG);
             this.rPGDG.ItemLinks.Add(this.bbtiDSSDocGia);
             this.rPGDG.Name = "rPGDG";
             // 
@@ -454,10 +473,6 @@
             // 
             // rPGDS
             // 
-            this.rPGDS.ItemLinks.Add(this.bbiThemDS);
-            this.rPGDS.ItemLinks.Add(this.bbiSuaDS);
-            this.rPGDS.ItemLinks.Add(this.bbiXoaDS);
-            this.rPGDS.ItemLinks.Add(this.bbiTimKiem);
             this.rPGDS.ItemLinks.Add(this.bbiDSDS);
             this.rPGDS.Name = "rPGDS";
             // 
@@ -471,11 +486,13 @@
             // 
             // rPGMuonSach
             // 
+            this.rPGMuonSach.ItemLinks.Add(this.btnmuonsach);
             this.rPGMuonSach.Name = "rPGMuonSach";
             resources.ApplyResources(this.rPGMuonSach, "rPGMuonSach");
             // 
             // rPGTraSach
             // 
+            this.rPGTraSach.ItemLinks.Add(this.btntrasach);
             this.rPGTraSach.Name = "rPGTraSach";
             resources.ApplyResources(this.rPGTraSach, "rPGTraSach");
             // 
@@ -486,6 +503,7 @@
             // 
             // ribbonStatusBar1
             // 
+            this.uControl.SetBoundPropertyName(this.ribbonStatusBar1, "");
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem2);
             resources.ApplyResources(this.ribbonStatusBar1, "ribbonStatusBar1");
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
@@ -505,6 +523,7 @@
             // nvbiQDTN
             // 
             this.nvbiQDTN.ActiveGroup = this.NBGNoiQuy;
+            this.uControl.SetBoundPropertyName(this.nvbiQDTN, "");
             this.nvbiQDTN.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.NBGNoiQuy,
             this.nbgHD});
@@ -512,8 +531,6 @@
             this.nvbiQDMS,
             this.nbiQDC,
             this.nbiHDQLDG,
-            this.nbiHDQLDS,
-            this.nbiHDQLMT,
             this.nvbiQDLT,
             this.nvbiQDBVTL,
             this.nvbiHVUX});
@@ -569,28 +586,18 @@
             resources.ApplyResources(this.nbgHD, "nbgHD");
             this.nbgHD.Expanded = true;
             this.nbgHD.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLDG),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLDS),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLMT)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.nbiHDQLDG)});
             this.nbgHD.Name = "nbgHD";
             // 
             // nbiHDQLDG
             // 
             resources.ApplyResources(this.nbiHDQLDG, "nbiHDQLDG");
             this.nbiHDQLDG.Name = "nbiHDQLDG";
-            // 
-            // nbiHDQLDS
-            // 
-            resources.ApplyResources(this.nbiHDQLDS, "nbiHDQLDS");
-            this.nbiHDQLDS.Name = "nbiHDQLDS";
-            // 
-            // nbiHDQLMT
-            // 
-            resources.ApplyResources(this.nbiHDQLMT, "nbiHDQLMT");
-            this.nbiHDQLMT.Name = "nbiHDQLMT";
+            this.nbiHDQLDG.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.nbiHDQLDG_LinkClicked);
             // 
             // panelControl1
             // 
+            this.uControl.SetBoundPropertyName(this.panelControl1, "");
             this.panelControl1.Controls.Add(this.nvbiQDTN);
             resources.ApplyResources(this.panelControl1, "panelControl1");
             this.panelControl1.Name = "panelControl1";
@@ -599,15 +606,18 @@
             // 
             this.panelControl2.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("panelControl2.Appearance.BackColor")));
             this.panelControl2.Appearance.Options.UseBackColor = true;
+            this.uControl.SetBoundPropertyName(this.panelControl2, "");
             this.panelControl2.Controls.Add(this.xtraTabControl1);
             resources.ApplyResources(this.panelControl2, "panelControl2");
             this.panelControl2.Name = "panelControl2";
             // 
             // xtraTabControl1
             // 
+            this.uControl.SetBoundPropertyName(this.xtraTabControl1, "");
             resources.ApplyResources(this.xtraTabControl1, "xtraTabControl1");
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
+            this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
             // 
             // bbiDSDG
             // 
@@ -618,9 +628,15 @@
             // 
             // panelControl3
             // 
+            this.uControl.SetBoundPropertyName(this.panelControl3, "");
             this.panelControl3.Controls.Add(this.ribbonStatusBar1);
             resources.ApplyResources(this.panelControl3, "panelControl3");
             this.panelControl3.Name = "panelControl3";
+            // 
+            // uControl
+            // 
+            resources.ApplyResources(this.uControl, "uControl");
+            this.uControl.Name = "uControl";
             // 
             // Main
             // 
@@ -632,6 +648,7 @@
             this.Appearance.Options.UseForeColor = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.uControl.SetBoundPropertyName(this, "");
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
@@ -697,8 +714,6 @@
         private DevExpress.XtraNavBar.NavBarItem nbiQDC;
         private DevExpress.XtraNavBar.NavBarGroup nbgHD;
         private DevExpress.XtraNavBar.NavBarItem nbiHDQLDG;
-        private DevExpress.XtraNavBar.NavBarItem nbiHDQLDS;
-        private DevExpress.XtraNavBar.NavBarItem nbiHDQLMT;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit repositoryItemRichTextEdit1;
@@ -728,6 +743,9 @@
         private DevExpress.XtraNavBar.NavBarItem nvbiQDLT;
         private DevExpress.XtraNavBar.NavBarItem nvbiQDBVTL;
         private DevExpress.XtraNavBar.NavBarItem nvbiHVUX;
+        private DevExpress.XtraBars.BarButtonItem btnmuonsach;
+        private DevExpress.XtraBars.BarButtonItem btntrasach;
+        private DevExpress.XtraGrid.Views.Grid.EditFormUserControl uControl;
     }
 }
 

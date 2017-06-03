@@ -225,9 +225,71 @@ namespace QLTV
             xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabHanhVi.Text)];
         }
 
+
         private void nvbiQDTN_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void bbiThemDG_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void xtraTabControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbcMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnmuonsach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraTabPage tabDSDocGia = new XtraTabPage();
+            tabDSDocGia.Text = "Mượn sách";
+            if (KiemTraTabPage(tabDSDocGia.Text) == false)
+                xtraTabControl1.TabPages.Add(tabDSDocGia);
+            else
+                tabDSDocGia.PageVisible = true;
+            uDSDocGia ds = new uDSDocGia("1");
+            ds.Parent = xtraTabControl1.TabPages[ViTriTabPage(tabDSDocGia.Text)];
+            ds.Dock = DockStyle.Fill;
+            ds.Show();
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabDSDocGia.Text)];
+        }
+
+        private void btntrasach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            XtraTabPage tabDSDocGia = new XtraTabPage();
+            tabDSDocGia.Text = "Trả sách";
+            if (KiemTraTabPage(tabDSDocGia.Text) == false)
+                xtraTabControl1.TabPages.Add(tabDSDocGia);
+            else
+                tabDSDocGia.PageVisible = true;
+            uDSDocGia ds = new uDSDocGia("2");
+            ds.Parent = xtraTabControl1.TabPages[ViTriTabPage(tabDSDocGia.Text)];
+            ds.Dock = DockStyle.Fill;
+            ds.Show();
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabDSDocGia.Text)];
+        }
+
+        private void nbiHDQLDG_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            XtraTabPage tabHanhVi = new XtraTabPage();
+            tabHanhVi.Text = "Hướng dẫn sử dụng phần mềm";
+            if (KiemTraTabPage(tabHanhVi.Text) == false)
+                xtraTabControl1.TabPages.Add(tabHanhVi);
+            else
+                tabHanhVi.PageVisible = true;
+            uHuongDanSuDung ds = new uHuongDanSuDung();
+            ds.Parent = xtraTabControl1.TabPages[ViTriTabPage(tabHanhVi.Text)];
+            ds.Dock = DockStyle.Fill;
+            ds.Show();
+            xtraTabControl1.SelectedTabPage = xtraTabControl1.TabPages[ViTriTabPage(tabHanhVi.Text)];
+        }
+
     }
 }

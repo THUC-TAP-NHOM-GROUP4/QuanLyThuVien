@@ -41,6 +41,8 @@ namespace QLTV
         {
             Sach sach = new Sach();
             sach.ma = grvSach.GetFocusedRowCellValue("ma").ToString();
+            if (sach.ma == null) return;
+
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn xóa ?" + sach.ma , "Xóa sách", MessageBoxButtons.OKCancel);
             if (result == DialogResult.OK)
             {
