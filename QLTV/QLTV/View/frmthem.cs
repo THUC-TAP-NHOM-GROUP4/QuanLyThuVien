@@ -19,7 +19,7 @@ namespace QLTV.View
         {
             InitializeComponent();
             cbbdocgia.DataSource = da.Convert(da.Query("select ma from DocGia "));
-            cbbnhanvienma.DataSource = da.Convert(da.Query("select ten from NhanVien"));
+            cbbnhanvienma.DataSource = da.Convert(da.Query("select ma from NhanVien"));
         }
         DataAcess da = new DataAcess();
         List<ChiTietPhieuMuon> lst = new List<ChiTietPhieuMuon>();
@@ -49,6 +49,11 @@ namespace QLTV.View
 
         private void btnluulai_Click(object sender, EventArgs e)
         {
+        }
+
+        private void frmthem_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
