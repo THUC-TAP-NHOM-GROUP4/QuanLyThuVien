@@ -53,6 +53,11 @@ namespace QLTV.View
 
         private void txttukhoa_TextChanged(object sender, EventArgs e)
         {
+           
+        }
+
+        private void txttukhoa_MouseClick(object sender, MouseEventArgs e)
+        {
             txttukhoa.Text = "";
         }
     }

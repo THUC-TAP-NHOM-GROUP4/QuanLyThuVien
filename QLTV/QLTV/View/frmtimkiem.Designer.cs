@@ -94,6 +94,7 @@
             this.txttukhoa.Size = new System.Drawing.Size(245, 20);
             this.txttukhoa.TabIndex = 4;
             this.txttukhoa.Text = "  ---Nhập từ khóa---";
+            this.txttukhoa.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txttukhoa_MouseClick);
             this.txttukhoa.TextChanged += new System.EventHandler(this.txttukhoa_TextChanged);
             // 
             // rdbhantra

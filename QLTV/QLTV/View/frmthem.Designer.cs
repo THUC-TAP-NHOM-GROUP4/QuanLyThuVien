@@ -131,6 +131,7 @@
             this.Controls.Add(this.btnthem);
             this.Name = "frmthem";
             this.Text = "frmthem";
+            this.Load += new System.EventHandler(this.frmthem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
