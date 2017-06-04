@@ -23,6 +23,16 @@ namespace QLTV.View
         public AddBook()
         {
             InitializeComponent();
+
+            cbbNhaXuatBanMa.DataSource = control.getListNhaXuatBan();
+            cbbNhaXuatBanMa.DisplayMember = "ten";
+            cbbNhaXuatBanMa.ValueMember = "ma";
+            cbbTacGiaMa.DataSource = control.getListTacGia();
+            cbbTacGiaMa.DisplayMember = "ten";
+            cbbTacGiaMa.ValueMember = "ma";
+            cbbTheLoaiMa.DataSource = control.getListTheLoai();
+            cbbTheLoaiMa.DisplayMember = "ten";
+            cbbTheLoaiMa.ValueMember = "ma";
          
         }
         private void ssbtnThemDS_Click(object sender, EventArgs e)
@@ -33,14 +43,13 @@ namespace QLTV.View
                 s.ten = txtTenSach.Text.ToString().Trim();
                 s.sotrang = int.Parse(txtSoTrang.Text.ToString().Trim());
                 s.gia = int.Parse(txtGia.Text);
-                s.nhaxuatbanma = txtNhaXuatBanMa.Text.ToString().Trim();
-                s.tacgiama = txtTacGiaMa.Text.ToString().Trim();
-                s.theloaima = txtTheLoaiMa.Text.ToString().Trim();
+                s.nhaxuatbanma = cbbNhaXuatBanMa.SelectedValue.ToString().Trim();
+               
+                s.tacgiama = cbbTacGiaMa.SelectedValue.ToString().Trim();
+                s.theloaima = cbbTheLoaiMa.SelectedValue.ToString().Trim();
                 s.soluong = int.Parse(txtSoLuong.Text);
                 s.noidungtomtat = rtbNoiDungTomTat.Text;
-                if (rdbTrue.Checked)
-                    s.tinhtrang = true;
-                else s.tinhtrang = false;
+                
                 if (control.addnewBook(s))
                 {
                     this.Close();
@@ -74,21 +83,21 @@ namespace QLTV.View
                 return false;
             }
             errSoLuong.Clear();
-            if (txtNhaXuatBanMa.Text.ToString().Trim().Equals(""))
+            if (cbbNhaXuatBanMa.Text.ToString().Trim().Equals(""))
             {
-                errNXBMa.SetError(txtNhaXuatBanMa, "Chưa nhập mã nhà xuất bản");
+                errNXBMa.SetError(cbbNhaXuatBanMa, "Chưa nhập mã nhà xuất bản");
                 return false;
             }
             errNXBMa.Clear();
-            if (txtTacGiaMa.Text.ToString().Trim().Equals(""))
+            if (cbbTacGiaMa.Text.ToString().Trim().Equals(""))
             {
-                errTacGiaMa.SetError(txtTacGiaMa, "Chưa nhập mã tác giả");
+                errTacGiaMa.SetError(cbbTacGiaMa, "Chưa nhập mã tác giả");
                 return false;
             }
             errTacGiaMa.Clear();
-            if (txtTheLoaiMa.Text.ToString().Trim().Equals(""))
+            if (cbbTheLoaiMa.Text.ToString().Trim().Equals(""))
             {
-                errTheLoaiMa.SetError(txtTheLoaiMa, "Chưa nhập mã thể loại");
+                errTheLoaiMa.SetError(cbbTheLoaiMa, "Chưa nhập mã thể loại");
                 return false;
             }
 
@@ -99,11 +108,11 @@ namespace QLTV.View
                 return false;
             }
             errNoiDungTomTat.Clear();
-            if (!(rdbFalse.Checked||rdbTrue.Checked))
-            {
-                errTinhTrang.SetError(rdbFalse, "Chưa nhập tình trạng");
-                return false;
-            }
+            //if (!(rdbFalse.Checked||rdbTrue.Checked))
+            //{
+            //    errTinhTrang.SetError(rdbFalse, "Chưa nhập tình trạng");
+            //    return false;
+            //}
       
             errTinhTrang.Clear();
             return true;
@@ -111,6 +120,45 @@ namespace QLTV.View
         private void sbtnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtSoTrang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&(e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&(e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&(e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

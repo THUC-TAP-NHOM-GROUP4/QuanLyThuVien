@@ -33,7 +33,57 @@ namespace QLTV.Controller
 
             return listDocGia;
         }
-        
+        public string  getNXBMa(string ma)
+        {
+            DataTable table = dataAcess.Query("select ma from NhaXuatBan where ma='" + ma + "'");
+            string manxb = "";
+          
+            if (table.Rows.Count == 1)
+                return table.Rows[0]["ma"].ToString().Trim();
+            return manxb;
+        }
+        public List<TacGia> getListTacGia()
+        {
+            List<TacGia> ls = new List<TacGia>();
+            DataTable table = dataAcess.Query("select ma,ten from TacGia");
+            int n = table.Rows.Count;
+            int i;
+            if (n == 0) return null;
+
+            for (i = 0; i < n; i++)
+            {
+                ls.Add(getTacGia(table.Rows[i]));
+            }
+            return ls;
+        }
+        public List<TheLoai> getListTheLoai()
+        {
+            List<TheLoai> ls = new List<TheLoai>();
+            DataTable table = dataAcess.Query("select ma,ten from TheLoai");
+            int n = table.Rows.Count;
+            int i;
+            if (n == 0) return null;
+
+            for (i = 0; i < n; i++)
+            {
+                ls.Add(getTheLoai(table.Rows[i]));
+            }
+            return ls;
+        }
+        public List<NhaXuatBan> getListNhaXuatBan()
+        {
+            List<NhaXuatBan> ls = new List<NhaXuatBan>();
+            DataTable table = dataAcess.Query("select ma,ten from NhaXuatBan");
+            int n = table.Rows.Count;
+            int i;
+            if (n == 0) return null;
+
+            for (i = 0; i < n; i++)
+            {
+                ls.Add(getNhaXuatBan(table.Rows[i]));
+            }
+            return ls;
+        }
         public List<Sach> getListSach()
         {
             List<Sach> listSach = new List<Sach>();
@@ -57,7 +107,27 @@ namespace QLTV.Controller
                                       new SqlParameter("@phatquahan", phatquahan),
                                       new SqlParameter("@phatmat", phatmat));
         }
-
+        public TheLoai getTheLoai(DataRow row)
+        {
+            TheLoai tl = new TheLoai();
+            tl.ma = row["ma"].ToString().Trim();
+            tl.ten = row["ten"].ToString().Trim();
+            return tl;
+        }
+        public TacGia getTacGia(DataRow row)
+        {
+            TacGia tg = new TacGia();
+            tg.ma= row["ma"].ToString().Trim();
+            tg.ten = row["ten"].ToString().Trim();
+            return tg;
+        }
+        public NhaXuatBan getNhaXuatBan(DataRow row)
+        {
+            NhaXuatBan nxb = new NhaXuatBan();
+            nxb.ma = row["ma"].ToString().Trim();
+            nxb.ten = row["ten"].ToString().Trim();
+            return nxb;
+        }
         public Sach getSach(DataRow row)
         {
             Sach sach = new Sach();
@@ -115,8 +185,7 @@ namespace QLTV.Controller
                 new SqlParameter("nhaxuatbanma",s.nhaxuatbanma),
                 new SqlParameter("tacgiama",s.tacgiama),
                 new SqlParameter("theloaima",s.theloaima),
-                new SqlParameter("tinhtrang",s.tinhtrang)
-
+                new SqlParameter("tinhtrang", 1)
             };
             dataAcess.Query("procedure_insertSach", para);
             return true;
@@ -131,12 +200,52 @@ namespace QLTV.Controller
                 new SqlParameter("ngaysinh",dg.ngaysinh),
                 new SqlParameter("gioitinh",dg.gioitinh),
                 new SqlParameter("diachi",dg.diachi),
-                new SqlParameter("ngaylamthe",dg.ngaylamthe),
-                new SqlParameter("ngayhethan",dg.ngayhethan),
-                new SqlParameter("hoatdong",dg.hoatdong),
+                new SqlParameter("ngaylamthe", DateTime.Now),
+                new SqlParameter("ngayhethan", DateTime.Now),
+                new SqlParameter("hoatdong", 1)
              
             };
             dataAcess.Query("procedure_insertDocGia", para);
+            return true;
+        }
+
+
+        public bool editBook(Sach s)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("ma", s.ma),
+                new SqlParameter("ten",s.ten),
+                new SqlParameter("noidungtomtat",s.noidungtomtat),
+                new SqlParameter("sotrang",s.sotrang),
+                new SqlParameter("gia",s.gia),
+                new SqlParameter("soluong",s.soluong),
+                new SqlParameter("nhaxuatban",s.nhaxuatbanma),
+                new SqlParameter("tacgiama",s.tacgiama),
+                new SqlParameter("tinhtrang",s.tinhtrang)
+
+            };
+            dataAcess.Query("procedure_updateSach", para);
+            return true;
+        }
+
+        public bool editReader(DocGia dg)
+        {
+            //select dg.ma, dg.ten, dg.ngaysinh, dg.gioitinh, 
+            //dg.diachi, dg.ngaylamthe, dg.ngayhethan, dg.hoatdong from docgia dg
+            SqlParameter[] para =
+           {
+                new SqlParameter("ma",dg.ma),
+                new SqlParameter("ten",dg.ten),
+                new SqlParameter("ngaysinh",dg.ngaysinh),
+                new SqlParameter("gioitinh",dg.gioitinh),
+                new SqlParameter("diachi",dg.diachi),
+                new SqlParameter("ngaylamthe",dg.ngaylamthe),
+                new SqlParameter("ngayhethan",dg.ngayhethan),
+                new SqlParameter("hoatdong",dg.hoatdong),
+
+            };
+            dataAcess.Query("procedure_updateDocGia", para);
             return true;
         }
 
@@ -149,6 +258,8 @@ namespace QLTV.Controller
             dataAcess.Query("deleteDocGia", para);
             return true;
         }
+
+
         public bool deleteSach(String ma)
         {
             SqlParameter[] para =
@@ -156,6 +267,16 @@ namespace QLTV.Controller
                 new SqlParameter("ma", ma),
             };
             dataAcess.Query("procedure_deleteSach", para);
+            return true;
+        }
+
+        public bool SearchBook(string ma)
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("ma", ma),
+            };
+            dataAcess.Query("procedure_searchBook", para);
             return true;
         }
     }

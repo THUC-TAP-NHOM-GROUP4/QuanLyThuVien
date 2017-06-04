@@ -18,26 +18,28 @@ namespace QLTV.View
         public frmthem()
         {
             InitializeComponent();
-            cbbsach.DataSource = da.Convert(da.Query("select ten from Sach"));
-            cbbnhanvienma.DataSource = da.Convert(da.Query("select ten from NhanVien"));
+            cbbdocgia.DataSource = da.Convert(da.Query("select ma from DocGia "));
+            cbbnhanvienma.DataSource = da.Convert(da.Query("select ma from NhanVien"));
         }
         DataAcess da = new DataAcess();
         List<ChiTietPhieuMuon> lst = new List<ChiTietPhieuMuon>();
         private void btnthem_Click(object sender, EventArgs e)
         {
-            string[] str = {txtdocgiama.Text,txthantra.Text,txtngaymuon.Text,cbbnhanvienma.Text,cbbsach.Text};
+            string[] str = { cbbdocgia.Text, txthantra.Text, txtngaymuon.Text, cbbnhanvienma.Text };
             if (da.Dieukhien(str) == 1)
             {
-               
-                ChiTietPhieuMuon ctpm = new ChiTietPhieuMuon();
-                ctpm.sachma = cbbsach.Text;
-                lst.Add(ctpm);
-                MessageBox.Show("Thành công");
-
-
+                PhieuMuon pm = new PhieuMuon();
+                pm.docgiama = cbbdocgia.Text;
+                pm.ngaymuon = DateTime.Parse(txtngaymuon.Text);
+                pm.nhanvienma = cbbnhanvienma.Text;
+                pm.hantra = DateTime.Parse(txthantra.Text);
+                pm.ThemPhieuMuon(pm.docgiama, pm.ngaymuon, pm.nhanvienma, pm.hantra);
+                frmchitietmuonsach frm = new frmchitietmuonsach();
+                frm.ShowDialog();
+                this.Close();
             }
             else
-                MessageBox.Show("Vui long dien day du thong tin");
+                MessageBox.Show("Vui lòng xem lại");
         }
 
         private void btnthoat_Click(object sender, EventArgs e)
@@ -47,19 +49,11 @@ namespace QLTV.View
 
         private void btnluulai_Click(object sender, EventArgs e)
         {
-            PhieuMuon pm = new PhieuMuon();
-            pm.docgiama = txtdocgiama.Text;
-            pm.ngaymuon = DateTime.Parse(txtngaymuon.Text);
-            pm.nhanvienma = cbbnhanvienma.Text;
-            pm.hantra = DateTime.Parse(txthantra.Text);
-            pm.ThemPhieuMuon(pm.docgiama, pm.ngaymuon, pm.nhanvienma, pm.hantra);
-            foreach(var item in lst)
-            {
-                ChiTietPhieuMuon chitiet = new ChiTietPhieuMuon();
-                chitiet.sachma = item.sachma;
-                chitiet.ThemVaoChiTietPhieuMuon(chitiet.sachma);
-            }
-            MessageBox.Show("Thanh công");
+        }
+
+        private void frmthem_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,10 +32,10 @@ namespace QLTV.View
                     pm.hantra = DateTime.Parse(txttukhoa.Text);
                     dgrtimkiemphieumuon.DataSource = da.Query("select *from PhieuMuon where hantra='" + pm.hantra + "'");
                 }
-                else if (rdbngaymuon.Checked == true)
+                else if (rdbphieumuonma.Checked == true)
                 {
-                    pm.ngaymuon =DateTime.Parse( txttukhoa.Text);
-                    dgrtimkiemphieumuon.DataSource = da.Query("select *from PhieuMuon where ngaymuon='" + pm.ngaymuon+ "'");
+                    pm.phieumuonma = txttukhoa.Text;
+                    dgrtimkiemphieumuon.DataSource = da.Query("select *from PhieuMuon where phieumuonma='" + pm.phieumuonma + "'");
                 }
                 else if (rdbmasach.Checked == true)
                     dgrtimkiemphieumuon.DataSource = da.Query("select *from PhieuMuon where sachma='" + txttukhoa.Text + "'");
@@ -44,6 +44,21 @@ namespace QLTV.View
             }
             else
                 MessageBox.Show("Vui lòng nhập từ khóa");
+        }
+
+        private void frmtimkiem_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txttukhoa_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txttukhoa_MouseClick(object sender, MouseEventArgs e)
+        {
+            txttukhoa.Text = "";
         }
     }
 }
