@@ -102,7 +102,7 @@
     </Compile>
     <Compile Include="View\EditReader.Designer.cs">
       <DependentUpon>EditReader.cs</DependentUpon>
-
+    </Compile>
     <Compile Include="View\frmchitietmuonsach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,7 +214,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditReader.resx">
       <DependentUpon>EditReader.cs</DependentUpon>
-
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmchitietmuonsach.resx">
       <DependentUpon>frmchitietmuonsach.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +279,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
